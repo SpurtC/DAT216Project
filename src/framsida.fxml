@@ -21,53 +21,21 @@
                <children>
                   <Accordion layoutX="26.0" layoutY="22.0" prefHeight="512.0" prefWidth="254.0" styleClass="paneFill" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
                     <panes>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <TitledPane animated="false" styleClass="paneFill" text="Frukt och grönt">
-=======
-                      <TitledPane animated="false" text="Bröd">
->>>>>>> ce3894236f373a155c09b745c1d0ec9fb5c3a6be
-=======
-                      <TitledPane animated="false" text="Bröd">
->>>>>>> ce3894236f373a155c09b745c1d0ec9fb5c3a6be
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <Label text="Grovt bröd" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                    <Label layoutX="10.0" layoutY="30.0" text="Mjukt bröd" />
-                                 </children></AnchorPane>
-                        </content>
-                      </TitledPane>
-                        <TitledPane animated="false" prefHeight="27.0" prefWidth="254.0" text="Drycker">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="77.0" />
-                          </content>
-                        </TitledPane>
-                      <TitledPane animated="false" text="Frukt och grönt">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                         </content>
                       </TitledPane>
-                        <TitledPane animated="false" text="Kött, fisk &amp; ägg">
+                        <TitledPane animated="false" prefHeight="27.0" prefWidth="254.0" text="Kött och fisk">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="77.0" />
                           </content>
                         </TitledPane>
-                        <TitledPane animated="false" text="Mejeriprodukter">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
-                        </TitledPane>
-                        <TitledPane animated="false" text="Sötsaker">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
-                        </TitledPane>
-                        <TitledPane animated="false" text="Torrvaror">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
-                        </TitledPane>
+                      <TitledPane animated="false" text="Mejeriprodukter">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </TitledPane>
                     </panes>
                   </Accordion>
                   <Pane layoutY="2.0" prefHeight="23.0" prefWidth="253.0" styleClass="paneFill">
@@ -79,8 +47,6 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <TextField layoutX="36.0" layoutY="14.0" prefHeight="26.0" prefWidth="546.0" />
                   <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sök varor" />
                   <ImageView fitHeight="35.0" fitWidth="49.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -88,12 +54,6 @@
                         <Image url="@../imat/images/forstoringsglas.png" />
                      </image>
                   </ImageView>
-=======
-                  <TextField layoutX="19.0" layoutY="14.0" prefHeight="25.0" prefWidth="565.0" promptText="Sök..." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
->>>>>>> ce3894236f373a155c09b745c1d0ec9fb5c3a6be
-=======
-                  <TextField layoutX="19.0" layoutY="14.0" prefHeight="25.0" prefWidth="565.0" promptText="Sök..." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
->>>>>>> ce3894236f373a155c09b745c1d0ec9fb5c3a6be
                </children>
             </AnchorPane>
         </items>
@@ -107,7 +67,7 @@
                   <Image url="@../imat/images/varukorg.png" />
                </image>
             </ImageView>
-            <Button layoutX="38.0" layoutY="66.0" mnemonicParsing="false" text="Se Hela Varukorgen" />
+            <Button layoutX="37.0" layoutY="66.0" mnemonicParsing="false" text="Se hela Varukorgen" />
          </children></Pane>
       <ImageView fitHeight="100.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
          <image>
