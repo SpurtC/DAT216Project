@@ -45,7 +45,16 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Pane layoutX="689.0" prefHeight="100.0" prefWidth="158.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="689.0" prefHeight="100.0" prefWidth="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="8.0" layoutY="33.0" text="Antal Varor" />
+            <Label layoutX="14.0" layoutY="58.0" text="Total Pris" />
+            <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="96.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imat/images/varukorg.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
       <ImageView fitHeight="100.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imat/images/logga.png" />
@@ -54,6 +63,24 @@
       <Pane layoutX="76.0" prefHeight="100.0" prefWidth="191.0">
          <children>
             <Label layoutX="55.0" layoutY="31.0" prefHeight="38.0" prefWidth="81.0" text="Handla">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="276.0" prefHeight="100.0" prefWidth="191.0">
+         <children>
+            <Label layoutX="39.0" layoutY="33.0" text="Kundtjänst">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="476.0" prefHeight="100.0" prefWidth="191.0">
+         <children>
+            <Label layoutX="39.0" layoutY="33.0" text="Mitt Konto">
                <font>
                   <Font size="24.0" />
                </font>
