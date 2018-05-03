@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="636.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Framsida">
+<AnchorPane prefHeight="636.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Framsida">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <items>
@@ -52,6 +52,7 @@
                         <Image url="@../imat/images/forstoringsglas.png" />
                      </image>
                   </ImageView>
+                  <Button layoutX="231.0" layoutY="204.0" mnemonicParsing="false" text="NYTT TEST" />
                </children>
             </AnchorPane>
         </items>
