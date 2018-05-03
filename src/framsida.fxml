@@ -5,10 +5,11 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Framsida">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framsida">
    <children>
       <Button layoutX="245.0" layoutY="173.0" mnemonicParsing="false" text="TRYCK PÅ MIG" />
       <CheckBox layoutX="59.0" layoutY="178.0" mnemonicParsing="false" text="Här kan du också trycka" />
       <ComboBox layoutX="170.0" layoutY="83.0" prefWidth="150.0" promptText="Hej Spurt, skål Spurt" />
+       <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Hoopas detta går" />
    </children>
 </AnchorPane>
