@@ -20,36 +20,153 @@
                <children>
                   <Accordion layoutX="26.0" layoutY="22.0" prefHeight="512.0" prefWidth="254.0" styleClass="paneFill" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
                     <panes>
-                        <TitledPane animated="false" text="Bröd">
+                        <TitledPane animated="false" prefHeight="269.0" prefWidth="254.0" text="Bröd">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="253.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Grovt bröd" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="26.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Vitt bröd" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
                           </content>
                         </TitledPane>
                         <TitledPane animated="false" text="Drycker">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Kalla drycker" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="26.0" prefHeight="23.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="3.0" text="Varma drycker" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
                           </content>
                         </TitledPane>
                       <TitledPane animated="false" styleClass="paneFill" text="Frukt och grönt">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Baljväxter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="26.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Bär" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="52.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Citrusfrukter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="78.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Exotiska frukter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="104.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Grönsaksfrukter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="130.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Kål" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="156.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Meloner" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="182.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Rotfrukter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="-1.0" layoutY="208.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Stenfrukter" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="234.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Örtkryddor" />
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
                         </content>
                       </TitledPane>
-                        <TitledPane animated="false" prefHeight="27.0" prefWidth="254.0" text="Kött, fisk och ägg">
+                        <TitledPane animated="false" prefHeight="27.0" prefWidth="254.0" text="Kött, fisk &amp; ägg">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="77.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="77.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Fisk" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="-1.0" layoutY="26.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Fläskkött" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="-1.0" layoutY="52.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Fågel" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="78.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Nötkött" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="-1.0" layoutY="104.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="5.0" text="Ägg" />
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
                           </content>
                         </TitledPane>
                       <TitledPane animated="false" text="Mejeriprodukter">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="44.0" layoutY="5.0" text="Fil &amp; yoghurt" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="26.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="44.0" layoutY="5.0" text="Mjölk" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="52.0" prefHeight="26.0" prefWidth="254.0">
+                                       <children>
+                                          <Label layoutX="47.0" layoutY="5.0" text="Ost" />
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
                         </content>
                       </TitledPane>
-                        <TitledPane animated="false" text="Sötsaker">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
-                        </TitledPane>
                         <TitledPane animated="false" text="Torrvaror">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
