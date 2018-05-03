@@ -1,0 +1,8 @@
+.paneFill {
+    -fx-background-color: linear-gradient(white, lightgray);
+}
+
+.upperPaneFill {
+    -fx-background-color: lavender;
+    -fx-border-color: darkgray;
+}
