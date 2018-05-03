@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<<<<<<< HEAD
+<?import javafx.scene.control.TextField?>
 <AnchorPane prefHeight="636.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Framsida">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
@@ -43,13 +41,5 @@
         </items>
       </SplitPane>
       <Pane layoutX="689.0" prefHeight="100.0" prefWidth="158.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-=======
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="framsida">
-   <children>
-      <Button layoutX="245.0" layoutY="173.0" mnemonicParsing="false" text="TRYCK PÅ MIG" />
-      <CheckBox layoutX="59.0" layoutY="178.0" mnemonicParsing="false" text="Här kan du också trycka" />
-      <ComboBox layoutX="170.0" layoutY="83.0" prefWidth="150.0" promptText="Hej Spurt, skål Spurt" />
-       <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Hoopas detta går" />
->>>>>>> 2ee0101bc58b53ce122b80f21d806140b96d478b
    </children>
 </AnchorPane>
