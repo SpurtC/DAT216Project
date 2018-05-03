@@ -1,0 +1,15 @@
+.categoriesText {
+    -fx-font-size: 17px;
+    -fx-font-family: "Athelas";
+}
+
+
+.header {
+    -fx-font-size: 28px;
+    -fx-font-family: "Athelas";
+}
+
+.cart {
+    -fx-font-size: 15px;
+    -fx-font-family: "Athelas";
+}
