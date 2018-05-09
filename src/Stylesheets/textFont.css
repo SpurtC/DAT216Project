@@ -13,3 +13,8 @@
     -fx-font-size: 15px;
     -fx-font-family: "Athelas";
 }
+
+#logo{
+    -fx-font-size: 64px;
+    -fx-font-family: "SignPainter";
+}
