@@ -204,7 +204,7 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Pane layoutX="689.0" prefHeight="100.0" prefWidth="191.0" styleClass="upperPaneFill" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="672.0" layoutY="-1.0" prefHeight="102.0" prefWidth="191.0" styleClass="upperPaneFill" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <children>
             <Label layoutX="13.0" layoutY="18.0" styleClass="cart" text="Antal Varor:" />
             <Label layoutX="13.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
@@ -215,7 +215,7 @@
             </ImageView>
             <Button layoutX="37.0" layoutY="66.0" mnemonicParsing="false" text="Se hela Varukorgen" />
          </children></Pane>
-      <Pane layoutX="132.0" prefHeight="100.0" prefWidth="182.0" styleClass="upperPaneFill">
+      <Pane layoutX="132.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFill">
          <children>
             <Label layoutX="51.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
                <font>
@@ -224,7 +224,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="313.0" prefHeight="100.0" prefWidth="182.0" styleClass="upperPaneFill">
+      <Pane layoutX="313.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFill">
          <children>
             <Label layoutX="31.0" layoutY="35.0" text="Kundtjänst">
                <font>
@@ -233,7 +233,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="494.0" prefHeight="100.0" prefWidth="182.0" styleClass="upperPaneFill">
+      <Pane layoutX="494.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFill">
          <children>
             <Label layoutX="36.0" layoutY="35.0" text="Mitt Konto">
                <font>
