@@ -6,3 +6,8 @@
     -fx-background-color: lavender ;
     -fx-border-color: black;
 }
+
+.upperPaneFillHover {
+    -fx-background-color: #b9aeff;
+    -fx-border-color: black;
+}

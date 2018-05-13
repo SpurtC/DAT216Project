@@ -52,7 +52,7 @@
                 </Label>
             </children>
         </Pane>
-        <Pane layoutX="494.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFill">
+        <Pane layoutX="494.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFillHover">
             <children>
                 <Label layoutX="36.0" layoutY="35.0" text="Mitt Konto">
                     <font>

@@ -215,7 +215,7 @@
             </ImageView>
             <Button layoutX="37.0" layoutY="66.0" mnemonicParsing="false" text="Se hela Varukorgen" />
          </children></Pane>
-      <Pane layoutX="132.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFill">
+      <Pane layoutX="132.0" layoutY="-1.0" prefHeight="102.0" prefWidth="182.0" styleClass="upperPaneFillHover">
          <children>
             <Label layoutX="51.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
                <font>
