@@ -18,3 +18,12 @@
     -fx-font-size: 64px;
     -fx-font-family: "SignPainter";
 }
+
+.vanligText {
+    -fx-font-size: 24 px;
+    -fx-font-family: "Athelas";
+}
+
+#menuItems {
+    -fx-fill-width: true;
+}
