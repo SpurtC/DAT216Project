@@ -1,27 +1,27 @@
 .categoriesText {
     -fx-font-size: 17px;
-    -fx-font-family: "Athelas";
+    -fx-font-family: "Times New Roman";
 }
 
 
 .header {
     -fx-font-size: 28px;
-    -fx-font-family: "Athelas";
+    -fx-font-family: "Times New Roman";
 }
 
 .cart {
     -fx-font-size: 15px;
-    -fx-font-family: "Athelas";
+    -fx-font-family: "Times New Roman";
 }
 
 #logo{
     -fx-font-size: 64px;
-    -fx-font-family: "SignPainter";
+    -fx-font-family: "Alien Encounters";
 }
 
 .vanligText {
     -fx-font-size: 20 px;
-    -fx-font-family: "Athelas";
+    -fx-font-family: "Calibri";
 }
 
 .tjockText {
