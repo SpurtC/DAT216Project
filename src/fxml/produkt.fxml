@@ -11,11 +11,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="89.0" layoutY="29.0" prefHeight="200.0" prefWidth="315.0" styleClass="upperPaneFill" stylesheets="@Stylesheets/formsFonts.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="89.0" layoutY="29.0" prefHeight="200.0" prefWidth="315.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="varaImg" fitHeight="147.0" fitWidth="207.0" layoutX="59.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imat/images/product_4.jpg" />
+                  <Image url="@../../imat/images/product_4.jpg" />
                </image>
             </ImageView>
             <Text fx:id="prisTxt" layoutX="16.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="categoriesText" text="5 kr / förpackning" textAlignment="CENTER" wrappingWidth="281.0371060371399">
@@ -31,7 +31,7 @@
             <TextField fx:id="antalTxtF" layoutX="109.0" layoutY="227.0" prefHeight="36.0" prefWidth="95.0" promptText="0" />
             <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="204.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imat/images/hjartaVit.png" />
+                  <Image url="@../../imat/images/hjartaVit.png" />
                </image>
             </ImageView>
          </children></Pane>

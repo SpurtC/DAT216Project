@@ -29,7 +29,7 @@
                 <Label layoutX="13.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
                 <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="127.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../imat/images/varukorg.png" />
+                        <Image url="@../../imat/images/varukorg.png" />
                     </image>
                 </ImageView>
                 <Button layoutX="37.0" layoutY="66.0" mnemonicParsing="false" text="Se hela Varukorgen" />
@@ -61,6 +61,6 @@
                 </Label>
             </children>
         </Pane>
-        <Label id="logo" layoutX="14.0" layoutY="15.0" stylesheets="@Stylesheets/textFont.css" text="iMAT" />
+        <Label id="logo" layoutX="14.0" layoutY="15.0" stylesheets="@../Stylesheets/textFont.css" text="iMAT" />
     </children>
 </AnchorPane>

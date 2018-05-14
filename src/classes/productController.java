@@ -1,3 +1,5 @@
+package classes;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -14,10 +16,11 @@ public class productController {
     @FXML private ImageView varaImg;
     @FXML private Button minusBtn, plusBtn;
     @FXML private TextField antalTxtF;
+    private int antal;
 
     public productController(Product product){
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("produkt.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/produkt.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -30,6 +33,7 @@ public class productController {
         this.rubrikTxt.setText(product.getName());
         this.prisTxt.setText(product.getPrice() + "");
         this.varaImg.setImage(getFXImage(product));
+        this.antalTxtF.setText(antal + "");
 
        
     }
