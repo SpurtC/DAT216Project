@@ -17,12 +17,15 @@
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="1438.0">
                <children>
-                  <Label layoutX="68.0" layoutY="46.0" styleClass="header" text="Kundtjänst" />
-                  <Label layoutX="133.0" layoutY="100.0" styleClass="vanligText" text="Vanliga frågor och svar" />
+                  <Label layoutX="24.0" layoutY="21.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Kundtjänst" />
+                  <Label layoutX="198.0" layoutY="95.0" stylesheets="@../Stylesheets/textFont.css" text="Vanliga frågor och svar">
+                     <font>
+                        <Font size="36.0" />
+                     </font></Label>
                   <Label layoutX="65.0" layoutY="435.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss" />
-                  <Accordion layoutX="200.0" layoutY="126.0" prefHeight="203.0" prefWidth="898.0" styleClass="paneFill">
+                  <Accordion layoutX="200.0" layoutY="157.0" prefHeight="203.0" prefWidth="898.0" styleClass="paneFill">
                      <panes>
                         <TitledPane animated="false" prefHeight="113.0" prefWidth="967.0" text="Hur betalar jag?">
                            <content>
@@ -62,26 +65,26 @@
                         </TitledPane>
                      </panes>
                   </Accordion>
-                  <Text layoutX="64.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer: 0730720714 (Vardagar 10-16)" />
-                  <Text layoutX="65.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: mat@imat.se" />
-                  <Text layoutX="115.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="103.76906152527454" />
-                  <Text layoutX="66.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:" />
-                  <Line endX="400.0" layoutX="139.0" layoutY="484.0" startX="-75.0" />
+                  <Text layoutX="64.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer: 0730720714 (Vardagar 10-16)" />
+                  <Text layoutX="65.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: mat@imat.se" />
+                  <Text layoutX="115.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="103.76906152527454" />
+                  <Text layoutX="65.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:" />
+                  <Line endX="400.0" layoutX="139.0" layoutY="470.0" startX="-75.0" />
                </children></AnchorPane>
             </items>
         </SplitPane>
-        <Pane layoutX="1113.0" layoutY="-1.0" prefHeight="102.0" prefWidth="266.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+        <Pane layoutX="1174.0" layoutY="-1.0" prefHeight="102.0" prefWidth="254.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
             <children>
-                <Label layoutX="14.0" layoutY="18.0" styleClass="cart" text="Antal Varor:" />
-                <Label layoutX="14.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
-                <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="131.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="136.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../imat/images/varukorg.png" />
                     </image>
                 </ImageView>
+                <Label layoutX="14.0" layoutY="18.0" styleClass="cart" text="Antal Varor:" />
+                <Label layoutX="14.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
                 <Button layoutX="64.0" layoutY="60.0" mnemonicParsing="false" text="Se hela Varukorgen" />
             </children></Pane>
-        <Pane layoutX="260.0" layoutY="-1.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+        <Pane layoutX="260.0" layoutY="-1.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
             <children>
                 <Label layoutX="83.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
                     <font>
@@ -90,27 +93,32 @@
                 </Label>
             </children>
         </Pane>
-        <Pane layoutX="564.0" layoutY="-1.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
+        <Pane layoutX="517.0" layoutY="-1.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
             <children>
-                <Label layoutX="72.0" layoutY="36.0" text="Kundtjänst">
+                <Label layoutX="65.0" layoutY="36.0" text="Kundtjänst">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Label>
             </children>
         </Pane>
-        <Pane layoutX="869.0" layoutY="-1.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css">
+        <Pane layoutX="774.0" layoutY="-1.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css">
             <children>
-                <Label layoutX="89.0" layoutY="39.0" text="Mitt Konto">
+                <Label layoutX="70.0" layoutY="37.0" text="Mitt Konto">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Label>
             </children>
         </Pane>
-        <Label id="logo" layoutX="14.0" layoutY="15.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
-         <font>
-            <Font size="42.0" />
-         </font></Label>
+      <Pane layoutY="-1.0" prefHeight="102.0" prefWidth="261.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+         <children>
+              <Label id="logo" layoutX="51.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
