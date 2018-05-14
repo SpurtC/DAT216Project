@@ -15,7 +15,7 @@ public class Main extends Application{
 
             ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
 
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/framsida.fxml"), bundle);
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/kundinformation.fxml"), bundle);
 
             Scene scene = new Scene(root, 1440, 800);
 

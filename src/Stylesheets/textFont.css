@@ -20,8 +20,14 @@
 }
 
 .vanligText {
-    -fx-font-size: 24 px;
+    -fx-font-size: 20 px;
     -fx-font-family: "Athelas";
+}
+
+.tjockText {
+    -fx-font-size: 20 px;
+    -fx-font-family: "Athelas";
+    -fx-fill-width: bold;
 }
 
 #menuItems {
