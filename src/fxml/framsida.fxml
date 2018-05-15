@@ -2,21 +2,23 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.Main">
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ProductController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Pane layoutY="25.0" prefHeight="43.0" prefWidth="426.0" styleClass="paneFill">
+                  <Pane fx:id="minaFavoriterCtg" layoutY="25.0" prefHeight="43.0" prefWidth="426.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Mina favoriter">
                            <font>
@@ -24,7 +26,7 @@
                            </font></Label>
                      </children>
                   </Pane>
-                  <Pane layoutY="69.0" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
+                  <Pane fx:id="breadCtg" layoutX="-2.0" layoutY="68.0" onMouseClicked="#clickedBreadCtg" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Bröd">
                            <font>
@@ -33,7 +35,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutY="113.0" prefHeight="43.0" prefWidth="427.0" styleClass="paneFill">
+                  <Pane fx:id="drinksCtg" layoutY="113.0" prefHeight="43.0" prefWidth="427.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Drycker">
                            <font>
@@ -42,7 +44,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutY="157.0" prefHeight="43.0" prefWidth="427.0" styleClass="paneFill">
+                  <Pane fx:id="fruitCtg" layoutY="157.0" prefHeight="43.0" prefWidth="427.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Frukt och Grönt">
                            <font>
@@ -51,7 +53,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="-1.0" layoutY="201.0" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
+                  <Pane fx:id="meatCtg" layoutX="-1.0" layoutY="200.0" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Kött, Fisk &amp; Fågel">
                            <font>
@@ -60,7 +62,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="-1.0" layoutY="245.0" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
+                  <Pane fx:id="dairyCtg" layoutX="-1.0" layoutY="245.0" prefHeight="43.0" prefWidth="429.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Mejeriprodukter">
                            <font>
@@ -69,7 +71,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutY="290.0" prefHeight="43.0" prefWidth="426.0" styleClass="paneFill">
+                  <Pane fx:id="sweetsCtg" layoutY="290.0" prefHeight="43.0" prefWidth="426.0" styleClass="paneFill">
                      <children>
                         <Label layoutX="23.0" layoutY="2.0" text="Sötsaker">
                            <font>
@@ -98,6 +100,11 @@
                      </image>
                   </ImageView>
                   <Button layoutX="920.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" text="Sök" />
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                     <content>
+                        <FlowPane fx:id="resultFlowPane" prefHeight="648.0" prefWidth="1007.0" />
+                     </content>
+                  </ScrollPane>
                </children>
             </AnchorPane>
         </items>
@@ -119,7 +126,7 @@
       </Pane>
       <Pane layoutX="871.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
-            <Label layoutX="102.0" layoutY="36.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Mina Sidor" />
+            <Label layoutX="90.0" layoutY="36.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Mina Sidor" />
          </children>
       </Pane>
       <Pane layoutX="1174.0" prefHeight="102.0" prefWidth="266.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
