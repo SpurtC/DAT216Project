@@ -4,13 +4,18 @@
 }
 
 
-.header {
+.categoriesText {
     -fx-font-size: 30px;
     -fx-font-family: "Times New Roman";
 }
 
 .cart {
     -fx-font-size: 15px;
+    -fx-font-family: "Times New Roman";
+}
+
+.header {
+    -fx-font-size: 40px;
     -fx-font-family: "Times New Roman";
 }
 

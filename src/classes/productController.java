@@ -1,54 +1,144 @@
 package classes;
 
-
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.*;
 
-public class productController {
-    @FXML private Text rubrikTxt, prisTxt;
-    @FXML private ImageView varaImg;
-    @FXML private Button minusBtn, plusBtn;
-    @FXML private TextField antalTxtF;
-    private int antal;
+public class ProductController implements Initializable{
 
-    public productController(Product product){
+    private ProductCategory category;
+    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/produkt.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
 
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
+    private List<Product> allProducts = iMatDataHandler.getProducts();
+    private List<Product> currentList = new ArrayList<>();
+    private Map<String, ProductItem> productsListItemMap = new HashMap<>();
+
+    @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
+    @FXML FlowPane resultFlowPane;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        List<Product> products = iMatDataHandler.getProducts();
+        updateFlowPane(products);
+    }
+
+    public void updateFlowPane(List<Product> list) {
+        resultFlowPane.getChildren().clear();
+        for (Product aProduct : list){
+            ProductItem productItem = new ProductItem(aProduct);
+            productsListItemMap.put(aProduct.getName(), productItem);
+            resultFlowPane.getChildren().add(productsListItemMap.get(aProduct.getName()));
         }
-
-        this.rubrikTxt.setText(product.getName());
-        this.prisTxt.setText(product.getPrice() + "");
-        this.varaImg.setImage(getFXImage(product));
-        this.antalTxtF.setText(antal + "");
-
-       
     }
 
-    public Image getFXImage(Product product) {
-        return new Image("file:" + product.getImageName());
+    public void clickedMinaFavoriter() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++){
+            if (iMatDataHandler.isFavorite(allProducts.get(i))){
+                currentList.add(allProducts.get(i));
+            }
+        }
     }
 
+    public void clickedBreadCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.BREAD){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedDrinksCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.COLD_DRINKS || allProducts.get(i).getCategory() == ProductCategory.HOT_DRINKS){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedFruitCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.CABBAGE ||
+                    allProducts.get(i).getCategory() == ProductCategory.CITRUS_FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.EXOTIC_FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.MELONS ||
+                    allProducts.get(i).getCategory() == ProductCategory.FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.ROOT_VEGETABLE ||
+                    allProducts.get(i).getCategory() == ProductCategory.VEGETABLE_FRUIT){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedNutCtg() {
+        currentList.clear();
+        for (int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.NUTS_AND_SEEDS ||
+                    allProducts.get(i).getCategory() == ProductCategory.HERB ||
+                    allProducts.get(i).getCategory() == ProductCategory.BERRY ||
+                    allProducts.get(i).getCategory() == ProductCategory.POD){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+        public void clickedMeatCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.MEAT ||
+                    allProducts.get(i).getCategory() == ProductCategory.FISH){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedDairyCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.DAIRIES){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedSweetsCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.SWEET){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
+    public void clickedDryCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.PASTA ||
+                    allProducts.get(i).getCategory() == ProductCategory.FLOUR_SUGAR_SALT ||
+                    allProducts.get(i).getCategory() == ProductCategory.POTATO_RICE){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
 
 }
