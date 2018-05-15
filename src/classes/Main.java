@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 
 public class Main extends Application{
@@ -13,18 +14,19 @@ public class Main extends Application{
     @Override
     public void start(Stage stage) throws Exception {
 
-            ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
+        ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
 
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/framsida.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/framsida.fxml"), bundle);
+       // Parent root = (Parent) FXMLLoader.load(Main.class.getResource("/fxml/framsida.fxml"));
 
-            Scene scene = new Scene(root, 1440, 800);
+        Scene scene = new Scene(root, 1440, 800);
 
-            stage.setTitle(bundle.getString("application.name"));
-            stage.setScene(scene);
-            stage.show();
+        stage.setTitle(bundle.getString("application.name"));
+        stage.setScene(scene);
+        stage.show();
 
 
-            }
+    }
            /* @Override
             public void stop*/
 
