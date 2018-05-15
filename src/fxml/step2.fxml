@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="1182.0" layoutY="2.0" prefHeight="102.0" prefWidth="254.0" styleClass="upperPaneFillHover" stylesheets="@formsFonts.css">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="136.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imat/images/varukorg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="18.0" styleClass="cart" text="Antal Varor:" />
+            <Label layoutX="14.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
+            <Button layoutX="64.0" layoutY="60.0" mnemonicParsing="false" text="Se hela Varukorgen" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="144.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imat/images/varukorg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="22.0" layoutY="19.0" styleClass="cart" text="Antal Varor:" />
+      <Label layoutX="24.0" layoutY="48.0" styleClass="cart" text="Total Pris:" />
+      <Button layoutX="72.0" layoutY="62.0" mnemonicParsing="false" text="Se hela Varukorgen" />
+      <Pane layoutX="268.0" layoutY="2.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+         <children>
+            <Label layoutX="83.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="91.0" layoutY="32.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="525.0" layoutY="2.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+         <children>
+            <Label layoutX="65.0" layoutY="36.0" text="Kundtjänst">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="73.0" layoutY="38.0" text="Kundtjänst">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="782.0" layoutY="2.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css">
+         <children>
+            <Label layoutX="70.0" layoutY="37.0" text="Mitt Konto">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="78.0" layoutY="39.0" text="Mitt Konto">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="8.0" layoutY="2.0" prefHeight="102.0" prefWidth="271.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+         <children>
+            <Label id="logo" layoutX="51.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label id="logo" layoutX="59.0" layoutY="13.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <Pane layoutX="1226.0" layoutY="234.0" prefHeight="419.0" prefWidth="212.0" styleClass="upperPaneFill">
+         <children>
+            <RadioButton layoutX="7.0" layoutY="61.0" mnemonicParsing="false" text="08:00-10:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="7.0" layoutY="157.0" mnemonicParsing="false" text="10:00-12:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="9.0" layoutY="250.0" mnemonicParsing="false" text="14:00-16:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="11.0" layoutY="347.0" mnemonicParsing="false" text="16:00-18:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="825.0" layoutY="225.0" prefHeight="426.0" prefWidth="218.0" styleClass="upperPaneFill">
+         <children>
+            <RadioButton layoutX="15.0" layoutY="74.0" mnemonicParsing="false" text="08:00-10:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="15.0" layoutY="170.0" mnemonicParsing="false" text="10:00-12:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="17.0" layoutY="263.0" mnemonicParsing="false" text="14:00-16:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="19.0" layoutY="360.0" mnemonicParsing="false" text="16:00-18:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="23.0" layoutY="235.0" prefHeight="438.0" prefWidth="198.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+         <children>
+            <RadioButton layoutX="3.0" layoutY="66.0" mnemonicParsing="false" text="08:00-10:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="3.0" layoutY="162.0" mnemonicParsing="false" text="10:00-12:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="5.0" layoutY="255.0" mnemonicParsing="false" text="14:00-16:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="7.0" layoutY="352.0" mnemonicParsing="false" text="16:00-18:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Pane layoutX="420.0" layoutY="231.0" prefHeight="428.0" prefWidth="210.0" styleClass="upperPaneFill">
+         <children>
+            <RadioButton layoutX="10.0" layoutY="72.0" mnemonicParsing="false" text="08:00-10:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="10.0" layoutY="168.0" mnemonicParsing="false" text="10:00-12:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="12.0" layoutY="261.0" mnemonicParsing="false" text="14:00-16:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="14.0" layoutY="358.0" mnemonicParsing="false" text="16:00-18:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <Text fill="#4f10a1" layoutX="21.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj leveranstillfälle">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag 3/3" wrappingWidth="226.99999856948853">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="242.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag 4/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="436.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag 5/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="640.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag 6/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="853.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag 7/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="1052.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lördag 8/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="1247.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Söndag 9/3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fill="#45585e" layoutX="547.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 2 av 3">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <RadioButton layoutX="228.0" layoutY="301.0" mnemonicParsing="false" text="08:00-10:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="228.0" layoutY="397.0" mnemonicParsing="false" text="10:00-12:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="230.0" layoutY="490.0" mnemonicParsing="false" text="14:00-16:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="232.0" layoutY="587.0" mnemonicParsing="false" text="16:00-18:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="636.0" layoutY="303.0" mnemonicParsing="false" text="08:00-10:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="636.0" layoutY="399.0" mnemonicParsing="false" text="10:00-12:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="640.0" layoutY="492.0" mnemonicParsing="false" text="14:00-16:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="642.0" layoutY="589.0" mnemonicParsing="false" text="16:00-18:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="1043.0" layoutY="294.0" mnemonicParsing="false" text="08:00-10:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="1043.0" layoutY="390.0" mnemonicParsing="false" text="10:00-12:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="1045.0" layoutY="483.0" mnemonicParsing="false" text="14:00-16:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="1047.0" layoutY="580.0" mnemonicParsing="false" text="16:00-18:00">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

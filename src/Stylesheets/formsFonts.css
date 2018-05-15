@@ -11,3 +11,13 @@
     -fx-background-color: #b9aeff;
     -fx-border-color: black;
 }
+
+.exitColor {
+    -fx-background-color: #e0a8a8;
+    -fx-border-color: black;
+}
+
+.buyColor {
+    -fx-background-color: #99e482;
+    -fx-border-color: black;
+}
