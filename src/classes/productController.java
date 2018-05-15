@@ -22,7 +22,7 @@ public class ProductController implements Initializable{
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
 
-    @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg;
+    @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
     @FXML FlowPane resultFlowPane;
 
     @Override
@@ -72,17 +72,37 @@ public class ProductController implements Initializable{
     public void clickedFruitCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getCategory() == ProductCategory.BREAD){
+            if (allProducts.get(i).getCategory() == ProductCategory.CABBAGE ||
+                    allProducts.get(i).getCategory() == ProductCategory.CITRUS_FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.EXOTIC_FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.MELONS ||
+                    allProducts.get(i).getCategory() == ProductCategory.FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.ROOT_VEGETABLE ||
+                    allProducts.get(i).getCategory() == ProductCategory.VEGETABLE_FRUIT){
                 currentList.add(allProducts.get(i));
             }
         }
         updateFlowPane(currentList);
     }
 
-    public void clickedMeatCtg() {
+    public void clickedNutCtg() {
+        currentList.clear();
+        for (int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getCategory() == ProductCategory.NUTS_AND_SEEDS ||
+                    allProducts.get(i).getCategory() == ProductCategory.HERB ||
+                    allProducts.get(i).getCategory() == ProductCategory.BERRY ||
+                    allProducts.get(i).getCategory() == ProductCategory.POD){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
+
+        public void clickedMeatCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getCategory() == ProductCategory.MEAT || allProducts.get(i).getCategory() == ProductCategory.FISH){
+            if (allProducts.get(i).getCategory() == ProductCategory.MEAT ||
+                    allProducts.get(i).getCategory() == ProductCategory.FISH){
                 currentList.add(allProducts.get(i));
             }
         }
@@ -92,7 +112,7 @@ public class ProductController implements Initializable{
     public void clickedDairyCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getCategory() == ProductCategory.BREAD){
+            if (allProducts.get(i).getCategory() == ProductCategory.DAIRIES){
                 currentList.add(allProducts.get(i));
             }
         }
@@ -102,7 +122,7 @@ public class ProductController implements Initializable{
     public void clickedSweetsCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getCategory() == ProductCategory.BREAD){
+            if (allProducts.get(i).getCategory() == ProductCategory.SWEET){
                 currentList.add(allProducts.get(i));
             }
         }
@@ -112,7 +132,9 @@ public class ProductController implements Initializable{
     public void clickedDryCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getCategory() == ProductCategory.BREAD){
+            if (allProducts.get(i).getCategory() == ProductCategory.PASTA ||
+                    allProducts.get(i).getCategory() == ProductCategory.FLOUR_SUGAR_SALT ||
+                    allProducts.get(i).getCategory() == ProductCategory.POTATO_RICE){
                 currentList.add(allProducts.get(i));
             }
         }
