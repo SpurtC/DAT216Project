@@ -36,7 +36,19 @@ public class ProductItem extends AnchorPane {
         this.prisTxt.setText(product.getPrice() + "");
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.antalTxtF.setText(antal + "");
+    }
 
-       
+    public void clickedMnsBtn() {
+        if (antal > 0) {
+            antal--;
+            this.antalTxtF.setText(antal + "");
+        }
+    }
+
+    public void clickedPlsBtn() {
+        if (antal < 99) {
+            antal++;
+            this.antalTxtF.setText(antal + "");
+        }
     }
 }

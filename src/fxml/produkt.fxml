@@ -34,8 +34,8 @@
                   <Image url="@../../imat/images/hjartaVit.png" />
                </image>
             </ImageView>
-            <Button fx:id="plusBtn" layoutX="210.0" layoutY="219.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" text="+" />
-            <Button fx:id="minusBtn" layoutX="47.0" layoutY="219.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" text="–" />
+            <Button fx:id="plusBtn" layoutX="210.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="36.0" prefWidth="36.0" text="+" />
+            <Button fx:id="minusBtn" layoutX="47.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="36.0" prefWidth="36.0" text="–" />
          </children></Pane>
    </children>
 </fx:root>
