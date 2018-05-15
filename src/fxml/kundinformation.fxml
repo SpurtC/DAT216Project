@@ -19,7 +19,6 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="1438.0">
                <children>
-                  <Label layoutX="24.0" layoutY="21.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Kundtjänst" />
                   <Label layoutX="198.0" layoutY="95.0" stylesheets="@../Stylesheets/textFont.css" text="Vanliga frågor och svar">
                      <font>
                         <Font size="36.0" />
