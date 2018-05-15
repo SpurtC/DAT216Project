@@ -6,6 +6,7 @@
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/*
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -50,3 +51,5 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 .DS_Store
+*.xml
+.idea/misc.xml

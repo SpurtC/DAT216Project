@@ -1,12 +1,8 @@
 package classes;
 
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -18,7 +14,7 @@ import java.net.URL;
 import java.util.*;
 
 
-public class ProductController implements Initializable{
+public class ProductController implements Initializable {
 
     private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -28,8 +24,10 @@ public class ProductController implements Initializable{
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
 
-    @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
-    @FXML FlowPane resultFlowPane;
+    @FXML
+    private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
+    @FXML
+    FlowPane resultFlowPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -155,4 +153,5 @@ public class ProductController implements Initializable{
         productController.changeToHandla()
     });*/
 }
+
 
