@@ -123,22 +123,22 @@
             <Label id="logo" layoutX="52.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMat" />
          </children>
       </Pane>
-      <Pane layoutX="260.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
+      <Pane layoutX="260.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
-            <Label layoutX="107.0" layoutY="36.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Handla" />
+            <Label layoutX="95.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Handla" />
          </children>
       </Pane>
-      <Pane layoutX="565.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
+      <Pane layoutX="565.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
-            <Label layoutX="86.0" layoutY="36.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Kundtjänst" />
+            <Label layoutX="65.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Kundtjänst" />
          </children>
       </Pane>
-      <Pane layoutX="871.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
+      <Pane layoutX="871.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
-            <Label layoutX="90.0" layoutY="36.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Mina Sidor" />
+            <Label layoutX="62.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Mina Sidor" />
          </children>
       </Pane>
-      <Pane layoutX="1174.0" prefHeight="102.0" prefWidth="266.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
+      <Pane layoutX="1174.0" prefHeight="102.0" prefWidth="266.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
             <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="181.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>

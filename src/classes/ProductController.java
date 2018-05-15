@@ -1,21 +1,19 @@
 package classes;
 
+import javafx.scene.control.TextField;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.List;
 
 
 public class ProductController implements Initializable{
@@ -30,6 +28,7 @@ public class ProductController implements Initializable{
 
     @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
     @FXML FlowPane resultFlowPane;
+    @FXML TextField searchBar;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -145,6 +144,10 @@ public class ProductController implements Initializable{
             }
         }
         updateFlowPane(currentList);
+    }
+
+    public void searchBar() {
+        //Skriv Skit Här
     }
 
     public void changeToHandla() throws IOException {
