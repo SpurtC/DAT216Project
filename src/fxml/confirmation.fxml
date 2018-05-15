@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="1179.0" layoutY="6.0" prefHeight="102.0" prefWidth="254.0" styleClass="upperPaneFillHover" stylesheets="@formsFonts.css">
+      <Pane layoutX="1179.0" layoutY="6.0" prefHeight="102.0" prefWidth="254.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
             <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="136.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -32,7 +32,7 @@
       <Label layoutX="24.0" layoutY="28.0" styleClass="cart" text="Antal Varor:" />
       <Label layoutX="24.0" layoutY="48.0" styleClass="cart" text="Total Pris:" />
       <Button layoutX="74.0" layoutY="70.0" mnemonicParsing="false" text="Se hela Varukorgen" />
-      <Pane layoutX="278.0" layoutY="12.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+      <Pane layoutX="278.0" layoutY="12.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
             <Label layoutX="83.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
                <font>
@@ -46,7 +46,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Pane layoutX="535.0" layoutY="12.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+      <Pane layoutX="535.0" layoutY="12.0" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
             <Label layoutX="65.0" layoutY="36.0" text="Kundtjänst">
                <font>
@@ -74,7 +74,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Pane layoutX="18.0" layoutY="12.0" prefHeight="102.0" prefWidth="271.0" styleClass="upperPaneFill" stylesheets="@formsFonts.css">
+      <Pane layoutX="18.0" layoutY="12.0" prefHeight="102.0" prefWidth="271.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
          <children>
             <Label id="logo" layoutX="51.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
                <font>
@@ -103,7 +103,7 @@
             <Font size="48.0" />
          </font>
       </Text>
-      <Button layoutX="578.0" layoutY="625.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" text="Klar">
+      <Button layoutX="578.0" layoutY="625.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="217.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" text="Klar">
          <font>
             <Font size="36.0" />
          </font>

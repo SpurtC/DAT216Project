@@ -103,11 +103,6 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Text layoutX="861.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 3 av 3">
-                           <font>
-                              <Font size="36.0" />
-                           </font>
-                        </Text>
                         <Text layoutX="794.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer">
                            <font>
                               <Font size="24.0" />
@@ -132,6 +127,11 @@
                         <TextField layoutX="999.0" layoutY="157.0" prefHeight="35.0" prefWidth="381.0" />
                         <TextField layoutX="1000.0" layoutY="199.0" prefHeight="35.0" prefWidth="381.0" />
                         <TextField layoutX="1000.0" layoutY="242.0" prefHeight="35.0" prefWidth="381.0" />
+                        <Text fill="#45585e" layoutX="576.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 3 av 3">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
                </items>
