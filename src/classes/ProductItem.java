@@ -58,5 +58,7 @@ public class ProductItem extends AnchorPane {
         }
         if (antal == 0)
             antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
+
+        
     }
 }

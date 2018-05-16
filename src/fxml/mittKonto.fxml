@@ -33,8 +33,8 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="258.0" layoutY="474.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="142.0" text="Fortsätt handla" />
-                  <Button layoutX="531.0" layoutY="474.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="57.0" prefWidth="119.0" text="Spara ändringar" />
+                  <Button fx:id="mittKontoHandla" layoutX="258.0" layoutY="474.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="142.0" text="Fortsätt handla" />
+                  <Button fx:id="mittKontoSpara" layoutX="531.0" layoutY="474.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="57.0" prefWidth="119.0" text="Spara ändringar" />
                   <Label layoutX="115.0" layoutY="76.0" text="MINA UPPGIFTER" underline="true">
                      <font>
                         <Font name="System Bold" size="17.0" />
