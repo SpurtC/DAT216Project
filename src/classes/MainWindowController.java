@@ -29,9 +29,6 @@ public class MainWindowController extends Controller{
     public void init() {
         makeAfxmlList();
 
-
-        System.out.println("Main");
-
         spManager = new SPManager(stackPaneMain, fxmlFileList);
         spManager.showPane("../fxml/framsida.fxml");
         makeAMap();
@@ -49,9 +46,7 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/confirmation.fxml");
         fxmlFileList.add("../fxml/framsida.fxml");
         fxmlFileList.add("../fxml/kundinformation.fxml");
-        fxmlFileList.add("../fxml/minaFavoriter.fxml");
-        fxmlFileList.add("../fxml/mittKonto.fxml");
-        fxmlFileList.add("../fxml/tidigareKop.fxml");
+        fxmlFileList.add("../fxml/mittKontoMain.fxml");
         fxmlFileList.add("../fxml/varukorg.fxml");
     }
 
@@ -69,12 +64,12 @@ public class MainWindowController extends Controller{
 
     @FXML
     public void onMittKontoClicked() {
-        spManager.showPane("../fxml/mittKonto.fxml");
+        spManager.showPane("../fxml/mittKontoMain.fxml");
         cssManager.changeCSS("mittKontoPane");
     }
 
     @FXML
-    public void onVarukorgClicked() {
+    public void onVarukorgClicked () {
         spManager.showPane("../fxml/varukorg.fxml");
         cssManager.changeCSS("varukorgPane");
 
