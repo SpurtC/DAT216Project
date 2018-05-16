@@ -56,5 +56,10 @@ public class MainWindowController extends Controller{
     public void onMittKontoClicked() {
         spManager.showPane("../fxml/mittKonto.fxml");
     }
+
+    @FXML
+    public void onVarukorgClicked() {
+        spManager.showPane("../fxml/varkorg.fxml");
+    }
 }
 
