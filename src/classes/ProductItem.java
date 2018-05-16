@@ -33,7 +33,7 @@ public class ProductItem extends AnchorPane {
         }
 
         this.rubrikTxt.setText(product.getName());
-        this.prisTxt.setText(product.getPrice() + "");
+        this.prisTxt.setText(product.getPrice() + " kr");
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.antalTxtF.setText(antal + "");
     }

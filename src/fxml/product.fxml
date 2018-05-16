@@ -28,14 +28,14 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <TextField fx:id="antalTxtF" layoutX="122.0" layoutY="217.0" prefHeight="45.0" prefWidth="45.0" promptText="0" />
+            <TextField fx:id="antalTxtF" layoutX="113.0" layoutY="217.0" prefHeight="45.0" prefWidth="65.0" promptText="0" />
             <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="192.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../imat/images/hjartaVit.png" />
                </image>
             </ImageView>
-            <Button fx:id="plusBtn" layoutX="177.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
-            <Button fx:id="minusBtn" layoutX="67.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
+            <Button fx:id="plusBtn" layoutX="198.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
+            <Button fx:id="minusBtn" layoutX="47.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
          </children></Pane>
    </children>
 </fx:root>
