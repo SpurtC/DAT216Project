@@ -22,7 +22,7 @@ public class ProductItem extends AnchorPane {
 
     public ProductItem(Product product){
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/produkt.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/product.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

@@ -23,4 +23,11 @@ public class VarukorgItem {
           //  shoppingCart.addItem(ShoppingItem sci);
         }
     }
+
+    public void clickedMinusBtn() {
+        if (antal < 99) {
+            antal++;
+            this.antalTxtF.setText(antal + "");
+        }
+    }
 }

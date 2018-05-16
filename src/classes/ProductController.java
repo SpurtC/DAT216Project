@@ -16,7 +16,7 @@ import java.util.*;
 import java.util.List;
 
 
-public class ProductController implements Initializable{
+public class ProductController extends Controller implements Initializable{
 
     private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -152,6 +152,11 @@ public class ProductController implements Initializable{
 
     public void changeToHandla() throws IOException {
         FXMLLoader.load(getClass().getResource("/fxml/kundinformation.fxml"));
+    }
+
+    @Override
+    public void init() {
+
     }
 
    /* super.setOnMouseClicked(event -> {
