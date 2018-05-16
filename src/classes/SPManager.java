@@ -58,8 +58,12 @@ public class SPManager {
                  otherPage.PANE.setOpacity(0.5);
              }
         }
+        if(map.get(fxml).CONTROLLER != null){
+            map.get(fxml).CONTROLLER.opened();
+        }else{
+            System.out.println("WARN: " + fxml + " har ingen controller som extendar Controller. Plz fix ");
+        }
 
-        map.get(fxml).CONTROLLER.opened();
     }
 
     private class Page{

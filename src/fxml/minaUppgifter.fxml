@@ -13,7 +13,7 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button layoutX="446.0" layoutY="455.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="142.0" text="Fortsätt handla" />
+                  <Button layoutX="446.0" layoutY="455.0" mnemonicParsing="false" onAction="#onContinueShopMyAccountClicked" prefHeight="57.0" prefWidth="142.0" text="Fortsätt handla" />
                   <Button layoutX="719.0" layoutY="455.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="57.0" prefWidth="119.0" text="Spara ändringar" />
                   <Label layoutX="303.0" layoutY="57.0" text="MINA UPPGIFTER" underline="true">
                      <font>

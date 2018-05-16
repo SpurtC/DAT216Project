@@ -53,8 +53,13 @@ public class MittKontoMainController extends Controller{
     @Override
     public void init() {
         makeAnFxmlList();
-        spManager = new SPManager(stackPaneMittKonto, fxmlFileListMittKonto);
-        spManager.showPane("../fxml/minaUppgifter.fxml");
         makeAMapMittKonto();
+        spManager = new SPManager(stackPaneMittKonto, fxmlFileListMittKonto);
+    }
+
+    @Override
+    public void opened() {
+        spManager.showPane("../fxml/minaUppgifter.fxml");
+
     }
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.TidigareKopController">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -33,7 +33,7 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="144.0" text="Fortsätt handla" />
+                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="50.0" prefWidth="144.0" text="Fortsätt handla" />
                   <Label layoutX="148.0" layoutY="62.0" text="Datum">
                      <font>
                         <Font name="System Bold" size="23.0" />

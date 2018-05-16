@@ -14,10 +14,10 @@ public class MainWindowController extends Controller{
     @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
 
     List<String> fxmlFileList = new ArrayList<>();
-    Map<String, Pane> stringPaneMap = new HashMap<>();
+    static Map<String, Pane> stringPaneMap = new HashMap<>();
 
     public static SPManager spManager;
-    CSSManager cssManager = new CSSManager(stringPaneMap);
+    public static CSSManager cssManager = new CSSManager(stringPaneMap);
 
 
 
@@ -28,10 +28,15 @@ public class MainWindowController extends Controller{
     @Override
     public void init() {
         makeAfxmlList();
+        makeAMap();
 
         spManager = new SPManager(stackPaneMain, fxmlFileList);
+    }
+
+    @Override
+    public void opened() {
         spManager.showPane("../fxml/framsida.fxml");
-        makeAMap();
+        cssManager.changeCSS("handlaPane");
     }
 
     public void makeAMap () {

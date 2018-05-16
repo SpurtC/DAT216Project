@@ -17,6 +17,8 @@ public class MinaUppgifterController extends Controller{
     @FXML
     Label confirmation;
 
+    SPManager spManager;
+
 
     public void setFirstName() {
         iMatDataHandler.getCustomer().setFirstName(firstName.getText());
@@ -224,6 +226,12 @@ public class MinaUppgifterController extends Controller{
             }
         }
         return false;
+    }
+
+    @FXML
+    public void onContinueShopMyAccountClicked () {
+        MainWindowController.spManager.showPane("../fxml/framsida.fxml");
+        MainWindowController.cssManager.changeCSS("handlaPane");
     }
 
     @Override

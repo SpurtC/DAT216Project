@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaFavoriterController">
    <children>
       <SplitPane prefHeight="650.0" prefWidth="1440.0">
          <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <AnchorPane layoutX="268.0" layoutY="-39.0" prefHeight="50.0" prefWidth="861.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutX="80.0" layoutY="448.0" mnemonicParsing="false" text="Fortsätt handla" />
+                  <Button layoutX="80.0" layoutY="448.0" mnemonicParsing="false" onAction="#onContinueShopMyFavoritesClicked" text="Fortsätt handla" />
                   <Label layoutX="80.0" layoutY="70.0" text="MINA FAVORITER" underline="true">
                      <font>
                         <Font name="System Bold" size="17.0" />
