@@ -1,21 +1,48 @@
 package classes;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.ResourceBundle;
+import java.util.Map;
 
 public class MainWindowController extends Controller{
 
     @FXML private StackPane stackPaneMain;
+    @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
 
-    List<String> fxmlFileList = new ArrayList<String>();
+    List<String> fxmlFileList = new ArrayList<>();
+    Map<String, Pane> stringPaneMap = new HashMap<>();
 
     SPManager spManager;
+    CSSManager cssManager = new CSSManager(stringPaneMap);
+
+
+
+    public List<String> getFxmlFilesList() {
+        return fxmlFileList;
+    }
+
+    @Override
+    public void init() {
+        makeAfxmlList();
+
+
+        System.out.println("Main");
+
+        spManager = new SPManager(stackPaneMain, fxmlFileList);
+        spManager.showPane("../fxml/framsida.fxml");
+        makeAMap();
+    }
+
+    public void makeAMap () {
+        stringPaneMap.put("handlaPane", handlaPane );
+        stringPaneMap.put("kundtjanstPane", kundtjanstPane );
+        stringPaneMap.put("mittKontoPane", mittKontoPane );
+        stringPaneMap.put("varukorgPane", varukorgPane );
+    }
 
     private void makeAfxmlList() {
         fxmlFileList.add("../fxml/betalning.fxml");
@@ -28,38 +55,31 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/varukorg.fxml");
     }
 
-    public List<String> getFxmlFilesList() {
-        return fxmlFileList;
-    }
-
-    @Override
-    public void init() {
-        makeAfxmlList();
-
-        System.out.println("Main");
-
-        spManager = new SPManager(stackPaneMain, fxmlFileList);
-        spManager.showPane("../fxml/framsida.fxml");
-    }
-
     @FXML
     public void onKundtjanstClicked() {
         spManager.showPane("../fxml/kundinformation.fxml");
+        cssManager.changeCSS("kundtjanstPane");
     }
 
     @FXML
     public void onHandlaClicked() {
         spManager.showPane("../fxml/framsida.fxml");
+        cssManager.changeCSS("handlaPane");
     }
 
     @FXML
     public void onMittKontoClicked() {
         spManager.showPane("../fxml/mittKonto.fxml");
+        cssManager.changeCSS("mittKontoPane");
     }
 
     @FXML
     public void onVarukorgClicked() {
         spManager.showPane("../fxml/varukorg.fxml");
+        cssManager.changeCSS("varukorgPane");
+
     }
+
+
 }
 
