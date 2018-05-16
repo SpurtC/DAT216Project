@@ -150,17 +150,9 @@ public class ProductController extends Controller implements Initializable{
         //Skriv Skit Här
     }
 
-    public void changeToHandla() throws IOException {
-        FXMLLoader.load(getClass().getResource("/fxml/kundinformation.fxml"));
-    }
-
     @Override
     public void init() {
 
     }
-
-   /* super.setOnMouseClicked(event -> {
-        productController.changeToHandla()
-    });*/
 }
 
