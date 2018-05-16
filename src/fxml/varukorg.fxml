@@ -8,11 +8,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
-=======
 <AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.VarukorgController">
->>>>>>> fa8b0b61da38faf266460f278abfbfc377a0b570
     <children>
         <SplitPane layoutX="170.0" layoutY="-10.0" prefHeight="700.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>

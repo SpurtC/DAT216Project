@@ -58,6 +58,7 @@ public class SPManager {
              }
         }
 
+        map.get(fxml).CONTROLLER.opened();
         pane.setOpacity(1.0);
     }
 
