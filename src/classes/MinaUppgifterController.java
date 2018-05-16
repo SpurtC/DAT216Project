@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
-public class MittKontoController extends Controller{
+public class MinaUppgifterController extends Controller{
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -198,7 +198,7 @@ public class MittKontoController extends Controller{
                 checkUsage(email) || checkUsage(address) || checkUsage(zipCode) || checkUsage(cardHolder) ||
                 checkUsage(cardHolder) || checkUsage(cvc)){
             this.confirmation.setText("Dina uppgifter har sparats!");
-    }
+        }
 
     }
 
@@ -225,7 +225,6 @@ public class MittKontoController extends Controller{
         }
         return false;
     }
-
 
     @Override
     public void init() {

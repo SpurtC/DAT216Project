@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MittKontoMainController">
+   <children>
+      <SplitPane>
+         <items>
+            <AnchorPane prefHeight="700.0" prefWidth="1440.0">
+               <children>
+                  <Pane fx:id="minaUppgifterPane" layoutX="47.0" layoutY="-65.0" onMouseClicked="#onMinaUppgifterClicked" prefHeight="50.0" prefWidth="434.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="197.0" layoutY="15.0" text="Mina uppgifter" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="tidigareKopPane" layoutX="386.0" layoutY="-11.0" onMouseClicked="#onTidigareKopClicked" prefHeight="50.0" prefWidth="434.0" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="193.0" layoutY="14.0" text="Tidigare köp" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="minaFavoriterPane" layoutX="1031.0" layoutY="10.0" onMouseClicked="#onMinaFavoriterClicked" prefHeight="50.0" prefWidth="443.0" AnchorPane.leftAnchor="868.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="185.0" layoutY="15.0" text="Mina favoriter" />
+                     </children>
+                  </Pane>
+                  <StackPane fx:id="stackPaneMittKonto" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
