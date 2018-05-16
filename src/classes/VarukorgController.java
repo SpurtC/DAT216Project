@@ -36,7 +36,6 @@ public class VarukorgController extends Controller{
 
     @Override
     public void opened() {
-        System.out.println("hej");
         updateShoppingCartFlowPane();
     }
 }

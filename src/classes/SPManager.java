@@ -52,14 +52,14 @@ public class SPManager {
         Pane pane = map.get(fxml).PANE;
         pane.toFront();
 
+        pane.setOpacity(1.0);
         for(Page otherPage : map.values()){
-             if(otherPage.PANE != pane) {
+            if(otherPage.PANE != pane) {
                  otherPage.PANE.setOpacity(0.5);
              }
         }
-        pane.setOpacity(1.0);
-        map.get(fxml).CONTROLLER.opened();
 
+        map.get(fxml).CONTROLLER.opened();
     }
 
     private class Page{

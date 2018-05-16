@@ -45,7 +45,7 @@
                   <Label layoutX="186.0" layoutY="544.0" text="Aj i plånboken" />
                   <ScrollPane layoutX="24.0" layoutY="110.0" prefHeight="406.0" prefWidth="1315.0">
                      <content>
-                        <FlowPane prefHeight="263.0" prefWidth="816.0" />
+                        <FlowPane fx:id="shoppingCartFlowPane" prefHeight="263.0" prefWidth="816.0" />
                      </content>
                   </ScrollPane>
                </children></AnchorPane>
