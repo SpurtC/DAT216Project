@@ -39,7 +39,7 @@ public class MainWindowController extends Controller{
         System.out.println("Main");
 
         spManager = new SPManager(stackPaneMain, fxmlFileList);
-        spManager.showPane("../fxml/varukorg.fxml");
+        spManager.showPane("../fxml/framsida.fxml");
     }
 
     @FXML
