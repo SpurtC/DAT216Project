@@ -12,21 +12,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ProductController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ProductController">
    <children>
-      <SplitPane dividerPositions="0.3086763070077864" layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <SplitPane dividerPositions="0.3086763070077864" layoutX="170.0" prefHeight="800.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Pane fx:id="minaFavoriterCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="minaFavoriterCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Mina favoriter">
                            <font>
                               <Font size="24.0" />
-                           </font></Label>
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="drinksCtg" layoutY="388.0" onMouseClicked="#clickedDrinksCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="drinksCtg" layoutY="350.0" onMouseClicked="#clickedDrinksCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Drycker">
                            <font>
@@ -35,7 +36,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="meatCtg" layoutY="74.0" onMouseClicked="#clickedMeatCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="meatCtg" layoutY="70.0" onMouseClicked="#clickedMeatCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Kött, Fisk &amp; Fågel">
                            <font>
@@ -44,7 +45,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="dairyCtg" layoutY="152.0" onMouseClicked="#clickedDairyCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="dairyCtg" layoutY="140.0" onMouseClicked="#clickedDairyCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Mejeriprodukter">
                            <font>
@@ -53,7 +54,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="sweetsCtg" layoutY="546.0" onMouseClicked="#clickedSweetsCtg" prefHeight="78.0" prefWidth="400.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="sweetsCtg" layoutY="490.0" onMouseClicked="#clickedSweetsCtg" prefHeight="70.0" prefWidth="400.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Sötsaker">
                            <font>
@@ -62,16 +63,16 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutY="625.0" onMouseClicked="#clickedDryCtg" prefHeight="78.0" prefWidth="442.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane layoutY="722.0" onMouseClicked="#clickedDryCtg" prefHeight="50.0" prefWidth="442.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Torrvaror">
+                        <Label layoutX="14.0" layoutY="8.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Torrvaror">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="nutCtg" layoutY="310.0" onMouseClicked="#clickedNutCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="nutCtg" layoutY="280.0" onMouseClicked="#clickedNutCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Nötter och Bär">
                            <font>
@@ -80,7 +81,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="fruitCtg" layoutY="231.0" onMouseClicked="#clickedFruitCtg" prefHeight="78.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="fruitCtg" layoutY="210.0" onMouseClicked="#clickedFruitCtg" prefHeight="70.0" prefWidth="351.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Frukt och Grönt">
                            <font>
@@ -89,7 +90,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane fx:id="breadCtg" layoutY="467.0" onMouseClicked="#clickedBreadCtg" prefHeight="78.0" prefWidth="442.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="breadCtg" layoutY="420.0" onMouseClicked="#clickedBreadCtg" prefHeight="70.0" prefWidth="442.0" styleClass="paneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="18.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Bröd">
                            <font>
@@ -102,52 +103,21 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TextField layoutX="47.0" layoutY="32.0" prefHeight="38.0" prefWidth="841.0" promptText="Sök varor..." />
-                  <ImageView fitHeight="60.0" fitWidth="47.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField layoutX="47.0" layoutY="12.0" prefHeight="38.0" prefWidth="841.0" promptText="Sök varor..." />
+                  <ImageView fitHeight="60.0" fitWidth="47.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../imat/images/forstoringsglas.png" />
                      </image>
                   </ImageView>
-                  <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                  <ScrollPane prefHeight="633.0" prefWidth="991.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.79999999999995">
                      <content>
-                        <FlowPane fx:id="resultFlowPane" prefHeight="686.0" prefWidth="1007.0" />
+                        <FlowPane fx:id="resultFlowPane" prefHeight="742.0" prefWidth="1007.0" />
                      </content>
                   </ScrollPane>
-                  <Button layoutX="912.0" layoutY="32.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" text="Sök" />
+                  <Button layoutX="912.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" text="Sök" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <Pane prefHeight="102.0" prefWidth="260.0" styleClass="upperPaneFillHover" stylesheets="@../Stylesheets/formsFonts.css">
-         <children>
-            <Label id="logo" layoutX="52.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMat" />
-         </children>
-      </Pane>
-      <Pane layoutX="260.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
-         <children>
-            <Label layoutX="95.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Handla" />
-         </children>
-      </Pane>
-      <Pane layoutX="565.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
-         <children>
-            <Label layoutX="65.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Kundtjänst" />
-         </children>
-      </Pane>
-      <Pane layoutX="871.0" prefHeight="102.0" prefWidth="306.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
-         <children>
-            <Label layoutX="62.0" layoutY="29.0" styleClass="header" stylesheets="@../Stylesheets/textFont.css" text="Mina Sidor" />
-         </children>
-      </Pane>
-      <Pane layoutX="1174.0" prefHeight="102.0" prefWidth="266.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css">
-         <children>
-            <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="181.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../imat/images/varukorg.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="22.0" layoutY="34.0" text="Antal Varor:" />
-            <Label layoutX="22.0" layoutY="59.0" text="Total Pris:" />
-         </children>
-      </Pane>
    </children>
 </AnchorPane>
