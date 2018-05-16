@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MainWindowController">
    <children>
-      <Pane layoutX="1031.0" prefHeight="102.0" prefWidth="254.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="1031.0" prefHeight="100.0" prefWidth="254.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="136.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -23,7 +23,7 @@
             <Button layoutX="64.0" layoutY="60.0" mnemonicParsing="false" text="Se hela Varukorgen" />
          </children>
       </Pane>
-      <Pane layoutX="260.0" layoutY="-1.0" onMouseClicked="#onHandlaClicked" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="260.0" layoutY="-1.0" onMouseClicked="#onHandlaClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="83.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
                <font>
@@ -32,7 +32,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="517.0" layoutY="-1.0" onMouseClicked="#onKundtjanstClicked" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="517.0" layoutY="-1.0" onMouseClicked="#onKundtjanstClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="65.0" layoutY="36.0" text="Kundtjänst">
                <font>
@@ -41,7 +41,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="774.0" layoutY="-1.0" onMouseClicked="#onMittKontoClicked" prefHeight="102.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="774.0" layoutY="-1.0" onMouseClicked="#onMittKontoClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="70.0" layoutY="37.0" text="Mitt Konto">
                <font>
@@ -50,7 +50,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="-1.0" prefHeight="102.0" prefWidth="261.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane layoutY="-1.0" prefHeight="100.0" prefWidth="261.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
             <Label id="logo" layoutX="51.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
                <font>
