@@ -8,20 +8,20 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.VarukorgController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.VarukorgController">
     <children>
         <SplitPane layoutX="170.0" layoutY="-10.0" prefHeight="700.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="1438.0">
                <children>
-                  <Button layoutX="37.0" layoutY="448.0" mnemonicParsing="false" onAction="#onContinueHandleClicked" prefHeight="50.0" prefWidth="130.0" text="Fortsätt handla" />
+                  <Button layoutX="37.0" layoutY="606.0" mnemonicParsing="false" onAction="#onContinueHandleClicked" prefHeight="50.0" prefWidth="130.0" text="Fortsätt handla" />
                   <Label layoutX="41.0" layoutY="38.0" text="DIN VARUKORG">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Button layoutX="710.0" layoutY="448.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="50.0" prefWidth="113.0" text="Gå vidare" />
-                  <Button layoutX="714.0" layoutY="382.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Töm varukorg" />
+                  <Button layoutX="710.0" layoutY="606.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="50.0" prefWidth="113.0" text="Gå vidare" />
+                  <Button layoutX="714.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Töm varukorg" />
                   <Label layoutX="41.0" layoutY="77.0" text="Produkt:">
                      <font>
                         <Font name="System Bold" size="17.0" />
@@ -37,20 +37,16 @@
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="45.0" layoutY="381.0" text="Summa totalt:">
+                  <Label layoutX="45.0" layoutY="539.0" text="Summa totalt:">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="186.0" layoutY="386.0" text="Aj i plånboken" />
-                  <ScrollPane layoutX="24.0" layoutY="110.0" prefHeight="263.0" prefWidth="815.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <FlowPane fx:id="shoppingCartFlowPane" prefHeight="263.0" prefWidth="815.0" />
-                           </children>
-                        </AnchorPane>
-                    </content>
+                  <Label layoutX="186.0" layoutY="544.0" text="Aj i plånboken" />
+                  <ScrollPane layoutX="24.0" layoutY="110.0" prefHeight="406.0" prefWidth="1315.0">
+                     <content>
+                        <FlowPane prefHeight="263.0" prefWidth="816.0" />
+                     </content>
                   </ScrollPane>
                </children></AnchorPane>
             </items>
