@@ -21,10 +21,15 @@ public class ProductController extends Controller implements Initializable{
     private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-
     private List<Product> allProducts = iMatDataHandler.getProducts();
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
+
+    /**
+     * Om ni vill rensa varukorgen: productToAmountMap.clear()
+     * Om ni vill lägga till en ny eller uppdatera: productToAmountMap.put(product, amount)
+     */
+    public static Map<Product, Integer> productToAmountMap = new HashMap<>();
 
     @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
     @FXML FlowPane resultFlowPane;

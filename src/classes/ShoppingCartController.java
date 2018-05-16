@@ -1,40 +1,35 @@
 package classes;
 
-
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.Map;
 
-public class ProductItem extends AnchorPane {
+public class ShoppingCartController {
+
     @FXML
-    private Text rubrikTxt, prisTxt;
+    ImageView shoppingCartProductImage;
+
     @FXML
-    private ImageView varaImg;
+    Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl;
+
     @FXML
     private Button minusBtn, plusBtn;
     @FXML
     private TextField antalTxtF;
 
-    private int antal;
-    private int numberOfItems;
-    private ShoppingCart shoppingCart;
-    private ShoppingItem shoppingItem;
-    private Product product;
     private String stringValue;
 
-    public ProductItem(Product product) {
+
+
+    public ShoppingCartController(Product product) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/product.fxml"));
         fxmlLoader.setRoot(this);
@@ -46,18 +41,21 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.rubrikTxt.setText(product.getName());
-        this.prisTxt.setText(product.getPrice() + " kr");
-        this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
-        this.antalTxtF.setText(antal + "");
-        this.product = product;
+        this.shoppingCartProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
+        this.shoppingCartProductNameLbl.setText(product.getName() + "");
+        this.shoppingCartProductPriceLbl.setText(product.getPrice() + "");
+        this.shoppingCartProductTotalPriceLbl.setText(product.getPrice() * totalAmount(product) + "");
 
-        antalTxtF.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                ProductController.productToAmountMap.put(product, antal);
-            }
-        });
+
+    }
+
+
+    private int totalAmount (Product product){
+        int a = 0;
+        for(Map.Entry<Product, Integer> entry: ProductController.productToAmountMap.entrySet()){
+            a = entry.getValue();
+        }
+        return a;
     }
 
     public void clickedMnsBtn() {
@@ -88,4 +86,6 @@ public class ProductItem extends AnchorPane {
         if (intValue == 0)
             antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
     }
+
 }
+
