@@ -57,9 +57,9 @@ public class SPManager {
                  otherPage.PANE.setOpacity(0.5);
              }
         }
-
-        map.get(fxml).CONTROLLER.opened();
         pane.setOpacity(1.0);
+        map.get(fxml).CONTROLLER.opened();
+
     }
 
     private class Page{
