@@ -59,7 +59,7 @@ public class MainWindowController extends Controller{
 
     @FXML
     public void onVarukorgClicked() {
-        spManager.showPane("../fxml/varkorg.fxml");
+        spManager.showPane("../fxml/varukorg.fxml");
     }
 }
 
