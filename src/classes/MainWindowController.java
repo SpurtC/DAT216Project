@@ -16,7 +16,7 @@ public class MainWindowController extends Controller{
     List<String> fxmlFileList = new ArrayList<>();
     Map<String, Pane> stringPaneMap = new HashMap<>();
 
-    SPManager spManager;
+    public static SPManager spManager;
     CSSManager cssManager = new CSSManager(stringPaneMap);
 
 
@@ -48,6 +48,10 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/kundinformation.fxml");
         fxmlFileList.add("../fxml/mittKontoMain.fxml");
         fxmlFileList.add("../fxml/varukorg.fxml");
+        fxmlFileList.add("../fxml/leveranstid.fxml");
+        fxmlFileList.add("../fxml/betalning.fxml");
+
+
     }
 
     @FXML
