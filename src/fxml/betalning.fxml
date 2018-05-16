@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
    <children>
       <AnchorPane layoutY="1.0" prefHeight="700.0" prefWidth="1440.0">
          <children>
@@ -88,12 +88,12 @@
                            </font>
                         </Text>
                         <TextField layoutX="978.0" layoutY="529.0" prefHeight="41.0" prefWidth="127.0" />
-                        <Button layoutX="459.0" layoutY="603.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="227.0" styleClass="exitColor" text="Gå tillbaka">
+                        <Button layoutX="459.0" layoutY="603.0" mnemonicParsing="false" onAction="#onGoBackToLeveranstidClicked" prefHeight="63.0" prefWidth="227.0" styleClass="exitColor" text="Gå tillbaka">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Button layoutX="947.0" layoutY="612.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="227.0" styleClass="buyColor" text="Slutför köp">
+                        <Button layoutX="947.0" layoutY="612.0" mnemonicParsing="false" onAction="#onGoToConfirmationClicked" prefHeight="63.0" prefWidth="227.0" styleClass="buyColor" text="Slutför köp">
                            <font>
                               <Font size="24.0" />
                            </font>

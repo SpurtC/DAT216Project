@@ -12,7 +12,7 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="1438.0">
                <children>
-                  <Button layoutX="37.0" layoutY="448.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="Fortsätt handla" />
+                  <Button layoutX="37.0" layoutY="448.0" mnemonicParsing="false" onAction="#onContinueHandleClicked" prefHeight="50.0" prefWidth="130.0" text="Fortsätt handla" />
                   <Label layoutX="41.0" layoutY="38.0" text="DIN VARUKORG">
                      <font>
                         <Font name="System Bold" size="17.0" />
