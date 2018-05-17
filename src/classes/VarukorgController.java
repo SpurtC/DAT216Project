@@ -10,6 +10,7 @@ public class VarukorgController extends Controller{
     @FXML
     public void onContinueHandleClicked() {
         MainWindowController.spManager.showPane("../fxml/framsida.fxml");
+        MainWindowController.cssManager.changeCSS("handlaPane");
     }
 
     @FXML
