@@ -80,9 +80,9 @@ public class VarukorgItem extends AnchorPane {
             antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
     }
 
-    private int totalAmount (Product product){
-        int a = 0;
-        for(Map.Entry<Product, Integer> entry: ProductController.productToAmountMap.entrySet()){
+    private double totalAmount (Product product){
+        double a = 0;
+        for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
             a = entry.getValue();
         }
         return a;

@@ -29,7 +29,7 @@ public class ProductController extends Controller implements Initializable{
      * Om ni vill rensa varukorgen: productToAmountMap.clear()
      * Om ni vill lägga till en ny eller uppdatera: productToAmountMap.put(product, amount)
      */
-    public static Map<Product, Integer> productToAmountMap = new HashMap<>();
+    public static Map<Product, Double> productToAmountMap = new HashMap<>();
 
     @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
     @FXML FlowPane resultFlowPane;

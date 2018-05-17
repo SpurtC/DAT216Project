@@ -237,7 +237,7 @@ public class MinaUppgifterController extends Controller{
     @Override
     public void init() {
         this.confirmation.setText("");
-        charLimiter(phoneNumber,9);
+        charLimiter(phoneNumber,11);
         charLimiter(mobileNumber, 10);
         charLimiter(zipCode,5);
         charLimiter(cardNumber,16);

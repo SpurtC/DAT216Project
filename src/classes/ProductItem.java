@@ -55,7 +55,20 @@ public class ProductItem extends AnchorPane {
         antalTxtF.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                ProductController.productToAmountMap.put(product, antal);
+                if(newValue == null){
+                    return;
+                }
+                double antal = Double.parseDouble(newValue);
+                if (antal <= 0){
+                    ProductController.productToAmountMap.put(product, antal);
+                    antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
+                }
+                else {
+                    antalTxtF.setStyle("-fx-control-inner-background: #99e482; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    ProductController.productToAmountMap.put(product, antal);
+                }
+
+
             }
         });
     }
@@ -67,12 +80,6 @@ public class ProductItem extends AnchorPane {
         if (intValue > 0) {
             intValue--;
             antalTxtF.textProperty().set(intValue + "");
-            antalTxtF.setStyle("-fx-control-inner-background: #99e482; -fx-font-size: 20 px; -fx-font-weight: bold");
-
-        }
-
-        if (intValue == 0){
-            antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
         }
     }
 
@@ -82,10 +89,6 @@ public class ProductItem extends AnchorPane {
         if (intValue < 99) {
             intValue++;
             antalTxtF.textProperty().set(intValue + "");
-            antalTxtF.setStyle("-fx-control-inner-background: #99e482; -fx-font-size: 20 px; -fx-font-weight: bold");
         }
-
-        if (intValue == 0)
-            antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
     }
 }
