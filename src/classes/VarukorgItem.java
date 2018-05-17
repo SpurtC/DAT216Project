@@ -45,8 +45,8 @@ public class VarukorgItem extends AnchorPane {
 
         this.shoppingCartProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.shoppingCartProductNameLbl.setText(product.getName() + "");
-        this.shoppingCartProductPriceLbl.setText(product.getPrice() + "");
-        this.shoppingCartProductTotalPriceLbl.setText(product.getPrice() * totalAmount(product) + "");
+        this.shoppingCartProductPriceLbl.setText(product.getPrice() + " kr");
+        this.shoppingCartProductTotalPriceLbl.setText(product.getPrice() * totalAmount(product) + " kr");
     }
 
 
