@@ -106,7 +106,7 @@
                   <TextField layoutX="47.0" layoutY="12.0" prefHeight="38.0" prefWidth="733.0" promptText="Sök varor..." />
                   <ImageView fitHeight="60.0" fitWidth="47.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../pictures/forstoringsglas.png" />
+                        <Image url="@../images/forstoringsglas.png" />
                      </image>
                   </ImageView>
                   <ScrollPane layoutY="65.0" prefHeight="653.0" prefWidth="858.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="65.0">
