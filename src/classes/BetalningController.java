@@ -26,6 +26,21 @@ public class BetalningController extends Controller {
         MainWindowController.spManager.showPane("../fxml/leveranstid.fxml");
     }
 
+    public void saveButton() {
+        iMatDataHandler.getCustomer().setFirstName(firstNameTxtF.getText());
+        iMatDataHandler.getCustomer().setLastName(lastNameTxtF.getText());
+        iMatDataHandler.getCustomer().setAddress(addressTxtF.getText());
+        iMatDataHandler.getCustomer().setEmail(emailTxtF.getText());
+        iMatDataHandler.getCustomer().setPhoneNumber(phoneNumberTxtF.getText());
+        iMatDataHandler.getCustomer().setMobilePhoneNumber(mobileNumberTxtF.getText());
+        iMatDataHandler.getCustomer().setPostCode(zipCodeTxtF.getText());
+        iMatDataHandler.getCreditCard().setHoldersName(cardHolderTxtF.getText());
+        iMatDataHandler.getCreditCard().setCardNumber(cardNumberTxtF.getText());
+        iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonthTxtF.getText()));
+        iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYearTxtF.getText()));
+        iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvcTxtF.getText()));
+    }
+
     @Override
     public void init() {
 
@@ -45,7 +60,6 @@ public class BetalningController extends Controller {
         validMonthTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
         validYearTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
         cvcTxtF.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
-
     }
 
 
