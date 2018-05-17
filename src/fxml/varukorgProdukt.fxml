@@ -9,33 +9,38 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1366.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="203.0" layoutY="-27.0" prefHeight="200.0" prefWidth="883.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="203.0" layoutY="-27.0" prefHeight="64.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="shoppingCartProductImage" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="shoppingCartProductImage" fitHeight="56.0" fitWidth="82.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../imat/images/product_26.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="shoppingCartProductNameLbl" layoutX="179.0" layoutY="25.0" text="Limegrön lime">
+            <Label fx:id="shoppingCartProductNameLbl" layoutX="99.0" layoutY="11.0" text="Limegrön lime">
                <font>
-                  <Font size="32.0" />
+                  <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="shoppingCartProductPriceLbl" layoutX="179.0" layoutY="72.0" text="5 kr / st">
+            <Label fx:id="shoppingCartProductPriceLbl" layoutX="435.0" layoutY="11.0" text="5 kr / st">
                <font>
-                  <Font size="32.0" />
+                  <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="shoppingCartProductTotalPriceLbl" layoutX="790.0" layoutY="48.0" text="15 kr">
+            <Label fx:id="shoppingCartProductTotalPriceLbl" layoutX="1104.0" layoutY="11.0" text="15 kr">
                <font>
-                  <Font size="32.0" />
+                  <Font size="27.0" />
                </font>
             </Label>
-            <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="615.0" layoutY="50.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-            <Button fx:id="plusBtn" layoutX="700.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
-            <Button fx:id="minusBtn" layoutX="549.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
+            <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="786.0" layoutY="8.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+            <Button fx:id="plusBtn" layoutX="871.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
+            <Button fx:id="minusBtn" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
+            <ImageView fitHeight="54.0" fitWidth="45.0" layoutX="1307.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/trash%20can%20icon.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
