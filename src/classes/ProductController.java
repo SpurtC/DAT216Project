@@ -5,12 +5,10 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
@@ -20,16 +18,15 @@ public class ProductController extends Controller implements Initializable{
 
     private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-    Product product = new Product();
 
-
-    @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
 
     private List<Product> allProducts = iMatDataHandler.getProducts();
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
 
-    static Map<String, Pane> stringPaneMap = new HashMap<>();
+    private CSSManager cssManager = new CSSManager(stringPaneMapProduct);
+
+    private static Map<String, Pane> stringPaneMapProduct = new HashMap<>();
 
 
 
@@ -40,9 +37,14 @@ public class ProductController extends Controller implements Initializable{
      */
     public static Map<Product, Double> productToAmountMap = new HashMap<>();
 
-    @FXML private Pane minaFavoriterCtg, breadCtg, drinksCtg, fruitCtg, meatCtg, dairyCtg, sweetsCtg, dryCtg, nutCtg;
-    @FXML FlowPane resultFlowPane;
-    @FXML TextField searchBar;
+    @FXML
+    private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane;
+
+    @FXML
+    FlowPane resultFlowPane;
+
+    @FXML
+    TextField searchBar;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -66,6 +68,8 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+
     }
 
     public void clickedBreadCtg() {
@@ -75,8 +79,8 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "breadCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
-        MainWindowController.cssManager.changeCSS("breadCtg", "upperPaneFill", "upperPaneFillPressed");
     }
 
     public void clickedDrinksCtg() {
@@ -86,6 +90,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "drinksCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -102,6 +107,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "fruitCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -115,6 +121,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "nutCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -126,6 +133,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "meatCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -136,6 +144,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "dairyCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -146,6 +155,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "sweetsCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -158,6 +168,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "dryCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -168,6 +179,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
+        cssManager.changeCSS( "ekoCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
         updateFlowPane(currentList);
     }
 
@@ -175,9 +187,23 @@ public class ProductController extends Controller implements Initializable{
         //Skriv Skit Här
     }
 
+    public void makeAMapProduct () {
+        stringPaneMapProduct.put("minaFavoriterCtgPane", minaFavoriterCtgPane );
+        stringPaneMapProduct.put("breadCtgPane", breadCtgPane );
+        stringPaneMapProduct.put("drinksCtgPane", drinksCtgPane );
+        stringPaneMapProduct.put("fruitCtgPane", fruitCtgPane );
+        stringPaneMapProduct.put("meatCtgPane", meatCtgPane );
+        stringPaneMapProduct.put("dairyCtgPane", dairyCtgPane );
+        stringPaneMapProduct.put("minaFavoriterCtgPane", minaFavoriterCtgPane );
+        stringPaneMapProduct.put("sweetsCtgPane", sweetsCtgPane );
+        stringPaneMapProduct.put("dryCtgPane", dryCtgPane );
+        stringPaneMapProduct.put("nutCtgPane", nutCtgPane );
+        stringPaneMapProduct.put("ekoCtgPane", ekoCtgPane );
+    }
+
     @Override
     public void init() {
-
+        makeAMapProduct();
     }
 }
 
