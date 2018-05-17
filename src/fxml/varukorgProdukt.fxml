@@ -36,9 +36,9 @@
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="786.0" layoutY="8.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
             <Button fx:id="plusBtn" layoutX="871.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
             <Button fx:id="minusBtn" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
-            <ImageView fitHeight="54.0" fitWidth="45.0" layoutX="1310.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="54.0" fitWidth="45.0" layoutX="1307.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/trash_can.png" />
+                  <Image url="@../images/trash%20can%20icon.png" />
                </image>
             </ImageView>
          </children>
