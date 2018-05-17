@@ -231,7 +231,7 @@ public class MinaUppgifterController extends Controller{
     @FXML
     public void onContinueShopMyAccountClicked () {
         MainWindowController.spManager.showPane("../fxml/framsida.fxml");
-        MainWindowController.cssManager.changeCSS("handlaPane");
+        MainWindowController.cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     @Override
@@ -244,5 +244,19 @@ public class MinaUppgifterController extends Controller{
         charLimiter(validMonth, 2);
         charLimiter(validYear, 2);
         charLimiter(cvc,3);
+
+        iMatDataHandler.getCustomer().setFirstName(null);
+        iMatDataHandler.getCustomer().setLastName(null);
+        iMatDataHandler.getCustomer().setPhoneNumber(null);
+        iMatDataHandler.getCustomer().setMobilePhoneNumber(null);
+        iMatDataHandler.getCustomer().setEmail(null);
+        iMatDataHandler.getCustomer().setAddress(null);
+        iMatDataHandler.getCustomer().setPostCode(null);
+
+        iMatDataHandler.getCreditCard().setHoldersName(null);
+        iMatDataHandler.getCreditCard().setCardNumber(null);
+        iMatDataHandler.getCreditCard().setValidMonth(00);
+        iMatDataHandler.getCreditCard().setValidYear(00);
+        iMatDataHandler.getCreditCard().setVerificationCode(000);
     }
 }

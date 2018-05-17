@@ -13,17 +13,16 @@ public class CSSManager {
 
     public CSSManager (Map<String, Pane> nameToPaneMap) {
         this.stringPaneMap = nameToPaneMap;
-
     }
 
-    public void changeCSS (String paneName) {
+    public void changeCSS(String paneName, String notClicked, String clickedOne) {
         for(Pane pane : stringPaneMap.values()) {
              pane.getStyleClass().clear();
-             pane.getStyleClass().add("upperPaneFill");
+             pane.getStyleClass().add(notClicked);
 
         }
         Pane pane = stringPaneMap.get(paneName);
         pane.getStyleClass().clear();
-        pane.getStyleClass().add("upperPaneFillHover");
+        pane.getStyleClass().add(clickedOne);
     }
 }

@@ -7,7 +7,7 @@ public class MinaFavoriterController extends Controller {
     @FXML
     public void onContinueShopMyFavoritesClicked () {
         MainWindowController.spManager.showPane("../fxml/framsida.fxml");
-        MainWindowController.cssManager.changeCSS("handlaPane");
+        MainWindowController.cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     @Override

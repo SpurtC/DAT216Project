@@ -1,8 +1,19 @@
 package classes;
 
 import javafx.fxml.FXML;
+import javafx.scene.ImageCursor;
+import javafx.scene.control.TextField;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class BetalningController extends Controller {
+
+    @FXML
+    private TextField firstNameTxtF, lastNameTxtF, addressTxtF, phoneNumberTxtF, mobileNumberTxtF, zipCodeTxtF, emailTxtF;
+
+    @FXML
+    private TextField cardHolderTxtF, cardNumberTxtF, validMonthTxtF, validYearTxtF, cvcTxtF;
+
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
 
     @FXML
@@ -19,4 +30,23 @@ public class BetalningController extends Controller {
     public void init() {
 
     }
+
+    public void opened() {
+        firstNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
+        lastNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getLastName());
+        emailTxtF.textProperty().set(iMatDataHandler.getCustomer().getEmail());
+        addressTxtF.textProperty().set(iMatDataHandler.getCustomer().getAddress());
+        phoneNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getPhoneNumber());
+        mobileNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        zipCodeTxtF.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
+
+        cardHolderTxtF.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
+        cardNumberTxtF.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
+        validMonthTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
+        validYearTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
+        cvcTxtF.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
+
+    }
+
+
 }

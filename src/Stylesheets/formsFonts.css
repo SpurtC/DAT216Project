@@ -1,4 +1,4 @@
-.paneFill {
+.ctgPaneFill {
     -fx-background-color: linear-gradient(white, lightgray);
 }
 
@@ -7,12 +7,16 @@
     -fx-border-color: black;
 }
 
+.ctgPaneFillPressed {
+    -fx-background-color: gray;
+}
+
 .productsFill {
     -fx-background-color: #ffbf91;
     -fx-border-color: black;
 }
 
-.upperPaneFillHover {
+.upperPaneFillPressed {
     -fx-background-color: #b9aeff;
     -fx-border-color: black;
 }
