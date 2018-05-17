@@ -11,15 +11,20 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Map;
 
 public class VarukorgItem extends AnchorPane {
+
+    private VarukorgController varukorgController;
 
     @FXML
     ImageView shoppingCartProductImage;
 
     @FXML
-    Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl;
+    Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl, shoppingCartTotalPriceLbl;
 
     @FXML
     private Button minusBtn, plusBtn;
@@ -27,9 +32,11 @@ public class VarukorgItem extends AnchorPane {
     private TextField antalTxtF;
 
     private String stringValue;
+    private Product product;
 
 
-    public VarukorgItem(Product product) {
+    public VarukorgItem(Product product, VarukorgController varukorgController) {
+        this.varukorgController = varukorgController;
         //int amount = ProductController.productToAmountMap.get(product);
         //antalTxtF.textProperty().set(amount + "");
 
@@ -48,6 +55,7 @@ public class VarukorgItem extends AnchorPane {
         this.shoppingCartProductPriceLbl.setText(product.getPrice() + " kr");
         this.shoppingCartProductTotalPriceLbl.setText(product.getPrice() * totalAmount(product) + " kr");
         antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)).intValue());
+        this.product = product;
     }
 
 
@@ -59,6 +67,7 @@ public class VarukorgItem extends AnchorPane {
         if (intValue > 0) {
             intValue--;
             antalTxtF.textProperty().set(intValue + "");
+            ProductController.productToAmountMap.put(product, (double) intValue);
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
 
         }
@@ -66,6 +75,9 @@ public class VarukorgItem extends AnchorPane {
         if (intValue == 0){
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
         }
+
+        updateItemTotalPrice();
+        varukorgController.updateTotalPriceLabel();
     }
 
     public void clickedPlsBtn() {
@@ -74,18 +86,33 @@ public class VarukorgItem extends AnchorPane {
         if (intValue < 99) {
             intValue++;
             antalTxtF.textProperty().set(intValue + "");
+            ProductController.productToAmountMap.put(product, (double) intValue);
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
         }
 
         if (intValue == 0)
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
+
+        updateItemTotalPrice();
+        varukorgController.updateTotalPriceLabel();
     }
 
     private double totalAmount (Product product){
         double a = 0;
+
         for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
             a = entry.getValue();
         }
+
         return a;
     }
+
+    private void updateItemTotalPrice(){
+        shoppingCartProductTotalPriceLbl.textProperty().set( roundInString(product.getPrice() * totalAmount(product) )+ " kr");
+    }
+
+    private String roundInString(double d){
+        return String.format("%.2f", d);
+    }
+
 }
