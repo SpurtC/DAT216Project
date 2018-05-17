@@ -34,7 +34,7 @@ public class MainWindowController extends Controller{
     @Override
     public void opened() {
         spManager.showPane("../fxml/framsida.fxml");
-        cssManager.changeCSS("handlaPane");
+        cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     public void makeAMap () {
@@ -53,35 +53,30 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/varukorg.fxml");
         fxmlFileList.add("../fxml/leveranstid.fxml");
         fxmlFileList.add("../fxml/betalning.fxml");
-
-
     }
 
     @FXML
     public void onKundtjanstClicked() {
         spManager.showPane("../fxml/kundinformation.fxml");
-        cssManager.changeCSS("kundtjanstPane");
+        cssManager.changeCSS("kundtjanstPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     @FXML
     public void onHandlaClicked() {
         spManager.showPane("../fxml/framsida.fxml");
-        cssManager.changeCSS("handlaPane");
+        cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     @FXML
     public void onMittKontoClicked() {
         spManager.showPane("../fxml/mittKontoMain.fxml");
-        cssManager.changeCSS("mittKontoPane");
+        cssManager.changeCSS("mittKontoPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
     @FXML
     public void onVarukorgClicked () {
         spManager.showPane("../fxml/varukorg.fxml");
-        cssManager.changeCSS("varukorgPane");
-
+        cssManager.changeCSS("varukorgPane", "upperPaneFill", "upperPaneFillPressed");
     }
-
-
 }
 

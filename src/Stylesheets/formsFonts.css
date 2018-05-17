@@ -12,7 +12,7 @@
     -fx-border-color: black;
 }
 
-.upperPaneFillHover {
+.upperPaneFillPressed {
     -fx-background-color: #b9aeff;
     -fx-border-color: black;
 }

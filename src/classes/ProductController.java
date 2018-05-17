@@ -20,10 +20,19 @@ public class ProductController extends Controller implements Initializable{
 
     private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    Product product = new Product();
+
+
+    @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
 
     private List<Product> allProducts = iMatDataHandler.getProducts();
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
+
+    static Map<String, Pane> stringPaneMap = new HashMap<>();
+
+
+
 
     /**
      * Om ni vill rensa varukorgen: productToAmountMap.clear()
@@ -67,6 +76,7 @@ public class ProductController extends Controller implements Initializable{
             }
         }
         updateFlowPane(currentList);
+        MainWindowController.cssManager.changeCSS("breadCtg", "upperPaneFill", "upperPaneFillPressed");
     }
 
     public void clickedDrinksCtg() {
@@ -145,6 +155,16 @@ public class ProductController extends Controller implements Initializable{
             if (allProducts.get(i).getCategory() == ProductCategory.PASTA ||
                     allProducts.get(i).getCategory() == ProductCategory.FLOUR_SUGAR_SALT ||
                     allProducts.get(i).getCategory() == ProductCategory.POTATO_RICE){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
+
+    public void clickedEcoCtg() { //Här behövs kod, nedan fungerar ej
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if(allProducts.get(i).isEcological()) {
                 currentList.add(allProducts.get(i));
             }
         }
