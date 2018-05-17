@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
    <children>
       <AnchorPane layoutY="1.0" prefHeight="700.0" prefWidth="1440.0">
          <children>
@@ -20,7 +20,6 @@
                               <Font size="70.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="254.0" layoutY="159.0" prefHeight="35.0" prefWidth="381.0" />
                         <Text fill="#403d3dbd" layoutX="83.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen kontrollera eller fyll in dina uppgifter" wrappingWidth="802.0">
                            <font>
                               <Font size="32.0" />
@@ -66,12 +65,18 @@
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="254.0" layoutY="212.0" prefHeight="35.0" prefWidth="383.0" />
-                        <TextField layoutX="254.0" layoutY="264.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField layoutX="256.0" layoutY="324.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField layoutX="303.0" layoutY="529.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField layoutX="975.0" layoutY="452.0" prefHeight="41.0" prefWidth="61.0" />
-                        <TextField layoutX="1068.0" layoutY="451.0" prefHeight="41.0" prefWidth="61.0" />
+                        <TextField fx:id="firstNameTxtF" layoutX="254.0" layoutY="159.0" prefHeight="35.0" prefWidth="381.0" />
+                        <TextField fx:id="lastNameTxtF" layoutX="254.0" layoutY="212.0" prefHeight="35.0" prefWidth="383.0" />
+                        <TextField fx:id="addressTxtF" layoutX="254.0" layoutY="264.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="zipCodeTxtF" layoutX="256.0" layoutY="324.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="phoneNumberTxtF" layoutX="999.0" layoutY="157.0" prefHeight="35.0" prefWidth="381.0" />
+                        <TextField fx:id="mobileNumberTxtF" layoutX="1000.0" layoutY="212.0" prefHeight="35.0" prefWidth="381.0" />
+                        <TextField fx:id="emailTxtF" layoutX="999.0" layoutY="267.0" prefHeight="35.0" prefWidth="381.0" />
+                        <TextField fx:id="cardHolderTxtF" layoutX="303.0" layoutY="456.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="cardNumberTxtF" layoutX="303.0" layoutY="529.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="validMonthTxtF" layoutX="975.0" layoutY="452.0" prefHeight="41.0" prefWidth="61.0" />
+                        <TextField fx:id="validYearTxtF" layoutX="1068.0" layoutY="451.0" prefHeight="41.0" prefWidth="61.0" />
+                        <TextField fx:id="cvcTxtF" layoutX="978.0" layoutY="529.0" prefHeight="41.0" prefWidth="127.0" />
                         <Text layoutX="1045.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
                            <font>
                               <Font size="36.0" />
@@ -87,7 +92,6 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="978.0" layoutY="529.0" prefHeight="41.0" prefWidth="127.0" />
                         <Button layoutX="459.0" layoutY="603.0" mnemonicParsing="false" onAction="#onGoBackToLeveranstidClicked" prefHeight="63.0" prefWidth="227.0" styleClass="exitColor" text="Gå tillbaka">
                            <font>
                               <Font size="24.0" />
@@ -118,10 +122,6 @@
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="303.0" layoutY="456.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField layoutX="999.0" layoutY="157.0" prefHeight="35.0" prefWidth="381.0" />
-                        <TextField layoutX="1000.0" layoutY="212.0" prefHeight="35.0" prefWidth="381.0" />
-                        <TextField layoutX="999.0" layoutY="267.0" prefHeight="35.0" prefWidth="381.0" />
                         <Text fill="#45585e" layoutX="576.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 3 av 3">
                            <font>
                               <Font size="36.0" />
