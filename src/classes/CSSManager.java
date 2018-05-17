@@ -1,11 +1,14 @@
 package classes;
 
 import javafx.scene.layout.Pane;
+
+import java.util.List;
 import java.util.Map;
 
 public class CSSManager {
 
     Map<String, Pane> stringPaneMap;
+
     
 
     public CSSManager (Map<String, Pane> nameToPaneMap) {
