@@ -19,8 +19,6 @@ public class MainWindowController extends Controller{
     public static SPManager spManager;
     public static CSSManager cssManager = new CSSManager(stringPaneMap);
 
-
-
     public List<String> getFxmlFilesList() {
         return fxmlFileList;
     }
