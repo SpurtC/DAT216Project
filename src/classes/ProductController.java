@@ -68,7 +68,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
 
     }
 
@@ -79,7 +79,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "breadCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "breadCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -90,7 +90,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "drinksCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "drinksCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -107,7 +107,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "fruitCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "fruitCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -121,7 +121,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "nutCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "nutCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -133,7 +133,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "meatCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "meatCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -144,7 +144,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "dairyCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "dairyCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -155,7 +155,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "sweetsCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "sweetsCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -168,7 +168,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "dryCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "dryCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -179,7 +179,7 @@ public class ProductController extends Controller implements Initializable{
                 currentList.add(allProducts.get(i));
             }
         }
-        cssManager.changeCSS( "ekoCtgPane", "ctgPaneFill", "ctgPaneFillPressed");
+        cssManager.changeCSS( "ekoCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 

@@ -12,19 +12,19 @@
          <items>
             <AnchorPane prefHeight="700.0" prefWidth="1440.0">
                <children>
-                  <Pane fx:id="minaUppgifterPane" layoutX="47.0" layoutY="-65.0" onMouseClicked="#onMinaUppgifterClicked" prefHeight="50.0" prefWidth="434.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="minaUppgifterPane" layoutX="47.0" layoutY="-65.0" onMouseClicked="#onMinaUppgifterClicked" prefHeight="50.0" prefWidth="434.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label layoutX="197.0" layoutY="15.0" text="Mina uppgifter" />
+                        <Label layoutX="172.0" layoutY="16.0" text="Mina uppgifter" />
                      </children>
                   </Pane>
-                  <Pane fx:id="tidigareKopPane" layoutX="386.0" layoutY="-11.0" onMouseClicked="#onTidigareKopClicked" prefHeight="50.0" prefWidth="434.0" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="tidigareKopPane" layoutX="386.0" layoutY="-11.0" onMouseClicked="#onTidigareKopClicked" prefHeight="50.0" prefWidth="434.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label layoutX="193.0" layoutY="14.0" text="Tidigare köp" />
+                        <Label layoutX="179.0" layoutY="16.0" text="Tidigare köp" />
                      </children>
                   </Pane>
-                  <Pane fx:id="minaFavoriterPane" layoutX="1031.0" layoutY="10.0" onMouseClicked="#onMinaFavoriterClicked" prefHeight="50.0" prefWidth="443.0" AnchorPane.leftAnchor="868.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="minaFavoriterPane" layoutX="1031.0" layoutY="10.0" onMouseClicked="#onMinaFavoriterClicked" prefHeight="50.0" prefWidth="443.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="868.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label layoutX="185.0" layoutY="15.0" text="Mina favoriter" />
+                        <Label layoutX="179.0" layoutY="16.0" text="Mina favoriter" />
                      </children>
                   </Pane>
                   <StackPane fx:id="stackPaneMittKonto" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />

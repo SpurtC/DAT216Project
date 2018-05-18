@@ -1,23 +1,44 @@
-.ctgPaneFill {
-    -fx-background-color: linear-gradient(white, lightgray);
-}
-
 .upperPaneFill {
     -fx-background-color: lavender ;
     -fx-border-color: black;
 }
 
-.ctgPaneFillPressed {
-    -fx-background-color: lightpink;
-}
-
-.productsFill {
-    -fx-background-color: #ffbf91;
-    -fx-border-color: black;
+.upperPaneFill:hover {
+    -fx-background-color: #897ec3;
 }
 
 .upperPaneFillPressed {
     -fx-background-color: #b9aeff;
+}
+
+.ctgPaneFill {
+    -fx-background-color: linear-gradient(white, lightgray);
+}
+
+.ctgPaneFill:hover {
+    -fx-background-color: linear-gradient(darkgray, #717b80);
+}
+
+.ctgPaneFillClicked {
+    -fx-background-color: #b9aeff;
+}
+
+.myAccountPane {
+    -fx-background-color: linear-gradient(white, lightgray);
+    -fx-border-color: black;
+}
+
+.myAccountPaneClicked {
+    -fx-background-color: linear-gradient(darkgray, #717b90);
+    -fx-border-color: black;
+}
+
+.myAccountPane:hover {
+    -fx-background-color: #897ec3;
+}
+
+.productsFill {
+    -fx-background-color: #ffbf91;
     -fx-border-color: black;
 }
 
