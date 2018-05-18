@@ -38,6 +38,11 @@
     -fx-background-color: #897ec3;
 }
 
+.deliveryTimePaneFill {
+    -fx-background-color: lavender ;
+    -fx-border-color: black;
+}
+
 .productsFill {
     -fx-background-color: #ffbf91;
     -fx-border-color: black;
