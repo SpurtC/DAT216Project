@@ -29,7 +29,7 @@ public class VarukorgItem extends AnchorPane {
 
     @FXML
     private Button minusBtn, plusBtn;
-    
+
     @FXML
     private TextField antalTxtF;
 

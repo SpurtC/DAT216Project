@@ -9,54 +9,94 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MainWindowController">
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MainWindowController">
    <children>
-      <Pane fx:id="varukorgPane" layoutX="1031.0" onMouseClicked="#onVarukorgClicked" prefHeight="100.0" prefWidth="254.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="varukorgPane" layoutX="964.0" onMouseClicked="#onVarukorgClicked" prefHeight="100.0" prefWidth="411.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="68.0" fitWidth="50.0" layoutX="136.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imat/images/varukorg.png" />
+                  <Image url="@../images/varukorg.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="18.0" styleClass="cart" text="Antal Varor:" />
-            <Label layoutX="14.0" layoutY="38.0" styleClass="cart" text="Total Pris:" />
-            <Button fx:id="VarukorgBtn" layoutX="64.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#onVarukorgClicked" text="Se hela Varukorgen" />
-         </children>
-      </Pane>
-      <Pane fx:id="handlaPane" layoutX="260.0" onMouseClicked="#onHandlaClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label layoutX="83.0" layoutY="30.0" prefHeight="38.0" prefWidth="88.0" text="Handla">
+            <Label layoutX="95.0" layoutY="16.0" styleClass="cart" text="Antal varor:">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Button fx:id="VarukorgBtn" layoutX="310.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onVarukorgClicked" prefHeight="64.0" prefWidth="87.0" text="Se hela varukorgen" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Label layoutX="95.0" layoutY="52.0" styleClass="cart" text="Totalt pris:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberOfItemsLbl" layoutX="206.0" layoutY="19.0" text="13 st">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalPriceLbl" layoutX="197.0" layoutY="55.0" text="346 kr">
+               <font>
+                  <Font name="System Bold" size="16.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="kundtjanstPane" layoutX="517.0" onMouseClicked="#onKundtjanstClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="handlaPane" layoutX="228.0" onMouseClicked="#onHandlaClicked" prefHeight="100.0" prefWidth="237.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="65.0" layoutY="36.0" text="Kundtjänst">
+            <Label layoutX="70.0" layoutY="18.0" prefHeight="62.0" prefWidth="153.0" text="Handla">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="43.0" />
                </font>
             </Label>
+            <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/shop_icon.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="mittKontoPane" layoutX="774.0" onMouseClicked="#onMittKontoClicked" prefHeight="100.0" prefWidth="258.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="kundtjanstPane" layoutX="764.0" onMouseClicked="#onKundtjanstClicked" prefHeight="100.0" prefWidth="201.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="70.0" layoutY="37.0" text="Mitt Konto">
+            <Label layoutX="75.0" layoutY="18.0" text="Hjälp">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="43.0" />
                </font>
             </Label>
+            <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="19.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/help_icon.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <Pane onMouseClicked="#onHandlaClicked" prefHeight="100.0" prefWidth="261.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="mittKontoPane" layoutX="464.0" onMouseClicked="#onMittKontoClicked" prefHeight="100.0" prefWidth="301.0" styleClass="upperPaneFill" stylesheets="@/Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="logo" layoutX="51.0" layoutY="10.0" stylesheets="@/Stylesheets/textFont.css" text="iMAT">
+            <Label layoutX="72.0" layoutY="18.0" text="Mitt konto">
                <font>
-                  <Font size="42.0" />
+                  <Font name="System Bold" size="43.0" />
                </font>
             </Label>
+            <ImageView fitHeight="62.0" fitWidth="62.0" layoutX="10.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/my_account_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane onMouseClicked="#onHandlaClicked" prefHeight="100.0" prefWidth="229.0" styleClass="upperPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="logo" layoutX="91.0" layoutY="15.0" text="iMAT" textFill="#6f0551">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="17.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iMat_icon.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <StackPane fx:id="stackPaneMain" layoutX="1.0" layoutY="100.0" prefHeight="700.0" prefWidth="1440.0" />
