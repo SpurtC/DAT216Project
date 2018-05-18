@@ -31,7 +31,7 @@
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="113.0" layoutY="217.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
             <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="192.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imat/images/hjartaVit.png" />
+                  <Image url="@../images/hjartaVit.png" />
                </image>
             </ImageView>
             <Button fx:id="plusBtn" layoutX="198.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
