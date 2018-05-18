@@ -1,5 +1,7 @@
 package classes;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
 import javafx.scene.control.TextField;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -35,7 +37,7 @@ public class ProductController extends Controller implements Initializable{
      * Om ni vill rensa varukorgen: productToAmountMap.clear()
      * Om ni vill lägga till en ny eller uppdatera: productToAmountMap.put(product, amount)
      */
-    public static Map<Product, Double> productToAmountMap = new HashMap<>();
+    public static ObservableMap<Product, Double> productToAmountMap;
 
     @FXML
     private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane;
@@ -45,6 +47,10 @@ public class ProductController extends Controller implements Initializable{
 
     @FXML
     TextField searchBar;
+
+    static{
+        productToAmountMap = FXCollections.observableMap(new HashMap<>());
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

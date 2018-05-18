@@ -18,10 +18,10 @@ public class MittKontoMainController extends Controller{
     StackPane stackPaneMittKonto;
 
     private List<String> fxmlFileListMittKonto = new ArrayList<>();
-    private Map<String, Pane> stringPaneMapMittKonto = new HashMap<>();
+    private static Map<String, Pane> stringPaneMapMittKonto = new HashMap<>();
 
     SPManager spManager;
-    private CSSManager cssManager = new CSSManager(stringPaneMapMittKonto);
+     static CSSManager cssManager = new CSSManager(stringPaneMapMittKonto);
 
     public void makeAnFxmlList () {
         fxmlFileListMittKonto.add("../fxml/minaUppgifter.fxml");
@@ -52,7 +52,6 @@ public class MittKontoMainController extends Controller{
     public void onMinaUppgifterClicked() {
         spManager.showPane("../fxml/minaUppgifter.fxml");
         cssManager.changeCSS("minaUppgifterPane", "myAccountPane", "myAccountPaneClicked");
-
     }
 
     @Override
