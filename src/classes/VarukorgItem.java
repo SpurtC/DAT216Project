@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
@@ -21,13 +22,14 @@ public class VarukorgItem extends AnchorPane {
     private VarukorgController varukorgController;
 
     @FXML
-    ImageView shoppingCartProductImage;
+    private ImageView shoppingCartProductImage;
 
     @FXML
-    Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl, shoppingCartTotalPriceLbl;
+    private Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl, shoppingCartTotalPriceLbl;
 
     @FXML
     private Button minusBtn, plusBtn;
+    
     @FXML
     private TextField antalTxtF;
 
@@ -51,9 +53,9 @@ public class VarukorgItem extends AnchorPane {
         }
 
         this.shoppingCartProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
-        this.shoppingCartProductNameLbl.setText(product.getName() + "");
-        this.shoppingCartProductPriceLbl.setText(product.getPrice() + " kr");
-        this.shoppingCartProductTotalPriceLbl.setText(product.getPrice() * totalAmount(product) + " kr");
+        this.shoppingCartProductNameLbl.textProperty().set(product.getName() + "");
+        this.shoppingCartProductPriceLbl.textProperty().set(product.getPrice() + " kr");
+        this.shoppingCartProductTotalPriceLbl.textProperty().set(product.getPrice() * totalAmount(product) + " kr");
         antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)).intValue());
         this.product = product;
     }
@@ -76,7 +78,7 @@ public class VarukorgItem extends AnchorPane {
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
         }
 
-        updateItemTotalPrice();
+        this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
     }
 
@@ -93,7 +95,7 @@ public class VarukorgItem extends AnchorPane {
         if (intValue == 0)
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
 
-        updateItemTotalPrice();
+        this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
     }
 
@@ -108,7 +110,7 @@ public class VarukorgItem extends AnchorPane {
     }
 
     private void updateItemTotalPrice(){
-        shoppingCartProductTotalPriceLbl.textProperty().set( roundInString(product.getPrice() * totalAmount(product) )+ " kr");
+        this.shoppingCartProductTotalPriceLbl.textProperty().set( roundInString(product.getPrice() * totalAmount(product) )+ " kr");
     }
 
     private String roundInString(double d){
