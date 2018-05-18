@@ -1,8 +1,11 @@
 package classes;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.scene.ImageCursor;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class BetalningController extends Controller {
@@ -13,13 +16,41 @@ public class BetalningController extends Controller {
     @FXML
     private TextField cardHolderTxtF, cardNumberTxtF, validMonthTxtF, validYearTxtF, cvcTxtF;
 
+    @FXML
+    private ImageView firstNameArrow, lastNameArrow, addressArrow, zipCodeArrow, phoneNumberArrow, mobileNumberArrow, emailArrow;
+
+    @FXML
+    private ImageView cardHolderArrow, cardNumberArrow, validArrow, cvcArrow;
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
 
     @FXML
     public void onGoToConfirmationClicked() {
-        MainWindowController.spManager.showPane("../fxml/confirmation.fxml");
-    }
+
+        controlArrow(firstNameTxtF, firstNameArrow);
+        controlArrow(lastNameTxtF,lastNameArrow);
+        controlArrow(addressTxtF,addressArrow);
+        controlArrow(zipCodeTxtF,zipCodeArrow);
+        controlArrow(phoneNumberTxtF,phoneNumberArrow);
+        controlArrow(mobileNumberTxtF,mobileNumberArrow);
+        controlArrow(emailTxtF,emailArrow);
+
+        controlArrow(cardHolderTxtF,cardHolderArrow);
+        controlArrow(cardNumberTxtF,cardNumberArrow);
+        control2ndArrow(validMonthTxtF,validArrow);
+        control2ndArrow(validYearTxtF,validArrow);
+        control2ndArrow(cvcTxtF,cvcArrow);
+
+        if(!firstNameArrow.isVisible() && !lastNameArrow.isVisible() && !addressArrow.isVisible() &&
+                !zipCodeArrow.isVisible() && !phoneNumberArrow.isVisible() && !mobileNumberArrow.isVisible() &&
+                !mobileNumberArrow.isVisible() && !emailArrow.isVisible() && !cardHolderArrow.isVisible() &&
+                !cardNumberArrow.isVisible() && !validArrow.isVisible() && !cvcArrow.isVisible()) {
+
+            MainWindowController.spManager.showPane("../fxml/confirmation.fxml");
+
+        }
+}
 
     @FXML
     public void onGoBackToLeveranstidClicked() {
@@ -39,27 +70,89 @@ public class BetalningController extends Controller {
         iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonthTxtF.getText()));
         iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYearTxtF.getText()));
         iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvcTxtF.getText()));
+
+    }
+
+    private void control2ndArrow(TextField textField, ImageView imageView){
+        if (!checkUsage(textField.getText()) || textField.getText().equals("0")){
+            imageView.setVisible(true);
+        }
+        else {
+            imageView.setVisible(false);
+        }
+    }
+
+    private void controlArrow(TextField textField, ImageView imageView){
+        if(!checkUsage(textField.getText())){
+            imageView.setVisible(true);
+        }
+        else {
+            imageView.setVisible(false);
+        }
+    }
+
+    private boolean checkUsage(String textField){
+        return textField != null;
+    }
+
+    private void charLimiter(TextField textField, int maxLength){
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (newValue != null && newValue.length() > maxLength ) {
+                    String s = newValue.substring(0, maxLength);
+                    textField.textProperty().set(s);
+                }
+            }
+        });
+    }
+
+    private void printIfNotNull (TextField textField) {
+        if (textField.getText() != null) {
+            textField.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
+        }
     }
 
     @Override
     public void init() {
+        charLimiter(phoneNumberTxtF,11);
+        charLimiter(mobileNumberTxtF, 10);
+        charLimiter(zipCodeTxtF,5);
+        charLimiter(cardNumberTxtF,16);
+        charLimiter(validMonthTxtF, 2);
+        charLimiter(validYearTxtF, 2);
+        charLimiter(cvcTxtF,3);
 
     }
 
     public void opened() {
-        firstNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
-        lastNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getLastName());
-        emailTxtF.textProperty().set(iMatDataHandler.getCustomer().getEmail());
-        addressTxtF.textProperty().set(iMatDataHandler.getCustomer().getAddress());
-        phoneNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getPhoneNumber());
-        mobileNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
-        zipCodeTxtF.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
+        printIfNotNull(firstNameTxtF);
+        printIfNotNull(lastNameTxtF);
+        printIfNotNull(addressTxtF);
+        printIfNotNull(emailTxtF);
+        printIfNotNull(phoneNumberTxtF);
+        printIfNotNull(mobileNumberTxtF);
+        printIfNotNull(zipCodeTxtF);
 
-        cardHolderTxtF.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
-        cardNumberTxtF.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
+        printIfNotNull(cardHolderTxtF);
+        printIfNotNull(cardNumberTxtF);
+
         validMonthTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
         validYearTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
         cvcTxtF.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
+
+        firstNameArrow.setVisible(false);
+        lastNameArrow.setVisible(false);
+        addressArrow.setVisible(false);
+        zipCodeArrow.setVisible(false);
+        phoneNumberArrow.setVisible(false);
+        mobileNumberArrow.setVisible(false);
+        emailArrow.setVisible(false);
+
+        cardHolderArrow.setVisible(false);
+        cardNumberArrow.setVisible(false);
+        validArrow.setVisible(false);
+        cvcArrow.setVisible(false);
     }
 
 
