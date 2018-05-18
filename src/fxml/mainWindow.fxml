@@ -31,12 +31,12 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="numberOfItemsLbl" layoutX="206.0" layoutY="19.0" text="13 st">
+            <Label fx:id="numberOfItemsLbl" layoutX="206.0" layoutY="19.0" text="0 st">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="totalPriceLbl" layoutX="197.0" layoutY="55.0" text="346 kr">
+            <Label fx:id="totalPriceLbl" layoutX="197.0" layoutY="55.0" prefHeight="25.0" prefWidth="70.0" text="0,00 kr">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
