@@ -1,9 +1,12 @@
 package classes;
 
+import javafx.collections.MapChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import se.chalmers.cse.dat216.project.Product;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +16,9 @@ public class MainWindowController extends Controller{
 
     @FXML private StackPane stackPaneMain;
     @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
-    @FXML private Label totalPriceLbl, numberOfItemsLabel;
+    @FXML private Label totalPriceLbl, numberOfItemsLbl;
+
+    private
 
     List<String> fxmlFileList = new ArrayList<>();
     static Map<String, Pane> stringPaneMap = new HashMap<>();
@@ -31,6 +36,11 @@ public class MainWindowController extends Controller{
         makeAMap();
 
         spManager = new SPManager(stackPaneMain, fxmlFileList);
+
+        ProductController.productToAmountMap.addListener((MapChangeListener<Product, Double>) change -> {
+            updateNumberOfItems();
+            updateTotalPrice();
+        });
     }
 
     @Override
@@ -58,15 +68,36 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/betalning.fxml");
     }
 
-    private void updateNumberOfItems(){
+    public void updateNumberOfItems(){
         int amount = 0;
 
+        for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
+            amount += entry.getValue();
+        }
 
+        numberOfItemsLbl.textProperty().set(amount + " st");
     }
 
-    private void updateTotalPrice(){
+    public void updateTotalPrice(){
+        double price = 0;
 
-        
+        price = addAllProducts();
+
+        totalPriceLbl.textProperty().set(roundInString(price) + " kr");
+    }
+
+    private double addAllProducts(){
+        double a = 0;
+
+        for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
+            a += entry.getKey().getPrice() * entry.getValue();
+        }
+
+        return a;
+    }
+
+    private String roundInString(double d){
+        return String.format("%.2f", d);
     }
 
     @FXML

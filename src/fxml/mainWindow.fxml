@@ -26,17 +26,17 @@
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <Label layoutX="104.0" layoutY="53.0" styleClass="cart" text="Totalt pris:">
+            <Label layoutX="95.0" layoutY="52.0" styleClass="cart" text="Totalt pris:">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="206.0" layoutY="18.0" text="13 st">
+            <Label fx:id="numberOfItemsLbl" layoutX="206.0" layoutY="19.0" text="13 st">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="206.0" layoutY="55.0" text="346 kr">
+            <Label fx:id="totalPriceLbl" layoutX="197.0" layoutY="55.0" text="346 kr">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
