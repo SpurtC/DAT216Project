@@ -1,6 +1,7 @@
 package classes;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class MainWindowController extends Controller{
 
     @FXML private StackPane stackPaneMain;
     @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
+    @FXML private Label totalPriceLbl, numberOfItemsLabel;
 
     List<String> fxmlFileList = new ArrayList<>();
     static Map<String, Pane> stringPaneMap = new HashMap<>();
@@ -54,6 +56,17 @@ public class MainWindowController extends Controller{
         fxmlFileList.add("../fxml/varukorg.fxml");
         fxmlFileList.add("../fxml/leveranstid.fxml");
         fxmlFileList.add("../fxml/betalning.fxml");
+    }
+
+    private void updateNumberOfItems(){
+        int amount = 0;
+
+
+    }
+
+    private void updateTotalPrice(){
+
+        
     }
 
     @FXML
