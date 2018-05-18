@@ -234,6 +234,12 @@ public class MinaUppgifterController extends Controller{
         MainWindowController.cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
+    private void printIfNotNull (TextField textField) {
+        if (textField.getText() != null) {
+            textField.textProperty().set(iMatDataHandler.getCustomer().getFirstName()); ///LAÄSDLÖADSÄLDAÖSDAS
+        }
+    }
+
     @Override
     public void init() {
         this.confirmation.setText("");
@@ -258,5 +264,23 @@ public class MinaUppgifterController extends Controller{
         iMatDataHandler.getCreditCard().setValidMonth(00);
         iMatDataHandler.getCreditCard().setValidYear(00);
         iMatDataHandler.getCreditCard().setVerificationCode(000);
+    }
+
+    @Override
+    public void opened() {
+        printIfNotNull(firstName);
+        printIfNotNull(lastName);
+        printIfNotNull(address);
+        printIfNotNull(email);
+        printIfNotNull(phoneNumber);
+        printIfNotNull(mobileNumber);
+        printIfNotNull(zipCode);
+
+        printIfNotNull(cardHolder);
+        printIfNotNull(cardNumber);
+
+        validMonth.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
+        validYear.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
+        cvc.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
     }
 }
