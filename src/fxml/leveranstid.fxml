@@ -31,7 +31,7 @@
                               <Font size="36.0" />
                            </font>
                         </Text>
-                        <RadioButton fx:id="monTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" text="10:00-12:00">
+                        <RadioButton fx:id="monTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="10:00-12:00">
                            <font>
                               <Font size="24.0" />
                            </font>

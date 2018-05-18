@@ -55,6 +55,9 @@ public class LeveranstidController extends Controller {
         friEighteenRBtn.setToggleGroup(RADIOGROUP);
     }
 
+    private void makeIntresstingthings () {
+    }
+
     @Override
     public void init() {
         makeAToggleGroup();
