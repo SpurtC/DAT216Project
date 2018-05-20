@@ -90,9 +90,9 @@ public class MinaUppgifterController extends Controller{
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
-                if (textField.getText().length() > maxLength) {
-                    String s = textField.getText().substring(0, maxLength);
-                    textField.setText(s);
+                if (newValue != null && newValue.length() > maxLength ) {
+                    String s = newValue.substring(0, maxLength);
+                    textField.textProperty().set(s);
                 }
             }
         });
@@ -205,10 +205,13 @@ public class MinaUppgifterController extends Controller{
     }
 
     private boolean checkUsage(TextField textField){
-        return textField.getText().length() != 0;
+        return textField.getText() == null;
     }
 
     private boolean checkIfNumbers(TextField textField){
+        if(textField.getText() == null){
+            return false;
+        }
         char [] charArray = textField.getText().toCharArray();
         for (int i = 0; i < charArray.length; i++){
             if (Character.isDigit(charArray[i])){
@@ -219,6 +222,9 @@ public class MinaUppgifterController extends Controller{
     }
 
     private boolean checkIfLetters(TextField textField) {
+        if(textField.getText() == null){
+            return false;
+        }
         char[] charArray = textField.getText().toCharArray();
         for (int i = 0; i < charArray.length; i++){
             if (Character.isAlphabetic(charArray[i])){
@@ -234,10 +240,47 @@ public class MinaUppgifterController extends Controller{
         MainWindowController.cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
     }
 
-    private void printIfNotNull (TextField textField) {
-        if (textField.getText() != null) {
-            textField.textProperty().set(iMatDataHandler.getCustomer().getFirstName()); ///LAÄSDLÖADSÄLDAÖSDAS
+    private void checkPreviousInfo(){
+        if (firstName.getText() != null){
+            firstName.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
         }
+
+
+        if (lastName.getText() != null){
+            lastName.textProperty().set(iMatDataHandler.getCustomer().getLastName());
+        }
+
+        if(address.getText() != null) {
+            address.textProperty().set(iMatDataHandler.getCustomer().getAddress());
+        }
+
+        if(email.getText() != null) {
+            email.textProperty().set(iMatDataHandler.getCustomer().getEmail());
+        }
+
+        if( zipCode.getText() != null) {
+            zipCode.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
+        }
+
+        if(mobileNumber.getText() != null) {
+            mobileNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        }
+
+        if(phoneNumber.getText() != null ){
+            phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        }
+
+        if(cardHolder.getText() != null){
+            cardHolder.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
+        }
+
+        if(cardNumber.getText() != null) {
+            cardNumber.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
+        }
+
+        validMonth.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
+        validYear.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
+        cvc.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
     }
 
     @Override
@@ -268,19 +311,6 @@ public class MinaUppgifterController extends Controller{
 
     @Override
     public void opened() {
-        printIfNotNull(firstName);
-        printIfNotNull(lastName);
-        printIfNotNull(address);
-        printIfNotNull(email);
-        printIfNotNull(phoneNumber);
-        printIfNotNull(mobileNumber);
-        printIfNotNull(zipCode);
-
-        printIfNotNull(cardHolder);
-        printIfNotNull(cardNumber);
-
-        validMonth.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
-        validYear.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
-        cvc.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
+        checkPreviousInfo();
     }
 }

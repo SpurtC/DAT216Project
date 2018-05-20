@@ -3,8 +3,8 @@ package classes;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
@@ -15,6 +15,9 @@ public class BetalningController extends Controller {
 
     @FXML
     private TextField cardHolderTxtF, cardNumberTxtF, validMonthTxtF, validYearTxtF, cvcTxtF;
+
+    @FXML
+    Label messageLbl;
 
     @FXML
     private ImageView firstNameArrow, lastNameArrow, addressArrow, zipCodeArrow, phoneNumberArrow, mobileNumberArrow, emailArrow;
@@ -50,6 +53,10 @@ public class BetalningController extends Controller {
             MainWindowController.spManager.showPane("../fxml/confirmation.fxml");
 
         }
+
+        else {
+            messageLbl.textProperty().set("Vänligen kontrollera att uppgifterna stämmer");
+        }
 }
 
     @FXML
@@ -71,7 +78,141 @@ public class BetalningController extends Controller {
         iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYearTxtF.getText()));
         iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvcTxtF.getText()));
 
+        if (checkUsage(firstNameTxtF)){
+            if(checkIfNumbers(firstNameTxtF)){
+                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(lastNameTxtF)){
+            if(checkIfNumbers(lastNameTxtF)){
+                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(phoneNumberTxtF)){
+            if(checkIfLetters(phoneNumberTxtF)){
+                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(mobileNumberTxtF)){
+            if(checkIfLetters(mobileNumberTxtF)){
+                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(zipCodeTxtF)){
+            if(checkIfLetters(zipCodeTxtF)){
+                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(cardHolderTxtF)){
+            if(checkIfNumbers(cardHolderTxtF)){
+                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
+        if (checkUsage(cardNumberTxtF)){
+            if(checkIfLetters(cardNumberTxtF)){
+                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
+
+        if (checkUsage(validMonthTxtF)){
+            if(checkIfLetters(validMonthTxtF)){
+                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
+
+        if (checkUsage(validYearTxtF)){
+            if(checkIfLetters(validYearTxtF)){
+                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
+
+        if (checkUsage(cvcTxtF)){
+            if(checkIfLetters(cvcTxtF)){
+                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
+
+
+
+        System.out.println(iMatDataHandler.getCreditCard().getValidMonth());
+        if (checkUsage(validMonthTxtF)){
+            if (Integer.parseInt(validMonthTxtF.getText()) > 12 || Integer.parseInt(validMonthTxtF.getText()) < 1) {
+                this.messageLbl.setText("Kontrollera att kortinformationen stämmer!");
+                return;
+            }
+            else{
+                this.messageLbl.setText("Dina uppgifter har sparats!");
+            }
+        }
+
+        if (checkUsage(validYearTxtF)){
+            if(Integer.parseInt(validYearTxtF.getText()) < 18){
+                this.messageLbl.setText("Kontrollera att kortinformationen stämmer!");
+                return;
+            }
+            else{
+                this.messageLbl.setText("Dina uppgifter har sparats!");
+            }
+        }
+        if (checkUsage(firstNameTxtF) || checkUsage(lastNameTxtF) || checkUsage(phoneNumberTxtF)|| checkUsage(mobileNumberTxtF) ||
+                checkUsage(emailTxtF) || checkUsage(addressTxtF) || checkUsage(zipCodeTxtF) || checkUsage(cardHolderTxtF) ||
+                checkUsage(cardHolderTxtF) || checkUsage(cvcTxtF)){
+            this.messageLbl.setText("Dina uppgifter har sparats!");
+        }
+
     }
+
+
+    private boolean checkUsage(TextField textField){
+        return textField.getText() == null;
+    }
+
+    private boolean checkIfNumbers(TextField textField){
+        if(textField.getText() == null){
+            return false;
+        }
+        char [] charArray = textField.getText().toCharArray();
+        for (int i = 0; i < charArray.length; i++){
+            if (Character.isDigit(charArray[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean checkIfLetters(TextField textField) {
+        if(textField.getText() == null){
+            return false;
+        }
+        char[] charArray = textField.getText().toCharArray();
+        for (int i = 0; i < charArray.length; i++){
+            if (Character.isAlphabetic(charArray[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     private void control2ndArrow(TextField textField, ImageView imageView){
         if (!checkUsage(textField.getText()) || textField.getText().equals("0")){
@@ -107,11 +248,49 @@ public class BetalningController extends Controller {
         });
     }
 
-    private void printIfNotNull (TextField textField) {
-        if (textField.getText() != null) {
-            textField.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
+    private void checkPreviousInfo(){
+        if (firstNameTxtF.getText() != null){
+            firstNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
         }
+
+
+        if (lastNameTxtF.getText() != null){
+            lastNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getLastName());
+        }
+
+        if(addressTxtF.getText() != null) {
+            addressTxtF.textProperty().set(iMatDataHandler.getCustomer().getAddress());
+        }
+
+        if(emailTxtF.getText() != null) {
+            emailTxtF.textProperty().set(iMatDataHandler.getCustomer().getEmail());
+        }
+
+        if( zipCodeTxtF.getText() != null) {
+            zipCodeTxtF.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
+        }
+
+        if(mobileNumberTxtF.getText() != null) {
+            mobileNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        }
+
+        if(phoneNumberTxtF.getText() != null ){
+            phoneNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        }
+
+        if(cardHolderTxtF.getText() != null){
+            cardHolderTxtF.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
+        }
+
+        if(cardNumberTxtF.getText() != null) {
+            cardNumberTxtF.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
+        }
+
+        validMonthTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
+        validYearTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
+        cvcTxtF.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
     }
+
 
     @Override
     public void init() {
@@ -126,20 +305,8 @@ public class BetalningController extends Controller {
     }
 
     public void opened() {
-        printIfNotNull(firstNameTxtF);
-        printIfNotNull(lastNameTxtF);
-        printIfNotNull(addressTxtF);
-        printIfNotNull(emailTxtF);
-        printIfNotNull(phoneNumberTxtF);
-        printIfNotNull(mobileNumberTxtF);
-        printIfNotNull(zipCodeTxtF);
 
-        printIfNotNull(cardHolderTxtF);
-        printIfNotNull(cardNumberTxtF);
-
-        validMonthTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
-        validYearTxtF.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
-        cvcTxtF.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
+        checkPreviousInfo();
 
         firstNameArrow.setVisible(false);
         lastNameArrow.setVisible(false);
@@ -153,6 +320,7 @@ public class BetalningController extends Controller {
         cardNumberArrow.setVisible(false);
         validArrow.setVisible(false);
         cvcArrow.setVisible(false);
+
     }
 
 
