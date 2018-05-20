@@ -64,6 +64,6 @@ public class MittKontoMainController extends Controller{
     @Override
     public void opened() {
         spManager.showPane("../fxml/minaUppgifter.fxml");
-
+        cssManager.changeCSS("minaUppgifterPane", "myAccountPane", "myAccountPaneClicked");
     }
 }

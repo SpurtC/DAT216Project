@@ -47,7 +47,6 @@ public class MainWindowController extends Controller{
     public void opened() {
         spManager.showPane("../fxml/framsida.fxml");
         cssManager.changeCSS("handlaPane", "upperPaneFill", "upperPaneFillPressed");
-        MittKontoMainController.cssManager.changeCSS("minaUppgifterPane", "myAccountPane", "myAccountPaneClicked");
     }
 
     public void makeAMap () {

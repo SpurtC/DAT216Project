@@ -63,99 +63,99 @@ public class LeveranstidController extends Controller {
             deliveryHandler.deliveryDate = "måndag mellan 10 och 12";
         }
 
-        if(monTwelveRBtn.isSelected()){
+        else if(monTwelveRBtn.isSelected()){
             deliveryHandler.deliveryDate = "måndag mellan 12 och 14";
         }
 
-        if(monFourteenRBtn.isSelected()){
+        else if(monFourteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "måndag mellan 14 och 16";
         }
 
-        if(monSixteenRBtn.isSelected()){
+        else if(monSixteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "måndag mellan 16 och 18";
         }
 
-        if(monEighteenRBtn.isSelected()){
+        else if(monEighteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "måndag mellan 18 och 20";
         }
 
-        if(tueTenRBtn.isSelected()){
+        else if(tueTenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "tisdag mellan 10 och 12";
         }
 
-        if(tueTwelveRBtn.isSelected()){
+        else if(tueTwelveRBtn.isSelected()){
             deliveryHandler.deliveryDate = "tisdag mellan 12 och 14";
         }
 
-        if(tueFourteenRBtn.isSelected()){
+        else if(tueFourteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "tisdag mellan 14 och 16";
         }
 
-        if(tueSixteenRBtn.isSelected()){
+        else if(tueSixteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "tisdag mellan 16 och 18";
         }
 
-        if(tueEighteenRBtn.isSelected()){
+        else if(tueEighteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "tisdag mellan 18 och 20";
         }
 
-        if(wedTenRBtn.isSelected()){
+        else if(wedTenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "onsdag mellan 10 och 12";
         }
 
-        if(wedTwelveRBtn.isSelected()){
+        else if(wedTwelveRBtn.isSelected()){
             deliveryHandler.deliveryDate = "onsdag mellan 12 och 14";
         }
 
-        if(wedFourteenRBtn.isSelected()){
+        else if(wedFourteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "onsdag mellan 14 och 16";
         }
 
-        if(wedSixteenRBtn.isSelected()){
+        else if(wedSixteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "onsdag mellan 16 och 18";
         }
 
-        if(wedEighteenRBtn.isSelected()){
+        else if(wedEighteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "onsdag mellan 18 och 20";
         }
 
-        if(thuTenRBtn.isSelected()){
+        else if(thuTenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "torsdag mellan 10 och 12";
         }
 
-        if(thuTwelveRBtn.isSelected()){
+        else if(thuTwelveRBtn.isSelected()){
             deliveryHandler.deliveryDate = "torsdag mellan 12 och 14";
         }
 
-        if(thuFourteenRBtn.isSelected()){
+        else if(thuFourteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "torsdag mellan 14 och 16";
         }
 
-        if(thuSixteenRBtn.isSelected()){
+        else if(thuSixteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "torsdag mellan 16 och 18";
         }
 
-        if(thuEighteenRBtn.isSelected()){
+        else if(thuEighteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "torsdag mellan 18 och 20";
         }
 
-        if(friTenRBtn.isSelected()){
+        else if(friTenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "fredag mellan 10 och 12";
         }
 
-        if(friTwelveRBtn.isSelected()){
+        else if(friTwelveRBtn.isSelected()){
             deliveryHandler.deliveryDate = "fredag mellan 12 och 14";
         }
 
-        if(friFourteenRBtn.isSelected()){
+        else if(friFourteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "fredag mellan 14 och 16";
         }
 
-        if(friSixteenRBtn.isSelected()){
+        else if(friSixteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "fredag mellan 16 och 18";
         }
 
-        if(friEighteenRBtn.isSelected()){
+        else if(friEighteenRBtn.isSelected()){
             deliveryHandler.deliveryDate = "fredag mellan 18 och 20";
         }
     }
