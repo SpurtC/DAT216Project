@@ -51,7 +51,7 @@ public class BetalningController extends Controller {
                 !cardNumberArrow.isVisible() && !validArrow.isVisible() && !cvcArrow.isVisible()) {
 
             iMatDataHandler.getCustomer().setEmail(emailTxtF.getText());
-            MainWindowController.spManager.showPane("../fxml/confirmation.fxml");
+            MainWindowController.spManager.showPane("../fxml/lastConfirmation.fxml");
 
         }
 

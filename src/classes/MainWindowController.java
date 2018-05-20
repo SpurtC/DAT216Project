@@ -58,7 +58,7 @@ public class MainWindowController extends Controller{
 
     private void makeAfxmlList() {
         fxmlFileList.add("../fxml/betalning.fxml");
-        fxmlFileList.add("../fxml/confirmation.fxml");
+        fxmlFileList.add("../fxml/lastConfirmation.fxml");
         fxmlFileList.add("../fxml/framsida.fxml");
         fxmlFileList.add("../fxml/kundinformation.fxml");
         fxmlFileList.add("../fxml/mittKontoMain.fxml");

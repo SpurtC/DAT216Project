@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
-public class ConfirmationController extends Controller {
+public class LastConfirmationController extends Controller {
 
     @FXML
     Text messageTxt, message2Txt;
