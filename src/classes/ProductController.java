@@ -18,7 +18,6 @@ import java.util.List;
 
 public class ProductController extends Controller implements Initializable{
 
-    private ProductCategory category;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
 
@@ -29,6 +28,8 @@ public class ProductController extends Controller implements Initializable{
     private CSSManager cssManager = new CSSManager(stringPaneMapProduct);
 
     private static Map<String, Pane> stringPaneMapProduct = new HashMap<>();
+
+    public static List<Map<Product, Double>> purchaseHistory = new ArrayList<>();
 
 
 
@@ -58,7 +59,7 @@ public class ProductController extends Controller implements Initializable{
         updateFlowPane(products);
     }
 
-    public void updateFlowPane(List<Product> list) {
+    private void updateFlowPane(List<Product> list) {
         resultFlowPane.getChildren().clear();
         for (Product aProduct : list){
             ProductItem productItem = new ProductItem(aProduct);

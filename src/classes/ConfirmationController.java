@@ -9,7 +9,6 @@ public class ConfirmationController extends Controller {
     @FXML
     Text messageTxt, message2Txt;
 
-
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private DeliveryHandler deliveryHandler = DeliveryHandler.getInstance();
 
@@ -19,9 +18,11 @@ public class ConfirmationController extends Controller {
         MainWindowController.cssManager.changeCSS("handlaPane","upperPaneFill", "upperPaneFillPressed");
     }
 
-    public void setText() {
-        messageTxt.textProperty().set("Betalningsbekräftelse och kvitto har skickats till din e-post: " + iMatDataHandler.getCustomer().getEmail());
-        message2Txt.textProperty().set("Varorna kommer att levereras på " + deliveryHandler.deliveryDate);
+    private void saveShoppingCart() {
+        System.out.println(ProductController.productToAmountMap.values());
+        System.out.println(ProductController.productToAmountMap.keySet());
+        ProductController.purchaseHistory.add(ProductController.productToAmountMap);
+        ProductController.productToAmountMap.clear();
     }
 
     @Override
@@ -30,6 +31,8 @@ public class ConfirmationController extends Controller {
     }
 
     public void opened() {
-        setText();
+        messageTxt.textProperty().set("Betalningsbekräftelse och kvitto har skickats till din e-post: " + iMatDataHandler.getCustomer().getEmail());
+        message2Txt.textProperty().set("Varorna kommer att levereras på " + deliveryHandler.deliveryDate);
+        saveShoppingCart();
     }
 }

@@ -21,7 +21,7 @@ public class MainWindowController extends Controller{
     private
 
     List<String> fxmlFileList = new ArrayList<>();
-    static Map<String, Pane> stringPaneMap = new HashMap<>();
+    private static Map<String, Pane> stringPaneMap = new HashMap<>();
 
     public static SPManager spManager;
     public static CSSManager cssManager = new CSSManager(stringPaneMap);
