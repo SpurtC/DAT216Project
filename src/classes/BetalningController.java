@@ -50,6 +50,7 @@ public class BetalningController extends Controller {
                 !mobileNumberArrow.isVisible() && !emailArrow.isVisible() && !cardHolderArrow.isVisible() &&
                 !cardNumberArrow.isVisible() && !validArrow.isVisible() && !cvcArrow.isVisible()) {
 
+            iMatDataHandler.getCustomer().setEmail(emailTxtF.getText());
             MainWindowController.spManager.showPane("../fxml/confirmation.fxml");
 
         }
@@ -248,7 +249,7 @@ public class BetalningController extends Controller {
     }
 
     private void checkPreviousInfo(){
-        if (firstNameTxtF.getText() != null){
+        if (firstNameTxtF.getText() != null ){
             firstNameTxtF.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
         }
 
@@ -319,8 +320,5 @@ public class BetalningController extends Controller {
         cardNumberArrow.setVisible(false);
         validArrow.setVisible(false);
         cvcArrow.setVisible(false);
-
     }
-
-
 }

@@ -6,18 +6,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ConfirmationController">
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ConfirmationController">
    <children>
       <SplitPane>
          <items>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1440.0">
                <children>
-                  <Text fill="#4f10a1" layoutX="566.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekräftelse">
+                  <Text fill="#4f10a1" layoutX="566.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekräftelse">
                      <font>
                         <Font size="64.0" />
                      </font>
                   </Text>
-                  <Text fill="#5a4a65" layoutX="308.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsbekräftelse och kvitto har skickats till din e-post: exempel@gmail.com" wrappingWidth="824.8818359375">
+                  <Text fx:id="messageTxt" fill="#5a4a65" layoutX="248.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsbekräftelse och kvitto har skickats till din e-post: exempel@gmail.com" textAlignment="CENTER" wrappingWidth="943.2818145751953">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="message2Txt" layoutX="249.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varorna kommer att levereras på måndag mellan 10 och 12">
                      <font>
                         <Font size="36.0" />
                      </font>
