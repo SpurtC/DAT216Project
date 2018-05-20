@@ -31,19 +31,19 @@ public class BetalningController extends Controller {
     @FXML
     public void onGoToConfirmationClicked() {
 
-        controlArrow(firstNameTxtF, firstNameArrow);
-        controlArrow(lastNameTxtF,lastNameArrow);
+        controlLettersOnlyArrow(firstNameTxtF, firstNameArrow);
+        controlLettersOnlyArrow(lastNameTxtF,lastNameArrow);
         controlArrow(addressTxtF,addressArrow);
-        controlArrow(zipCodeTxtF,zipCodeArrow);
-        controlArrow(phoneNumberTxtF,phoneNumberArrow);
-        controlArrow(mobileNumberTxtF,mobileNumberArrow);
+        controlNumbersOnlyArrow(zipCodeTxtF,zipCodeArrow);
+        controlNumbersOnlyArrow(phoneNumberTxtF,phoneNumberArrow);
+        controlNumbersOnlyArrow(mobileNumberTxtF,mobileNumberArrow);
         controlArrow(emailTxtF,emailArrow);
 
-        controlArrow(cardHolderTxtF,cardHolderArrow);
-        controlArrow(cardNumberTxtF,cardNumberArrow);
-        control2ndArrow(validMonthTxtF,validArrow);
-        control2ndArrow(validYearTxtF,validArrow);
-        control2ndArrow(cvcTxtF,cvcArrow);
+        controlLettersOnlyArrow(cardHolderTxtF,cardHolderArrow);
+        controlNumbersOnlyArrow(cardNumberTxtF,cardNumberArrow);
+        controlNumbersOnlyArrow(validMonthTxtF,validArrow);
+        controlNumbersOnlyArrow(validYearTxtF,validArrow);
+        controlNumbersOnlyArrow(cvcTxtF,cvcArrow);
 
         if(!firstNameArrow.isVisible() && !lastNameArrow.isVisible() && !addressArrow.isVisible() &&
                 !zipCodeArrow.isVisible() && !phoneNumberArrow.isVisible() && !mobileNumberArrow.isVisible() &&
@@ -55,7 +55,7 @@ public class BetalningController extends Controller {
         }
 
         else {
-            messageLbl.textProperty().set("Vänligen kontrollera att uppgifterna stämmer");
+            messageLbl.textProperty().set("Vänligen kontrollera att fälten är korrekt ifyllda");
         }
 }
 
@@ -65,50 +65,51 @@ public class BetalningController extends Controller {
     }
 
     public void saveButton() {
-        iMatDataHandler.getCustomer().setFirstName(firstNameTxtF.getText());
-        iMatDataHandler.getCustomer().setLastName(lastNameTxtF.getText());
-        iMatDataHandler.getCustomer().setAddress(addressTxtF.getText());
-        iMatDataHandler.getCustomer().setEmail(emailTxtF.getText());
-        iMatDataHandler.getCustomer().setPhoneNumber(phoneNumberTxtF.getText());
-        iMatDataHandler.getCustomer().setMobilePhoneNumber(mobileNumberTxtF.getText());
-        iMatDataHandler.getCustomer().setPostCode(zipCodeTxtF.getText());
-        iMatDataHandler.getCreditCard().setHoldersName(cardHolderTxtF.getText());
-        iMatDataHandler.getCreditCard().setCardNumber(cardNumberTxtF.getText());
-        iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonthTxtF.getText()));
-        iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYearTxtF.getText()));
-        iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvcTxtF.getText()));
+        messageLbl.textProperty().set("");
+        firstNameArrow.setVisible(false);
+        lastNameArrow.setVisible(false);
+        addressArrow.setVisible(false);
+        zipCodeArrow.setVisible(false);
+        phoneNumberArrow.setVisible(false);
+        mobileNumberArrow.setVisible(false);
+        emailArrow.setVisible(false);
+
+        cardHolderArrow.setVisible(false);
+        cardNumberArrow.setVisible(false);
+        validArrow.setVisible(false);
+        cvcArrow.setVisible(false);
 
         if (checkUsage(firstNameTxtF)){
             if(checkIfNumbers(firstNameTxtF)){
-                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
                 return;
             }
         }
 
         if (checkUsage(lastNameTxtF)){
             if(checkIfNumbers(lastNameTxtF)){
-                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
                 return;
             }
         }
 
         if (checkUsage(phoneNumberTxtF)){
             if(checkIfLetters(phoneNumberTxtF)){
-                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
                 return;
             }
         }
 
         if (checkUsage(mobileNumberTxtF)){
             if(checkIfLetters(mobileNumberTxtF)){
-                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
                 return;
             }
         }
 
         if (checkUsage(zipCodeTxtF)){
             if(checkIfLetters(zipCodeTxtF)){
-                this.messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att personuppgifterna stämmer!");
                 return;
             }
         }
@@ -122,69 +123,57 @@ public class BetalningController extends Controller {
 
         if (checkUsage(cardNumberTxtF)){
             if(checkIfLetters(cardNumberTxtF)){
-                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
                 return;
             }
         }
-
 
         if (checkUsage(validMonthTxtF)){
-            if(checkIfLetters(validMonthTxtF)){
-                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
-                return;
+            if (checkIfLetters(validMonthTxtF)){
+                if (Integer.parseInt(validMonthTxtF.getText()) > 12 || Integer.parseInt(validMonthTxtF.getText()) < 1) {
+                    messageLbl.setText("Kontrollera att kortinformationen stämmer!");
+                    return;
+                }
             }
         }
-
 
         if (checkUsage(validYearTxtF)){
-            if(checkIfLetters(validYearTxtF)){
-                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
-                return;
+            if (checkIfLetters(validYearTxtF)){
+                if(Integer.parseInt(validYearTxtF.getText()) < 18){
+                    messageLbl.setText("Kontrollera att kortinformationen stämmer!");
+                    return;
+                }
             }
         }
-
 
         if (checkUsage(cvcTxtF)){
             if(checkIfLetters(cvcTxtF)){
-                this.messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
+                messageLbl.setText("Kontrollera att kortuppgifterna stämmer!");
                 return;
             }
         }
 
-
-
-
-        System.out.println(iMatDataHandler.getCreditCard().getValidMonth());
-        if (checkUsage(validMonthTxtF)){
-            if (Integer.parseInt(validMonthTxtF.getText()) > 12 || Integer.parseInt(validMonthTxtF.getText()) < 1) {
-                this.messageLbl.setText("Kontrollera att kortinformationen stämmer!");
-                return;
-            }
-            else{
-                this.messageLbl.setText("Dina uppgifter har sparats!");
-            }
-        }
-
-        if (checkUsage(validYearTxtF)){
-            if(Integer.parseInt(validYearTxtF.getText()) < 18){
-                this.messageLbl.setText("Kontrollera att kortinformationen stämmer!");
-                return;
-            }
-            else{
-                this.messageLbl.setText("Dina uppgifter har sparats!");
-            }
-        }
-        if (checkUsage(firstNameTxtF) || checkUsage(lastNameTxtF) || checkUsage(phoneNumberTxtF)|| checkUsage(mobileNumberTxtF) ||
-                checkUsage(emailTxtF) || checkUsage(addressTxtF) || checkUsage(zipCodeTxtF) || checkUsage(cardHolderTxtF) ||
-                checkUsage(cardHolderTxtF) || checkUsage(cvcTxtF)){
+        if (checkUsage(firstNameTxtF) && checkUsage(lastNameTxtF) && checkUsage(phoneNumberTxtF) && checkUsage(mobileNumberTxtF) &&
+                checkUsage(emailTxtF) && checkUsage(addressTxtF) && checkUsage(zipCodeTxtF) && checkUsage(cardHolderTxtF) &&
+                checkUsage(cardHolderTxtF) && checkUsage(cvcTxtF)){
             this.messageLbl.setText("Dina uppgifter har sparats!");
+            iMatDataHandler.getCustomer().setFirstName(firstNameTxtF.getText());
+            iMatDataHandler.getCustomer().setLastName(lastNameTxtF.getText());
+            iMatDataHandler.getCustomer().setAddress(addressTxtF.getText());
+            iMatDataHandler.getCustomer().setEmail(emailTxtF.getText());
+            iMatDataHandler.getCustomer().setPhoneNumber(phoneNumberTxtF.getText());
+            iMatDataHandler.getCustomer().setMobilePhoneNumber(mobileNumberTxtF.getText());
+            iMatDataHandler.getCustomer().setPostCode(zipCodeTxtF.getText());
+            iMatDataHandler.getCreditCard().setHoldersName(cardHolderTxtF.getText());
+            iMatDataHandler.getCreditCard().setCardNumber(cardNumberTxtF.getText());
+            iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonthTxtF.getText()));
+            iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYearTxtF.getText()));
+            iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvcTxtF.getText()));
         }
-
     }
 
-
     private boolean checkUsage(TextField textField){
-        return textField.getText() == null;
+        return textField.getText() != null;
     }
 
     private boolean checkIfNumbers(TextField textField){
@@ -213,9 +202,17 @@ public class BetalningController extends Controller {
         return false;
     }
 
+    private void controlLettersOnlyArrow(TextField textField, ImageView imageView){
+        if(!checkUsage(textField.getText()) || checkIfNumbers(textField)){
+            imageView.setVisible(true);
+        }
+        else {
+            imageView.setVisible(false);
+        }
+    }
 
-    private void control2ndArrow(TextField textField, ImageView imageView){
-        if (!checkUsage(textField.getText()) || textField.getText().equals("0")){
+    private void controlNumbersOnlyArrow(TextField textField, ImageView imageView){
+        if (!checkUsage(textField.getText()) || textField.getText().equals("0") || checkIfLetters(textField)){
             imageView.setVisible(true);
         }
         else {
@@ -224,13 +221,15 @@ public class BetalningController extends Controller {
     }
 
     private void controlArrow(TextField textField, ImageView imageView){
-        if(!checkUsage(textField.getText())){
+        if(!checkUsage(textField)){
             imageView.setVisible(true);
         }
         else {
             imageView.setVisible(false);
         }
     }
+
+
 
     private boolean checkUsage(String textField){
         return textField != null;

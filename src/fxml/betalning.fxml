@@ -20,7 +20,7 @@
                      <children>
                         <Text fill="#684990" layoutX="81.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalning" wrappingWidth="313.21875">
                            <font>
-                              <Font size="70.0" />
+                              <Font size="65.0" />
                            </font>
                         </Text>
                         <Text fill="#403d3dbd" layoutX="83.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen kontrollera eller fyll in dina uppgifter" wrappingWidth="802.0">
@@ -190,9 +190,9 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Label fx:id="messageLbl" layoutX="767.0" layoutY="357.0" text="Dubbelkolla att personuppgifterna stämmer">
+                        <Label fx:id="messageLbl" layoutX="763.0" layoutY="368.0">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
                      </children>

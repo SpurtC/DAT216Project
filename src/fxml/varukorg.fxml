@@ -14,14 +14,23 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="1438.0">
                <children>
-                  <Button layoutX="37.0" layoutY="606.0" mnemonicParsing="false" onAction="#onContinueHandleClicked" prefHeight="50.0" prefWidth="130.0" text="Fortsätt handla" />
+                  <Button layoutX="37.0" layoutY="606.0" mnemonicParsing="false" onAction="#onContinueHandleClicked" prefHeight="51.0" prefWidth="217.0" text="Fortsätt handla">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                   <Label layoutX="41.0" layoutY="38.0" text="DIN VARUKORG">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Button layoutX="710.0" layoutY="606.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="50.0" prefWidth="113.0" text="Gå vidare" />
-                  <Button layoutX="1297.0" layoutY="543.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" text="Töm varukorgen" />
+                  <Button layoutX="710.0" layoutY="606.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="51.0" prefWidth="172.0" text="Gå vidare">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button layoutX="1196.0" layoutY="543.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="208.0" text="Töm varukorgen">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                   <Label layoutX="124.0" layoutY="77.0" text="Produkt:">
                      <font>
                         <Font name="System Bold" size="17.0" />
