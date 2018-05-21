@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.FlowPane?>
 
 <AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaFavoriterController">
    <children>
@@ -12,13 +12,13 @@
          <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
+                  <ScrollPane layoutX="21.0" layoutY="29.0" prefHeight="520.0" prefWidth="1396.0">
+                     <content>
+                        <FlowPane fx:id="favoriteFlowPane" prefHeight="504.0" prefWidth="1380.0" />
+                     </content>
+                  </ScrollPane>
                   <AnchorPane layoutX="268.0" layoutY="-39.0" prefHeight="50.0" prefWidth="861.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutX="80.0" layoutY="448.0" mnemonicParsing="false" onAction="#onContinueShopMyFavoritesClicked" text="Fortsätt handla" />
-                  <Label layoutX="80.0" layoutY="70.0" text="MINA FAVORITER" underline="true">
-                     <font>
-                        <Font name="System Bold" size="17.0" />
-                     </font>
-                  </Label>
+                  <Button layoutX="638.0" layoutY="572.0" mnemonicParsing="false" onAction="#onContinueShopMyFavoritesClicked" text="Fortsätt handla" />
                </children>
             </AnchorPane>
          </items>

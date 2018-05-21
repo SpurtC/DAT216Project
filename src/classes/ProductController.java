@@ -86,7 +86,7 @@ public class ProductController extends Controller implements Initializable{
             }
         }
         cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
-
+        updateFlowPane(iMatDataHandler.favorites());
     }
 
     public void clickedBreadCtg() {
@@ -189,7 +189,7 @@ public class ProductController extends Controller implements Initializable{
         updateFlowPane(currentList);
     }
 
-    public void clickedEcoCtg() { //Här behövs kod, nedan fungerar ej
+    public void clickedEcoCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
             if(allProducts.get(i).isEcological()) {

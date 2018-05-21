@@ -29,6 +29,8 @@ public class ProductItem extends AnchorPane {
     private Button minusBtn, plusBtn;
     @FXML
     private TextField antalTxtF;
+    @FXML
+    private ImageView favoriteHeartImg;
 
     private int antal;
     private int numberOfItems;
@@ -56,6 +58,10 @@ public class ProductItem extends AnchorPane {
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.antalTxtF.setText(antal + "");
         this.product = product;
+
+        if(IMatDataHandler.getInstance().isFavorite(product)) {
+            favoriteHeartImg.setImage(new Image("images/hjartaRod.png"));
+        }
 
         antalTxtF.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -121,25 +127,16 @@ public class ProductItem extends AnchorPane {
     }
 
 
-    @FXML ImageView favoriteHeartImg;
-    List<Product> favoritProductList = new ArrayList<>();
-
     public void onFavoriteHeartClicked() {
-
-
-        if(favoriteHeartImg.getImage().getUrl().equals("../image/hjartaVit.png")) {
-            favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "../image/hjartaRod.png")));
-            favoritProductList.add(product);
+        if(!IMatDataHandler.getInstance().isFavorite(product)) {
+            IMatDataHandler.getInstance().addFavorite(product);
+            favoriteHeartImg.setImage(new Image("images/hjartaRod.png"));
         }
 
         else {
-            favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "../image/hjartaVit.png")));
-            favoritProductList.remove(product);
+            IMatDataHandler.getInstance().removeFavorite(product);
+            favoriteHeartImg.setImage(new Image("images/hjartaVit.png"));
         }
     }
-
-
 
 }
