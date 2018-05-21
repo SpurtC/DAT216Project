@@ -38,7 +38,7 @@ public class VarukorgController extends Controller{
     }
 
     public void updateTotalPriceLabel(){
-        shoppingCartTotalPriceLbl.textProperty().set(roundInString(addAllProducts() )+ " kr");
+        shoppingCartTotalPriceLbl.textProperty().set(roundInString(addAllProducts())+ " kr");
     }
 
     private double addAllProducts(){
