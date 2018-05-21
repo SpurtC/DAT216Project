@@ -57,8 +57,10 @@ public class ProductItem extends AnchorPane {
         antalTxtF.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if(newValue == null){
-                    return;
+                charLimiter(antalTxtF, 2);
+                if(newValue.equals("")){
+                    newValue = "0";
+                    System.out.println("Lambi suger bajs");
                 }
                 double antal = Double.parseDouble(newValue);
                 if (antal <= 0){
@@ -92,5 +94,17 @@ public class ProductItem extends AnchorPane {
             intValue++;
             antalTxtF.textProperty().set(intValue + "");
         }
+    }
+
+    private void charLimiter(TextField textField, int maxLength){
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (newValue != null && newValue.length() > maxLength ) {
+                    String s = newValue.substring(0, maxLength);
+                    textField.textProperty().set(s);
+                }
+            }
+        });
     }
 }
