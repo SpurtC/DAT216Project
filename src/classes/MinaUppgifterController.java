@@ -22,7 +22,6 @@ public class MinaUppgifterController extends Controller{
 
     public void setFirstName() {
         iMatDataHandler.getCustomer().setFirstName(firstName.getText());
-        System.out.println(firstName.getText());
     }
 
     public void setLastName() {
@@ -151,33 +150,9 @@ public class MinaUppgifterController extends Controller{
 
 
         if (checkUsage(validMonth)){
-            if(checkIfLetters(validMonth)){
-                this.confirmation.setText("Kontrollera att kortuppgifterna stämmer!");
+            if (validMonth.textProperty().get().equals("0")){
                 return;
             }
-        }
-
-
-        if (checkUsage(validYear)){
-            if(checkIfLetters(validYear)){
-                this.confirmation.setText("Kontrollera att kortuppgifterna stämmer!");
-                return;
-            }
-        }
-
-
-        if (checkUsage(cvc)){
-            if(checkIfLetters(cvc)){
-                this.confirmation.setText("Kontrollera att kortuppgifterna stämmer!");
-                return;
-            }
-        }
-
-
-
-
-        System.out.println(iMatDataHandler.getCreditCard().getValidMonth());
-        if (checkUsage(validMonth)){
             if (Integer.parseInt(validMonth.getText()) > 12 || Integer.parseInt(validMonth.getText()) < 1) {
                 this.confirmation.setText("Kontrollera att kortinformationen stämmer!");
                 return;
@@ -188,6 +163,9 @@ public class MinaUppgifterController extends Controller{
         }
 
         if (checkUsage(validYear)){
+            if(validYear.textProperty().get().equals("0")){
+                return;
+            }
             if(Integer.parseInt(validYear.getText()) < 18){
                 this.confirmation.setText("Kontrollera att kortinformationen stämmer!");
                 return;
@@ -196,6 +174,14 @@ public class MinaUppgifterController extends Controller{
                 this.confirmation.setText("Dina uppgifter har sparats!");
             }
         }
+
+        if (checkUsage(cvc)){
+            if(checkIfLetters(cvc)){
+                this.confirmation.setText("Kontrollera att kortuppgifterna stämmer!");
+                return;
+            }
+        }
+
         if (checkUsage(firstName) || checkUsage(lastName) || checkUsage(phoneNumber)|| checkUsage(mobileNumber) ||
                 checkUsage(email) || checkUsage(address) || checkUsage(zipCode) || checkUsage(cardHolder) ||
                 checkUsage(cardHolder) || checkUsage(cvc)){
@@ -241,43 +227,17 @@ public class MinaUppgifterController extends Controller{
     }
 
     private void checkPreviousInfo(){
-        if (firstName.getText() != null){
-            firstName.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
-        }
 
+        firstName.textProperty().set(iMatDataHandler.getCustomer().getFirstName());
+        lastName.textProperty().set(iMatDataHandler.getCustomer().getLastName());
+        address.textProperty().set(iMatDataHandler.getCustomer().getAddress());
+        email.textProperty().set(iMatDataHandler.getCustomer().getEmail());
+        zipCode.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
+        mobileNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
 
-        if (lastName.getText() != null){
-            lastName.textProperty().set(iMatDataHandler.getCustomer().getLastName());
-        }
-
-        if(address.getText() != null) {
-            address.textProperty().set(iMatDataHandler.getCustomer().getAddress());
-        }
-
-        if(email.getText() != null) {
-            email.textProperty().set(iMatDataHandler.getCustomer().getEmail());
-        }
-
-        if( zipCode.getText() != null) {
-            zipCode.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
-        }
-
-        if(mobileNumber.getText() != null) {
-            mobileNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
-        }
-
-        if(phoneNumber.getText() != null ){
-            phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
-        }
-
-        if(cardHolder.getText() != null){
-            cardHolder.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
-        }
-
-        if(cardNumber.getText() != null) {
-            cardNumber.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
-        }
-
+        cardHolder.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
+        cardNumber.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
         validMonth.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
         validYear.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
         cvc.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
@@ -294,19 +254,41 @@ public class MinaUppgifterController extends Controller{
         charLimiter(validYear, 2);
         charLimiter(cvc,3);
 
-        iMatDataHandler.getCustomer().setFirstName(null);
-        iMatDataHandler.getCustomer().setLastName(null);
-        iMatDataHandler.getCustomer().setPhoneNumber(null);
-        iMatDataHandler.getCustomer().setMobilePhoneNumber(null);
-        iMatDataHandler.getCustomer().setEmail(null);
-        iMatDataHandler.getCustomer().setAddress(null);
-        iMatDataHandler.getCustomer().setPostCode(null);
+        if(iMatDataHandler.getCustomer().getFirstName() == null){
+            firstName.textProperty().set("");
+        }
 
-        iMatDataHandler.getCreditCard().setHoldersName(null);
-        iMatDataHandler.getCreditCard().setCardNumber(null);
-        iMatDataHandler.getCreditCard().setValidMonth(00);
-        iMatDataHandler.getCreditCard().setValidYear(00);
-        iMatDataHandler.getCreditCard().setVerificationCode(000);
+        if(iMatDataHandler.getCustomer().getLastName() == null){
+            lastName.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCustomer().getAddress() == null){
+            address.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCustomer().getPhoneNumber() == null){
+            phoneNumber.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCustomer().getMobilePhoneNumber() == null){
+            mobileNumber.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCustomer().getPostCode() == null) {
+            zipCode.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCustomer().getEmail() == null){
+            email.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCreditCard().getHoldersName() == null){
+            cardHolder.textProperty().set("");
+        }
+
+        if(iMatDataHandler.getCreditCard().getCardNumber() == null){
+            cardNumber.textProperty().set("");
+        }
     }
 
     @Override
