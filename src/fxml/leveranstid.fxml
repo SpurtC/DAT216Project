@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.LeveranstidController">
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.LeveranstidController">
    <children>
       <SplitPane>
          <items>
@@ -26,7 +26,7 @@
                   </Text>
                   <Pane layoutX="20.0" layoutY="120.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                        <Text layoutX="18.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag 1/3">
+                        <Text layoutX="54.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag" y="5.0">
                            <font>
                               <Font size="36.0" />
                            </font>
@@ -60,7 +60,7 @@
                   </Pane>
                   <Pane layoutX="256.0" layoutY="119.0" prefHeight="425.0" prefWidth="240.0">
                      <children>
-                         <Text layoutX="18.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag 2/3">
+                         <Text layoutX="68.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
@@ -94,7 +94,7 @@
                   </Pane>
                   <Pane layoutX="488.0" layoutY="120.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                         <Text layoutX="18.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag 3/3">
+                         <Text layoutX="58.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
@@ -128,7 +128,7 @@
                   </Pane>
                   <Pane layoutX="730.0" layoutY="119.0" prefHeight="425.0" prefWidth="240.0">
                      <children>
-                         <Text layoutX="18.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag 4/3">
+                         <Text layoutX="56.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
@@ -162,7 +162,7 @@
                   </Pane>
                   <Pane layoutX="974.0" layoutY="116.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                         <Text layoutX="18.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag 5/3">
+                         <Text layoutX="65.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>

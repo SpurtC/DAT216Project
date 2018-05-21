@@ -205,7 +205,7 @@ public class MinaUppgifterController extends Controller{
     }
 
     private boolean checkUsage(TextField textField){
-        return textField.getText() == null;
+        return textField.getText() != null;
     }
 
     private boolean checkIfNumbers(TextField textField){
