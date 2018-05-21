@@ -62,7 +62,8 @@ public class ProductController extends Controller implements Initializable{
     public void search(){
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
-            if (allProducts.get(i).getName().toLowerCase().startsWith(searchBar.getText().toLowerCase())){
+            if (allProducts.get(i).getName().toLowerCase().startsWith(searchBar.getText().toLowerCase()) ||
+                    allProducts.get(i).getName().toLowerCase().contains(searchBar.getText().toLowerCase())){
                 currentList.add(allProducts.get(i));
             }
         }
