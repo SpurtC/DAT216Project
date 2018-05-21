@@ -29,7 +29,7 @@
                </font>
             </Text>
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="113.0" layoutY="217.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-            <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="192.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="favoriteHeartImg" fitHeight="39.0" fitWidth="51.0" layoutX="192.0" layoutY="45.0" onMouseClicked="#onFavoriteHeartClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/hjartaVit.png" />
                </image>

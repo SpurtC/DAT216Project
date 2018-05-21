@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -16,6 +17,8 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductItem extends AnchorPane {
     @FXML
@@ -116,4 +119,27 @@ public class ProductItem extends AnchorPane {
             }
         });
     }
+
+
+    @FXML ImageView favoriteHeartImg;
+    List<Product> favoritProductList = new ArrayList<>();
+
+    public void onFavoriteHeartClicked() {
+
+
+        if(favoriteHeartImg.getImage().getUrl().equals("../image/hjartaVit.png")) {
+            favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "../image/hjartaRod.png")));
+            favoritProductList.add(product);
+        }
+
+        else {
+            favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "../image/hjartaVit.png")));
+            favoritProductList.remove(product);
+        }
+    }
+
+
+
 }
