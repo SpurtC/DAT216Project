@@ -52,12 +52,17 @@ public class VarukorgItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.product = product;
+
         this.shoppingCartProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.shoppingCartProductNameLbl.textProperty().set(product.getName() + "");
         this.shoppingCartProductPriceLbl.textProperty().set(product.getPrice() + " kr");
-        this.shoppingCartProductTotalPriceLbl.textProperty().set(product.getPrice() * totalAmount(product) + " kr");
+        updateItemTotalPrice();
         antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)).intValue());
-        this.product = product;
+
+        antalTxtF.textProperty().addListener((observable, oldValue, newValue) -> {
+            updateItemTotalPrice();
+        });
     }
 
 
@@ -100,13 +105,7 @@ public class VarukorgItem extends AnchorPane {
     }
 
     private double totalAmount (Product product){
-        double a = 0;
-
-        for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
-            a = entry.getValue();
-        }
-
-        return a;
+        return ProductController.productToAmountMap.get(product) == null ? 0 : ProductController.productToAmountMap.get(product);
     }
 
     private void updateItemTotalPrice(){
