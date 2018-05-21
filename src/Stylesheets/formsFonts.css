@@ -22,6 +22,7 @@
 
 .ctgPaneFillClicked {
     -fx-background-color: #b9aeff;
+    -fx-border-color: black;
 }
 
 .clickOnMe:hover {
