@@ -53,6 +53,11 @@
     -fx-border-color: black;
 }
 
+.productsFill2 {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: black;
+}
+
 .exitColor {
     -fx-background-color: #e0a8a8;
     -fx-border-color: black;
@@ -62,3 +67,8 @@
     -fx-background-color: #99e482;
     -fx-border-color: black;
 }
+
+.plusButton{
+    -fx-background-color: #efffe2
+}
+

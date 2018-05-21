@@ -85,7 +85,7 @@ public class ProductItem extends AnchorPane {
                 }
 
                 else {
-                    antalTxtF.setStyle("-fx-control-inner-background: #99e482; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
                     ProductController.productToAmountMap.put(product, antal);
                 }
 
