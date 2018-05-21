@@ -128,21 +128,13 @@ public class ProductItem extends AnchorPane {
 
 
     public void onFavoriteHeartClicked() {
-
-      //  favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream("images/hjartaRod.png")));
-
         if(!IMatDataHandler.getInstance().isFavorite(product)) {
             IMatDataHandler.getInstance().addFavorite(product);
-            if(IMatDataHandler.getInstance().isFavorite(product)) {
-                System.out.println("Heida");
-            }
             favoriteHeartImg.setImage(new Image("images/hjartaRod.png"));
         }
 
         else {
-            //FavoriteHandler.getInstance().favoriteProductList.remove(product.getName());
             IMatDataHandler.getInstance().removeFavorite(product);
-
             favoriteHeartImg.setImage(new Image("images/hjartaVit.png"));
         }
     }
