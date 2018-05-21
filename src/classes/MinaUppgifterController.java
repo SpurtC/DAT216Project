@@ -253,42 +253,6 @@ public class MinaUppgifterController extends Controller{
         charLimiter(validMonth, 2);
         charLimiter(validYear, 2);
         charLimiter(cvc,3);
-
-        if(iMatDataHandler.getCustomer().getFirstName() == null){
-            firstName.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getLastName() == null){
-            lastName.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getAddress() == null){
-            address.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getPhoneNumber() == null){
-            phoneNumber.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getMobilePhoneNumber() == null){
-            mobileNumber.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getPostCode() == null) {
-            zipCode.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCustomer().getEmail() == null){
-            email.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCreditCard().getHoldersName() == null){
-            cardHolder.textProperty().set("");
-        }
-
-        if(iMatDataHandler.getCreditCard().getCardNumber() == null){
-            cardNumber.textProperty().set("");
-        }
     }
 
     @Override

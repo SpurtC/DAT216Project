@@ -23,6 +23,7 @@ public class LastConfirmationController extends Controller {
         System.out.println(ProductController.productToAmountMap.keySet());
         ProductController.purchaseHistory.add(ProductController.productToAmountMap);
         ProductController.productToAmountMap.clear();
+
     }
 
     @Override
