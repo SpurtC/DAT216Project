@@ -59,6 +59,17 @@ public class ProductController extends Controller implements Initializable{
         updateFlowPane(products);
     }
 
+    public void search(){
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            if (allProducts.get(i).getName().toLowerCase().startsWith(searchBar.getText().toLowerCase()) ||
+                    allProducts.get(i).getName().toLowerCase().contains(searchBar.getText().toLowerCase())){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        updateFlowPane(currentList);
+    }
+
     private void updateFlowPane(List<Product> list) {
         resultFlowPane.getChildren().clear();
         for (Product aProduct : list){
@@ -188,10 +199,6 @@ public class ProductController extends Controller implements Initializable{
         }
         cssManager.changeCSS( "ekoCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
-    }
-
-    public void searchBar() {
-        //Skriv Skit Här
     }
 
     public void makeAMapProduct () {
