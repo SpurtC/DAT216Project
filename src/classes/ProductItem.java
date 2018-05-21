@@ -49,7 +49,7 @@ public class ProductItem extends AnchorPane {
         }
 
         this.rubrikTxt.setText(product.getName());
-        this.prisTxt.setText(product.getPrice() + " kr");
+        this.prisTxt.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.antalTxtF.setText(antal + "");
         this.product = product;
@@ -57,20 +57,29 @@ public class ProductItem extends AnchorPane {
         antalTxtF.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                charLimiter(antalTxtF, 2);
+                charLimiter(antalTxtF, 3);
                 if(newValue.equals("")){
                     newValue = "0";
-                    System.out.println("Lambi suger bajs");
                 }
+
                 double antal = Double.parseDouble(newValue);
+
+                if(!product.getUnitSuffix().equals("kg")){
+                    int round = (int) antal;
+                    System.out.println(round + "");
+                    antalTxtF.textProperty().set(round + "");
+                }
+
                 if (antal <= 0){
                     ProductController.productToAmountMap.put(product, antal);
                     antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
                 }
+
                 else {
                     antalTxtF.setStyle("-fx-control-inner-background: #99e482; -fx-font-size: 20 px; -fx-font-weight: bold");
                     ProductController.productToAmountMap.put(product, antal);
                 }
+
 
 
             }
