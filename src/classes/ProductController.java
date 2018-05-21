@@ -76,7 +76,7 @@ public class ProductController extends Controller implements Initializable{
             }
         }
         cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
-
+        updateFlowPane(iMatDataHandler.favorites());
     }
 
     public void clickedBreadCtg() {
