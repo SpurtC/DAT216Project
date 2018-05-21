@@ -24,6 +24,10 @@
     -fx-background-color: #b9aeff;
 }
 
+.clickOnMe:hover {
+    -fx-border-color: blue;
+}
+
 .myAccountPane {
     -fx-background-color: linear-gradient(white, lightgray);
     -fx-border-color: black;
