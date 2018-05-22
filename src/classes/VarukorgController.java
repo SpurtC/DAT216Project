@@ -37,6 +37,11 @@ public class VarukorgController extends Controller{
         }
     }
 
+    public void clearBasket(){
+        ProductController.productToAmountMap.clear();
+        shoppingCartFlowPane.getChildren().clear();
+    }
+
     public void updateTotalPriceLabel(){
         shoppingCartTotalPriceLbl.textProperty().set(roundInString(addAllProducts())+ " kr");
     }

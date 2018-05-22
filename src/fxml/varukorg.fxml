@@ -27,7 +27,7 @@
                      <font>
                         <Font size="24.0" />
                      </font></Button>
-                  <Button layoutX="1196.0" layoutY="543.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="208.0" text="Töm varukorgen">
+                  <Button fx:id="emptyBasketButton" layoutX="1196.0" layoutY="543.0" mnemonicParsing="false" onAction="#clearBasket" prefHeight="51.0" prefWidth="208.0" text="Töm varukorgen">
                      <font>
                         <Font size="24.0" />
                      </font></Button>
@@ -46,14 +46,14 @@
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="37.0" layoutY="540.0" text="Summa totalt:">
+                  <Label layoutX="37.0" layoutY="533.0" text="Summa totalt:">
                      <font>
-                        <Font name="System Bold" size="29.0" />
+                        <Font name="System Bold" size="36.0" />
                      </font>
                   </Label>
-                  <Label fx:id="shoppingCartTotalPriceLbl" layoutX="241.0" layoutY="547.0" text="Aj i plånboken">
+                  <Label fx:id="shoppingCartTotalPriceLbl" layoutX="291.0" layoutY="533.0" text="Aj i plånboken">
                      <font>
-                        <Font name="System Bold" size="20.0" />
+                        <Font name="System Bold" size="36.0" />
                      </font></Label>
                   <ScrollPane layoutX="24.0" layoutY="110.0" prefHeight="406.0" prefWidth="1380.0">
                      <content>

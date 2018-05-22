@@ -3,6 +3,13 @@ package classes;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class LastConfirmationController extends Controller {
 
@@ -19,11 +26,17 @@ public class LastConfirmationController extends Controller {
     }
 
     private void saveShoppingCart() {
-        System.out.println(ProductController.productToAmountMap.values());
-        System.out.println(ProductController.productToAmountMap.keySet());
-        ProductController.purchaseHistory.add(ProductController.productToAmountMap);
-        ProductController.productToAmountMap.clear();
+        addShoppingCartToListOfOrders();
 
+    }
+
+    private void addShoppingCartToListOfOrders() {
+
+        for (Product aProduct : ProductController.productToAmountMap.keySet()) {
+            iMatDataHandler.getShoppingCart().addProduct(aProduct, ProductController.productToAmountMap.get(aProduct));
+            System.out.println(aProduct);
+        }
+        iMatDataHandler.placeOrder();
     }
 
     @Override
