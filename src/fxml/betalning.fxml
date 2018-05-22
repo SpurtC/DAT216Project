@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
    <children>
       <AnchorPane layoutY="1.0" prefHeight="700.0" prefWidth="1440.0">
          <children>
@@ -100,6 +100,11 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
+                        <Button layoutX="470.0" layoutY="609.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="63.0" prefWidth="552.0" text="Behåll dessa informationsuppgifter till nästa köp">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
                         <Button layoutX="1130.0" layoutY="609.0" mnemonicParsing="false" onAction="#onGoToConfirmationClicked" prefHeight="63.0" prefWidth="227.0" styleClass="buyColor" text="Slutför köp">
                            <font>
                               <Font size="24.0" />
@@ -185,11 +190,6 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="470.0" layoutY="609.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="63.0" prefWidth="552.0" text="Behåll dessa informationsuppgifter till nästa köp">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
                         <Label fx:id="messageLbl" layoutX="763.0" layoutY="368.0">
                            <font>
                               <Font name="System Bold" size="24.0" />

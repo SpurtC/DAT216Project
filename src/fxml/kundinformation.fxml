@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -23,13 +23,16 @@
                      <font>
                         <Font size="20.0" />
                      </font></Label>
-                  <Accordion layoutX="200.0" layoutY="111.0" prefHeight="203.0" prefWidth="898.0" styleClass="paneFill">
+                  <Accordion layoutX="200.0" layoutY="111.0" prefHeight="284.0" prefWidth="898.0" styleClass="paneFill">
                      <panes>
                         <TitledPane animated="false" prefHeight="113.0" prefWidth="967.0" text="Hur betalar jag?">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="253.0">
                                  <children>
-                                    <Text layoutX="21.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att betala trycker du på &quot;Se Hela Inkorgen&quot;-knappen därefter &quot;Till Betala&quot;. Där väljer du ett leveransdatum och trycker &quot;vidare&quot;." />
+                                    <Text layoutX="11.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att betala trycker du på &quot;Se Hela Varukorgen&quot;-knappen därefter &quot;Till Betala&quot;. Där väljer du ett leveransdatum och trycker &quot;vidare&quot;.">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Text>
                                  </children>
                               </AnchorPane>
                            </content>
@@ -41,7 +44,10 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Text layoutX="22.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på den stora &quot;Handla&quot;-knappen högst upp till vänster, där väljer du sedan vilka varor du vill köpa och trycker på pluset för att lägga till rätt antal. När du är klar trycker du på &quot;Se Hela Varukorgen&quot;" wrappingWidth="857.955810546875" />
+                                    <Text layoutX="11.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på den stora &quot;Handla&quot;-knappen högst upp till vänster, där väljer du sedan vilka varor du vill köpa och trycker på pluset för att lägga till rätt antal. När du är klar trycker du på &quot;Se Hela Varukorgen&quot;" wrappingWidth="857.955810546875">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Text>
                                  </children>
                               </AnchorPane>
                            </content>
@@ -53,10 +59,37 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="492.0">
                                  <children>
-                                    <Text layoutX="23.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Börja med att trycka på &quot;Mitt Konto&quot;, där kan du välja mina uppgifter. Väl på den sidan skiver du in dina uppgifter och trycker på spara." />
+                                    <Text layoutX="11.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Börja med att trycka på &quot;Mitt Konto&quot;, där kan du välja mina uppgifter. Väl på den sidan skiver du in dina uppgifter och trycker på spara.">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Text>
                                  </children>
                               </AnchorPane>
                            </content>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="105.0" prefWidth="898.0" text="Hur gör jag en vara till favorit?">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="12.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att göra en vara till din favorit trycker du på hjärtat i högra hörnet på varan, hjärtat kommer då bli rött och visas bland mina favoritvaror" wrappingWidth="610.9830722808838" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Hur tar jag bort en favorit?">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="10.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om hjärtat högst upp i hörnet är rött är det din nuvarande favorit. För att ta bort den från listan trycker du på hjärtat, som blir vitt och det är inte längre din favorit." wrappingWidth="449.546875" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -71,7 +104,7 @@
                      <font>
                         <Font size="20.0" />
                      </font></Text>
-                  <Text layoutX="243.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="103.76906152527454">
+                  <Text layoutX="249.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="158.76906152527454">
                      <font>
                         <Font size="20.0" />
                      </font></Text>
