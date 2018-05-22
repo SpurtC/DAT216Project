@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -19,7 +19,10 @@
                      <font>
                         <Font size="36.0" />
                      </font></Label>
-                  <Label layoutX="65.0" layoutY="435.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss" />
+                  <Label layoutX="65.0" layoutY="435.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
                   <Accordion layoutX="200.0" layoutY="111.0" prefHeight="203.0" prefWidth="898.0" styleClass="paneFill">
                      <panes>
                         <TitledPane animated="false" prefHeight="113.0" prefWidth="967.0" text="Hur betalar jag?">
@@ -60,10 +63,22 @@
                         </TitledPane>
                      </panes>
                   </Accordion>
-                  <Text layoutX="64.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer: 0730720714 (Vardagar 10-16)" />
-                  <Text layoutX="65.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: mat@imat.se" />
-                  <Text layoutX="115.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="103.76906152527454" />
-                  <Text layoutX="65.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:" />
+                  <Text layoutX="64.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer:      0730720714 (Vardagar 10-16)">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <Text layoutX="65.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:                       mat@imat.se">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <Text layoutX="243.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="103.76906152527454">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <Text layoutX="65.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
                   <Line endX="400.0" layoutX="139.0" layoutY="470.0" startX="-75.0" />
                </children></AnchorPane>
             </items>

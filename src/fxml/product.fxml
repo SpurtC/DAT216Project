@@ -20,12 +20,12 @@
             </ImageView>
             <Text fx:id="prisTxt" layoutX="-27.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="categoriesText" text="5 kr / förpackning" textAlignment="CENTER" wrappingWidth="281.0371060371399">
                <font>
-                  <Font size="21.0" />
+                  <Font size="18.0" />
                </font>
             </Text>
             <Text fx:id="rubrikTxt" layoutX="-27.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header" text="Laktosfri mjölk" textAlignment="CENTER" wrappingWidth="281.0371060371399">
                <font>
-                  <Font name="System Bold" size="28.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Text>
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="81.0" layoutY="245.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
@@ -34,11 +34,11 @@
                   <Image url="@../images/hjartaVit.png" />
                </image>
             </ImageView>
-            <Button fx:id="plusBtn" layoutX="157.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="+">
+            <Button fx:id="plusBtn" layoutX="157.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #efffe2;" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="+">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font></Button>
-            <Button fx:id="minusBtn" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="–">
+            <Button fx:id="minusBtn" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #ffe2e2;" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="–">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font></Button>
