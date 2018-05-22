@@ -32,7 +32,6 @@ public class ProductItem extends AnchorPane {
     @FXML
     private ImageView favoriteHeartImg;
 
-    private int antal;
     private int numberOfItems;
     private ShoppingCart shoppingCart;
     private ShoppingItem shoppingItem;
@@ -45,8 +44,6 @@ public class ProductItem extends AnchorPane {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
-
-
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -56,7 +53,6 @@ public class ProductItem extends AnchorPane {
         this.rubrikTxt.setText(product.getName());
         this.prisTxt.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
-        this.antalTxtF.setText(antal + "");
         this.product = product;
 
         if(IMatDataHandler.getInstance().isFavorite(product)) {
@@ -89,10 +85,11 @@ public class ProductItem extends AnchorPane {
                     ProductController.productToAmountMap.put(product, antal);
                 }
 
-
-
             }
         });
+
+        this.antalTxtF.textProperty().set(ProductController.productToAmountMap.containsKey(product) ? String.valueOf(ProductController.productToAmountMap.get(product).intValue()) : "0");
+
     }
 
     public void clickedMnsBtn() {
