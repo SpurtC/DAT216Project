@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" stylesheets="@../Stylesheets/textFont.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ProductController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ProductController">
    <children>
       <SplitPane dividerPositions="0.2712100139082058" layoutX="170.0" prefHeight="800.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -118,7 +118,7 @@
                         <Image url="@../images/forstoringsglas.png" />
                      </image>
                   </ImageView>
-                  <ScrollPane layoutY="65.0" prefHeight="630.0" prefWidth="985.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="65.0">
+                  <ScrollPane layoutY="65.0" prefHeight="653.0" prefWidth="986.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="65.0">
                      <content>
                         <FlowPane fx:id="resultFlowPane" prefHeight="742.0" prefWidth="1053.0" />
                      </content>
