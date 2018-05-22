@@ -65,8 +65,6 @@ public class VarukorgItem extends AnchorPane {
         });
     }
 
-
-
     public void clickedMnsBtn() {
         stringValue = antalTxtF.textProperty().get();
         int intValue = Integer.valueOf(stringValue);

@@ -2,6 +2,7 @@ package classes;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -49,6 +50,9 @@ public class ProductController extends Controller implements Initializable{
     @FXML
     TextField searchBar;
 
+    @FXML
+    Label noFavoritessLbl;
+
     static{
         productToAmountMap = FXCollections.observableMap(new HashMap<>());
     }
@@ -76,10 +80,12 @@ public class ProductController extends Controller implements Initializable{
             ProductItem productItem = new ProductItem(aProduct);
             productsListItemMap.put(aProduct.getName(), productItem);
             resultFlowPane.getChildren().add(productsListItemMap.get(aProduct.getName()));
+            noFavoritessLbl.setVisible(false);
         }
     }
 
     public void clickedMinaFavoriter() {
+        noFavoritessLbl.setVisible(false);
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++){
             if (iMatDataHandler.isFavorite(allProducts.get(i))){
@@ -88,6 +94,10 @@ public class ProductController extends Controller implements Initializable{
         }
         cssManager.changeCSS( "minaFavoriterCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(iMatDataHandler.favorites());
+
+        if(iMatDataHandler.favorites().size() == 0) {
+            noFavoritessLbl.setVisible(true);
+        }
     }
 
     public void clickedBreadCtg() {
@@ -218,6 +228,7 @@ public class ProductController extends Controller implements Initializable{
     @Override
     public void init() {
         makeAMapProduct();
+        noFavoritessLbl.setVisible(false);
     }
 }
 
