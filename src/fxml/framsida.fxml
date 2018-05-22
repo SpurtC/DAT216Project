@@ -124,6 +124,7 @@
                      </content>
                   </ScrollPane>
                   <Button layoutX="801.0" layoutY="11.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="47.0" text="Sök" />
+                  <Label fx:id="noFavoritessLbl" layoutX="45.0" layoutY="122.0" prefHeight="83.0" prefWidth="819.0" styleClass="categoriesText" text="Du har tyvärr inga favoritvaror. Om du vill göra en vara till din favorit, tryck på hjärtat i högra hörnet på varan." wrapText="true" AnchorPane.leftAnchor="45.0" />
                </children>
             </AnchorPane>
          </items>
