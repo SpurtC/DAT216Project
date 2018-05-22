@@ -100,6 +100,15 @@ public class ProductController extends Controller implements Initializable{
         }
     }
 
+    public void clickedViewAllCtg() {
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++) {
+            currentList.add(allProducts.get(i));
+        }
+        //cssManager.changeCSS( "allProductsCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
+        updateFlowPane(currentList);
+    }
+
     public void clickedBreadCtg() {
         currentList.clear();
         for(int i = 0; i < allProducts.size(); i++) {
