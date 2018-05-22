@@ -71,7 +71,6 @@ public class ProductItem extends AnchorPane {
 
                 if(!product.getUnitSuffix().equals("kg")){
                     int round = (int) antal;
-                    System.out.println(round + "");
                     antalTxtF.textProperty().set(round + "");
                 }
 

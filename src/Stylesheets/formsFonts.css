@@ -48,6 +48,10 @@
     -fx-border-color: black;
 }
 
+.favoriteHeart:hover {
+    -fx-border-color: red;
+}
+
 .productsFill {
     -fx-background-color: #ffbf91;
     -fx-border-color: black;
