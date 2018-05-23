@@ -118,7 +118,7 @@
                         <Image url="@../images/forstoringsglas.png" />
                      </image>
                   </ImageView>
-                  <ScrollPane layoutY="65.0" prefHeight="653.0" prefWidth="986.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="65.0">
+                  <ScrollPane layoutY="65.0" prefHeight="653.0" prefWidth="1046.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="65.0">
                      <content>
                         <FlowPane fx:id="resultFlowPane" prefHeight="742.0" prefWidth="1053.0" />
                      </content>

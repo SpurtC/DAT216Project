@@ -6,28 +6,27 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1249.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1249.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="375.0" layoutY="-12.0" prefHeight="200.0" prefWidth="1249.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="104.0" layoutY="46.0" text="14/6">
+            <Label fx:id="dateLbl" layoutX="52.0" layoutY="46.0" prefHeight="38.0" prefWidth="487.0" text="14/6">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label layoutX="368.0" layoutY="46.0" text="13 st">
+            <Label fx:id="numberLbl" layoutX="591.0" layoutY="46.0" text="13 st">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label layoutX="670.0" layoutY="46.0" text="530 kr">
+            <Label fx:id="priceLbl" layoutX="897.0" layoutY="46.0" text="530 kr">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button layoutX="1070.0" layoutY="34.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Fler detaljer...." />
+            <Button fx:id="moreDetailsButton" layoutX="1070.0" layoutY="34.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Fler detaljer...." />
          </children>
       </Pane>
    </children>
-</AnchorPane>
+</fx:root>
