@@ -42,7 +42,7 @@ public class ProductController extends Controller implements Initializable{
     public static ObservableMap<Product, Double> productToAmountMap;
 
     @FXML
-    private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane;
+    private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane, allProductsCtgPane;
 
     @FXML
     FlowPane resultFlowPane;
@@ -105,7 +105,7 @@ public class ProductController extends Controller implements Initializable{
         for(int i = 0; i < allProducts.size(); i++) {
             currentList.add(allProducts.get(i));
         }
-        //cssManager.changeCSS( "allProductsCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
+        cssManager.changeCSS( "allProductsCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
         updateFlowPane(currentList);
     }
 
@@ -222,6 +222,7 @@ public class ProductController extends Controller implements Initializable{
 
     public void makeAMapProduct () {
         stringPaneMapProduct.put("minaFavoriterCtgPane", minaFavoriterCtgPane );
+        stringPaneMapProduct.put("allProductsCtgPane", allProductsCtgPane);
         stringPaneMapProduct.put("breadCtgPane", breadCtgPane );
         stringPaneMapProduct.put("drinksCtgPane", drinksCtgPane );
         stringPaneMapProduct.put("fruitCtgPane", fruitCtgPane );
