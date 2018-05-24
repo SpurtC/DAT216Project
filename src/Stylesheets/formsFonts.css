@@ -17,7 +17,7 @@
 }
 
 .ctgPaneFill:hover {
-    -fx-background-color: linear-gradient(darkgray, #717b80);
+    -fx-background-color: #897ec3;
 }
 
 .ctgPaneFillClicked {
@@ -35,7 +35,7 @@
 }
 
 .myAccountPaneClicked {
-    -fx-background-color: linear-gradient(darkgray, #717b90);
+    -fx-background-color: #b9aeff;
     -fx-border-color: black;
 }
 
