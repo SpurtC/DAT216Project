@@ -18,79 +18,74 @@
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="790.0" prefWidth="1438.0">
                      <children>
-                        <Text fill="#684990" layoutX="60.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalning" wrappingWidth="313.21875">
+                        <Text fill="#684990" layoutX="81.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalning" wrappingWidth="313.21875" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
                            <font>
                               <Font size="48.0" />
                            </font>
                         </Text>
-                        <Text fill="#403d3dbd" layoutX="24.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen kontrollera eller fyll in dina uppgifter" wrappingWidth="802.0">
-                           <font>
-                              <Font size="32.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="82.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn:">
+                        <Text layoutX="81.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="82.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn:">
+                        <Text layoutX="81.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="83.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:">
+                        <Text layoutX="82.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="80.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer:">
+                        <Text layoutX="81.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text fill="#684990" layoutX="81.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsuppgifter">
+                        <Text fill="#684990" layoutX="74.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortuppgifter">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </Text>
-                        <Text layoutX="80.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontonummer:">
+                        <Text layoutX="77.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontonummer:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="795.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
+                        <Text layoutX="797.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="794.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltig t.o.m:">
+                        <Text layoutX="795.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltig t.o.m:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="firstNameTxtF" layoutX="254.0" layoutY="159.0" prefHeight="41.0" prefWidth="381.0" />
+                        <TextField fx:id="firstNameTxtF" layoutX="254.0" layoutY="161.0" prefHeight="41.0" prefWidth="383.0" />
                         <TextField fx:id="lastNameTxtF" layoutX="254.0" layoutY="212.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="addressTxtF" layoutX="254.0" layoutY="264.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="zipCodeTxtF" layoutX="256.0" layoutY="324.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="phoneNumberTxtF" layoutX="999.0" layoutY="157.0" prefHeight="41.0" prefWidth="381.0" />
-                        <TextField fx:id="mobileNumberTxtF" layoutX="1000.0" layoutY="212.0" prefHeight="41.0" prefWidth="381.0" />
-                        <TextField fx:id="emailTxtF" layoutX="999.0" layoutY="267.0" prefHeight="41.0" prefWidth="381.0" />
-                        <TextField fx:id="cardHolderTxtF" layoutX="256.0" layoutY="456.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="cardNumberTxtF" layoutX="256.0" layoutY="529.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="validMonthTxtF" layoutX="975.0" layoutY="452.0" prefHeight="41.0" prefWidth="61.0" />
-                        <TextField fx:id="validYearTxtF" layoutX="1068.0" layoutY="451.0" prefHeight="41.0" prefWidth="61.0" />
-                        <TextField fx:id="cvcTxtF" layoutX="978.0" layoutY="529.0" prefHeight="41.0" prefWidth="127.0" />
-                        <Text layoutX="1045.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                        <TextField fx:id="addressTxtF" layoutX="254.0" layoutY="263.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="zipCodeTxtF" layoutX="256.0" layoutY="313.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="phoneNumberTxtF" layoutX="999.0" layoutY="161.0" prefHeight="41.0" prefWidth="381.0" />
+                        <TextField fx:id="mobileNumberTxtF" layoutX="999.0" layoutY="212.0" prefHeight="41.0" prefWidth="381.0" />
+                        <TextField fx:id="emailTxtF" layoutX="999.0" layoutY="263.0" prefHeight="41.0" prefWidth="381.0" />
+                        <TextField fx:id="cardHolderTxtF" layoutX="256.0" layoutY="461.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="cardNumberTxtF" layoutX="256.0" layoutY="512.0" prefHeight="41.0" prefWidth="383.0" />
+                        <TextField fx:id="validMonthTxtF" layoutX="975.0" layoutY="461.0" prefHeight="41.0" prefWidth="61.0" />
+                        <TextField fx:id="validYearTxtF" layoutX="1068.0" layoutY="461.0" prefHeight="41.0" prefWidth="61.0" />
+                        <TextField fx:id="cvcTxtF" layoutX="976.0" layoutY="512.0" prefHeight="41.0" prefWidth="127.0" />
+                        <Text layoutX="1045.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </Text>
-                        <Text layoutX="988.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mån">
+                        <Text layoutX="988.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mån">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="1090.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="År">
+                        <Text layoutX="1090.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="År">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -100,7 +95,7 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Button layoutX="510.0" layoutY="597.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="82.0" prefWidth="418.0" text="Behåll dessa uppgifter till nästa köp">
+                        <Button layoutX="510.0" layoutY="596.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="82.0" prefWidth="418.0" text="Behåll dessa uppgifter till nästa köp">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -110,27 +105,27 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Text layoutX="794.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer:">
+                        <Text layoutX="795.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="795.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobilnummer:">
+                        <Text layoutX="795.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobilnummer:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="795.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-postadress:">
+                        <Text layoutX="795.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-postadress:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="83.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortinnehavare:">
+                        <Text layoutX="76.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortinnehavare:">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text fill="#317252" layoutX="689.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 3 av 3">
+                        <Text fill="#317252" layoutX="631.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 3 av 3">
                            <font>
                               <Font size="36.0" />
                            </font>
@@ -140,12 +135,12 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="lastNameArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="lastNameArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="cvcArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cvcArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
@@ -155,12 +150,12 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="cardNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="cardHolderArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardHolderArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
@@ -170,22 +165,22 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="mobileNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="mobileNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="phoneNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="phoneNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="746.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="zipCodeArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="zipCodeArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="addressArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="addressArrow" fitHeight="35.0" fitWidth="50.0" layoutX="30.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/RedArrow.png" />
                            </image>
@@ -195,16 +190,21 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="47.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="47.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/arrow_left.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="1344.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="1362.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/arrow_right.png" />
                            </image>
                         </ImageView>
+                        <Text fill="#684990" layoutX="73.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personuppgifter">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
                </items>

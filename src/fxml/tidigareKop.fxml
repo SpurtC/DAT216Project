@@ -55,9 +55,9 @@
                         <FlowPane fx:id="itemFlowPane" prefHeight="390.0" prefWidth="941.0" />
                      </content>
                   </ScrollPane>
-                  <ScrollPane layoutX="76.0" layoutY="112.0" prefHeight="394.0" prefWidth="306.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="1056.0">
+                  <ScrollPane layoutX="76.0" layoutY="112.0" prefHeight="394.0" prefWidth="341.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="1021.0">
                      <content>
-                        <FlowPane fx:id="historyFlowPane" prefHeight="390.0" prefWidth="300.0" />
+                        <FlowPane fx:id="historyFlowPane" prefHeight="390.0" prefWidth="338.0" />
                      </content></ScrollPane>
                </children></AnchorPane>
             </items>

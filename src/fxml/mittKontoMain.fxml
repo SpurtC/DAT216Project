@@ -6,23 +6,23 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MittKontoMainController">
+<AnchorPane prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MittKontoMainController">
    <children>
       <SplitPane>
          <items>
             <AnchorPane prefHeight="700.0" prefWidth="1440.0">
                <children>
-                  <Pane fx:id="minaUppgifterPane" layoutX="47.0" layoutY="-65.0" onMouseClicked="#onMinaUppgifterClicked" prefHeight="50.0" prefWidth="502.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="minaUppgifterPane" layoutX="47.0" layoutY="-65.0" onMouseClicked="#onMinaUppgifterClicked" prefHeight="50.0" prefWidth="481.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label layoutX="172.0" layoutY="16.0" text="Mina uppgifter" />
                      </children>
                   </Pane>
-                  <Pane fx:id="tidigareKopPane" layoutX="499.0" onMouseClicked="#onTidigareKopClicked" prefHeight="50.0" prefWidth="495.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="499.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="tidigareKopPane" layoutX="480.0" onMouseClicked="#onTidigareKopClicked" prefHeight="50.0" prefWidth="481.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label layoutX="179.0" layoutY="16.0" text="Tidigare köp" />
                      </children>
                   </Pane>
-                  <Pane fx:id="minaFavoriterPane" layoutX="990.0" onMouseClicked="#onMinaFavoriterClicked" prefHeight="50.0" prefWidth="502.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="990.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="minaFavoriterPane" layoutX="960.0" onMouseClicked="#onMinaFavoriterClicked" prefHeight="50.0" prefWidth="480.0" styleClass="myAccountPane" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label layoutX="179.0" layoutY="16.0" text="Mina favoriter" />
                      </children>

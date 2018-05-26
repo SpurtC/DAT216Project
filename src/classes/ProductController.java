@@ -3,7 +3,9 @@ package classes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableMap;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
@@ -37,6 +39,13 @@ public class ProductController extends Controller implements Initializable{
      * Om ni vill lägga till en ny eller uppdatera: productToAmountMap.put(product, amount)
      */
     public static ObservableMap<Product, Double> productToAmountMap;
+
+
+    @FXML
+    private SplitPane frontSideSplitPane;
+
+    @FXML
+    private AnchorPane leftAnchorPane;
 
     @FXML
     private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane, allProductsCtgPane;
@@ -236,6 +245,8 @@ public class ProductController extends Controller implements Initializable{
     public void init() {
         makeAMapProduct();
         noFavoritessLbl.setVisible(false);
+        leftAnchorPane.maxWidthProperty().bind(frontSideSplitPane.widthProperty().multiply(0.23));
+        leftAnchorPane.minWidthProperty().bind(frontSideSplitPane.widthProperty().multiply(0.23));
     }
 }
 
