@@ -17,6 +17,10 @@
     -fx-border-color: black;
 }
 
+.border{
+    -fx-border-color: black;
+}
+
 .fillHistoryItem{
     -fx-background-color: white;
     -fx-border-color: black;

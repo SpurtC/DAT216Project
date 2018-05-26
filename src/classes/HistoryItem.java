@@ -43,7 +43,6 @@ public class HistoryItem extends AnchorPane{
         this.dateLbl.textProperty().set(dateFormat.format(order.getDate()));
         this.order = order;
         this.minHistorikController = minHistorikController;
-        //whatthafuck(order);
     }
 
     public void showItems(){
