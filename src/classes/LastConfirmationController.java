@@ -37,6 +37,7 @@ public class LastConfirmationController extends Controller {
             System.out.println(aProduct);
         }
         iMatDataHandler.placeOrder();
+        ProductController.productToAmountMap.clear();
     }
 
     @Override
