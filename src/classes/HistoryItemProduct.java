@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
@@ -21,12 +22,15 @@ public class HistoryItemProduct extends AnchorPane{
     @FXML
     TextField antalTxtF;
 
+    @FXML
+    ImageView picture;
+
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private ShoppingItem shoppingItem;
 
     HistoryItemProduct(ShoppingItem shoppingItem) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/product.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/tidigareKopProdukt.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -36,6 +40,7 @@ public class HistoryItemProduct extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
+        this.picture.setImage(IMatDataHandler.getInstance().getFXImage(shoppingItem.getProduct()));
         this.nameLbl.textProperty().set(shoppingItem.getProduct().getName());
         this.priceLbl.textProperty().set(shoppingItem.getProduct().getPrice() + "");
         this.antalLbl.textProperty().set(shoppingItem.getAmount() + "");
