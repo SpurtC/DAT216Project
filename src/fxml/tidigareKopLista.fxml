@@ -6,26 +6,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1249.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="298.0" styleClass="fillHistoryItembackground" stylesheets="@../Stylesheets/formsFonts.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="375.0" layoutY="-12.0" prefHeight="200.0" prefWidth="1249.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="6.0" layoutY="5.0" prefHeight="120.0" prefWidth="289.0" styleClass="fillHistoryItem" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
-            <Label fx:id="dateLbl" layoutX="52.0" layoutY="46.0" prefHeight="38.0" prefWidth="487.0" text="14/6">
+            <Label fx:id="dateLbl" layoutX="14.0" layoutY="29.0" prefHeight="38.0" prefWidth="159.0" text="14/6">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label fx:id="numberLbl" layoutX="591.0" layoutY="46.0" text="13 st">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <Label fx:id="priceLbl" layoutX="897.0" layoutY="46.0" text="530 kr">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <Button fx:id="moreDetailsButton" layoutX="1070.0" layoutY="34.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Fler detaljer...." />
+            <Button fx:id="moreDetailsButton" layoutX="176.0" layoutY="25.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer...." />
          </children>
       </Pane>
    </children>

@@ -10,17 +10,20 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class HistoryItem extends AnchorPane{
 
     @FXML
-    Label dateLbl, numberLbl, priceLbl;
+    Label dateLbl;
 
     @FXML
     Button moreDetailsButton;
 
     private IMatDataHandler iMatDataHandler =  IMatDataHandler.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
 
     HistoryItem(Order order){
@@ -34,32 +37,25 @@ public class HistoryItem extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
-        this.dateLbl.textProperty().set(order.getDate() + "");
-        getItems(order);
-        this.numberLbl.textProperty().set(getAmountOfItems(order));
-        this.priceLbl.textProperty().set(getTotalPrice(order));
-
+        this.dateLbl.textProperty().set(dateFormat.format(order.getDate()));
     }
 
     private String getTotalPrice (Order order){
         List<ShoppingItem> list = order.getItems();
         double total = 0;
         for(ShoppingItem aShoppingItem : list){
-            total = aShoppingItem.getAmount() + aShoppingItem.getProduct().getPrice();
+            total += aShoppingItem.getAmount() * aShoppingItem.getProduct().getPrice();
         }
         return total + "";
     }
 
     private String getAmountOfItems (Order order){
         List<ShoppingItem> list = order.getItems();
-        int antal = list.size();
-        return antal + "";
-    }
-
-    private void getItems (Order order){
-        List<ShoppingItem> list = order.getItems();
-        for(ShoppingItem a: list){
-            System.out.println(a.getProduct().getName());
+        int antal = 0;
+        for(ShoppingItem s: list){
+            antal += s.getAmount();
         }
+
+        return antal + "";
     }
 }
