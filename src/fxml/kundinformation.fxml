@@ -9,35 +9,35 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="1438.0">
                <children>
-                  <Label layoutX="198.0" layoutY="31.0" stylesheets="@../Stylesheets/textFont.css" text="Vanliga frågor och svar">
+                  <Label layoutX="24.0" layoutY="22.0" stylesheets="@../Stylesheets/textFont.css" text="Vanliga frågor och svar">
                      <font>
                         <Font size="36.0" />
                      </font></Label>
-                  <Label layoutX="65.0" layoutY="435.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss">
+                  <Label layoutX="949.0" layoutY="75.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Bold" size="38.0" />
                      </font></Label>
-                  <Accordion layoutX="200.0" layoutY="85.0" prefHeight="321.0" prefWidth="898.0" styleClass="paneFill">
+                  <Accordion layoutX="24.0" layoutY="83.0" prefHeight="572.0" prefWidth="896.0" styleClass="paneFill">
                      <panes>
-                        <TitledPane animated="false" prefHeight="113.0" prefWidth="967.0" text="Hur betalar jag?">
+                        <TitledPane animated="false" prefHeight="312.0" prefWidth="935.0" text="Hur betalar jag?">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="253.0">
                                  <children>
                                     <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att betala trycker du på &quot;Se Hela Varukorgen&quot;-knappen därefter &quot;Till Betala&quot;. Där väljer du ett leveransdatum och trycker &quot;vidare&quot;." wrappingWidth="873.021484375">
                                        <font>
-                                          <Font size="20.0" />
+                                          <Font size="27.0" />
                                        </font></Text>
                                  </children>
                               </AnchorPane>
                            </content>
                            <font>
-                              <Font size="30.0" />
+                              <Font size="32.0" />
                            </font>
                         </TitledPane>
                         <TitledPane animated="false" text="Hur handlar jag?">
@@ -46,13 +46,13 @@
                                  <children>
                                     <Text layoutX="11.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på den stora &quot;Handla&quot;-knappen högst upp till vänster, där väljer du sedan vilka varor du vill köpa och trycker på pluset för att lägga till rätt antal. När du är klar trycker du på &quot;Se Hela Varukorgen&quot;" wrappingWidth="857.955810546875">
                                        <font>
-                                          <Font size="20.0" />
+                                          <Font size="27.0" />
                                        </font></Text>
                                  </children>
                               </AnchorPane>
                            </content>
                            <font>
-                              <Font size="30.0" />
+                              <Font size="32.0" />
                            </font>
                         </TitledPane>
                         <TitledPane animated="false" prefHeight="117.0" prefWidth="498.0" styleClass="paneFill" text="Hur ändrar jag mina uppgifter?">
@@ -61,14 +61,14 @@
                                  <children>
                                     <Text layoutX="7.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Börja med att trycka på &quot;Mitt konto&quot;, där kan du välja mina uppgifter. Väl på den sidan skiver du in dina uppgifter och trycker på spara." wrappingWidth="874.240234375">
                                        <font>
-                                          <Font size="20.0" />
+                                          <Font size="27.0" />
                                        </font>
                                     </Text>
                                  </children>
                               </AnchorPane>
                            </content>
                            <font>
-                              <Font size="30.0" />
+                              <Font size="32.0" />
                            </font>
                         </TitledPane>
                         <TitledPane animated="false" prefHeight="105.0" prefWidth="898.0" text="Hur gör jag en vara till favorit?">
@@ -77,13 +77,13 @@
                                  <children>
                                     <Text layoutX="12.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att göra en vara till din favorit trycker du på hjärtat i högra hörnet på varan, hjärtat kommer då bli rött och visas bland mina favoritvaror" wrappingWidth="872.9830722808838">
                                        <font>
-                                          <Font size="20.0" />
+                                          <Font size="27.0" />
                                        </font></Text>
                                  </children>
                               </AnchorPane>
                           </content>
                            <font>
-                              <Font size="30.0" />
+                              <Font size="32.0" />
                            </font>
                         </TitledPane>
                         <TitledPane animated="false" text="Hur tar jag bort en favorit?">
@@ -92,34 +92,62 @@
                                  <children>
                                     <Text layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om hjärtat högst upp i hörnet är rött är det din nuvarande favorit. För att ta bort den från listan trycker du på hjärtat, som blir vitt och det är inte längre din favorit." wrappingWidth="881.546875">
                                        <font>
-                                          <Font size="20.0" />
+                                          <Font size="27.0" />
                                        </font></Text>
                                  </children>
                               </AnchorPane>
                           </content>
                            <font>
-                              <Font size="30.0" />
+                              <Font size="32.0" />
                            </font>
                         </TitledPane>
                      </panes>
                   </Accordion>
-                  <Text layoutX="64.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer:      0730720714 (Vardagar 10-16)">
+                  <Text layoutX="949.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer: ">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="25.0" />
                      </font></Text>
-                  <Text layoutX="65.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:                       mat@imat.se">
+                  <Text layoutX="1199.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="074 176 03 73">
                      <font>
-                        <Font size="20.0" />
-                     </font></Text>
-                  <Text layoutX="249.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 4, 415 31 Göteborg" wrappingWidth="158.76906152527454">
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="949.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Öppettider:">
                      <font>
-                        <Font size="20.0" />
-                     </font></Text>
-                  <Text layoutX="65.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:">
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1199.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vardagar 10-16">
                      <font>
-                        <Font size="20.0" />
-                     </font></Text>
-                  <Line endX="400.0" layoutX="139.0" layoutY="470.0" startX="-75.0" />
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="949.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-post:">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1199.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no-reply@imat.se">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="949.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1199.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smurfgatan 5" wrappingWidth="148.583984375">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1199.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="413 55 Göteborg" wrappingWidth="195.16598224639893">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" layoutX="1050.0" layoutY="138.0" startX="-100.0" />
                </children></AnchorPane>
             </items>
         </SplitPane>
