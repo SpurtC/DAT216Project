@@ -40,6 +40,7 @@ public class VarukorgController extends Controller{
     public void clearBasket(){
         ProductController.productToAmountMap.clear();
         shoppingCartFlowPane.getChildren().clear();
+        shoppingCartTotalPriceLbl.textProperty().set("0 kr");
     }
 
     public void updateTotalPriceLabel(){

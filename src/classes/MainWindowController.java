@@ -18,7 +18,7 @@ public class MainWindowController extends Controller{
     @FXML private Pane handlaPane, kundtjanstPane, mittKontoPane, varukorgPane;
     @FXML private Label totalPriceLbl, numberOfItemsLbl;
 
-    private
+    private ProductItem productItem;
 
     List<String> fxmlFileList = new ArrayList<>();
     private static Map<String, Pane> stringPaneMap = new HashMap<>();
@@ -69,6 +69,16 @@ public class MainWindowController extends Controller{
 
     public void updateNumberOfItems(){
         int amount = 0;
+
+        /*for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
+            if(entry.getKey().getUnitSuffix().equals("kg") && entry.getValue() > 0){
+                System.out.println("Nu är jag här");
+            }
+            else{
+                amount += entry.getValue();
+                System.out.println("inte här");
+            }
+        }*/
 
         for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
             amount += entry.getValue();

@@ -28,7 +28,7 @@ public class ProductItem extends AnchorPane {
     @FXML
     private Button minusBtn, plusBtn;
     @FXML
-    private TextField antalTxtF;
+    public TextField antalTxtF;
     @FXML
     private ImageView favoriteHeartImg;
 
