@@ -1,22 +1,22 @@
 .categoriesText {
     -fx-font-size: 17px;
-    -fx-font-family: "Times New Roman";
+    -fx-font-family: "Arial";
 }
 
 
 .categoriesText {
     -fx-font-size: 28px;
-    -fx-font-family: "Times New Roman";
+    -fx-font-family: "Arial";
 }
 
 .cart {
     -fx-font-size: 15px;
-    -fx-font-family: "Times New Roman";
+    -fx-font-family: "Arial";
 }
 
 .header {
     -fx-font-size: 40px;
-    -fx-font-family: "Times New Roman";
+    -fx-font-family: "Arial";
 }
 
 #logo{
@@ -26,12 +26,12 @@
 
 .vanligText {
     -fx-font-size: 20 px;
-    -fx-font-family: "Calibri";
+    -fx-font-family: "Arial";
 }
 
 .tjockText {
     -fx-font-size: 20 px;
-    -fx-font-family: "Athelas";
+    -fx-font-family: "Arial";
     -fx-fill-width: bold;
 }
 
