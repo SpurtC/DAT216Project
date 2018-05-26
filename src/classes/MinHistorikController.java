@@ -44,10 +44,6 @@ public class MinHistorikController extends Controller {
     public void updateItemFlowPane (Order order){
         itemFlowPane.getChildren().clear();
         List<ShoppingItem> shoppingItemList = order.getItems();
-        System.out.println(order.getDate());
-        for(ShoppingItem shoppingItem: shoppingItemList){
-            System.out.println(shoppingItem.getProduct().getName());
-        }
         for(ShoppingItem shoppingItem: shoppingItemList){
             if(shoppingItem.getAmount() != 0){
                 HistoryItemProduct historyItemProduct = new HistoryItemProduct(shoppingItem);

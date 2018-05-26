@@ -24,7 +24,7 @@ public class HistoryItem extends AnchorPane{
     Button moreDetailsButton;
 
     private IMatDataHandler iMatDataHandler =  IMatDataHandler.getInstance();
-    private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+    private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:dd:ss");
     private Order order;
     private MinHistorikController minHistorikController;
 
@@ -48,21 +48,4 @@ public class HistoryItem extends AnchorPane{
     public void showItems(){
         minHistorikController.updateItemFlowPane(order);
     }
-
-    public void whatthafuck(Order order) {
-        double pris = 0;
-        System.out.println(order.getItems().size());
-        System.out.println("\n");
-        List<ShoppingItem> shoppingItemList = order.getItems();
-        for(ShoppingItem shoppingItem: shoppingItemList){
-            System.out.println(shoppingItem.getProduct().getName());
-            pris += shoppingItem.getAmount() * shoppingItem.getProduct().getPrice();
-        }
-        System.out.println(pris);
-
-
-    }
-
-
-
 }
