@@ -16,17 +16,17 @@
          <items>
             <AnchorPane prefHeight="700.0" prefWidth="1440.0">
                <children>
-                  <Text fill="#4f10a1" layoutX="46.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj leveranstillfälle">
+                  <Text fill="#684990" layoutX="46.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj leveranstillfälle" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font size="48.0" />
                      </font>
                   </Text>
-                  <Text fill="#317252" layoutX="543.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 2 av 3">
+                  <Text fill="#317252" layoutX="632.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 2 av 3">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Text>
-                  <Pane layoutX="46.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+                  <Pane layoutX="20.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
                         <Text layoutX="69.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag" y="5.0">
                            <font>
@@ -60,7 +60,7 @@
                         </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="314.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
+                  <Pane layoutX="301.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
                      <children>
                          <Text layoutX="83.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag" y="5.0">
                              <font>
@@ -128,7 +128,7 @@
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="854.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
+                  <Pane layoutX="867.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
                      <children>
                          <Text layoutX="71.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag" y="5.0">
                              <font>
@@ -162,7 +162,7 @@
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="1124.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+                  <Pane layoutX="1150.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
                          <Text layoutX="80.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag" y="5.0">
                              <font>
@@ -196,22 +196,22 @@
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="82.0" prefWidth="343.0" styleClass="exitColor" text="        Tillbaka till Varukorgen" textAlignment="RIGHT">
+                  <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="82.0" prefWidth="343.0" styleClass="exitColor" text="        Tillbaka till Varukorgen" textAlignment="RIGHT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button layoutX="1051.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoForwardToPaymentClicked" prefHeight="82.0" prefWidth="343.0" styleClass="buyColor" text="Gå vidare till betalning     ">
+                  <Button layoutX="1051.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoForwardToPaymentClicked" prefHeight="82.0" prefWidth="343.0" styleClass="buyColor" text="Gå vidare till betalning     " AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="68.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="47.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/arrow_left.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="1339.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="1362.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/arrow_right.png" />
                      </image>
