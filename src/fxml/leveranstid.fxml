@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -14,196 +16,206 @@
          <items>
             <AnchorPane prefHeight="700.0" prefWidth="1440.0">
                <children>
-                  <Text fill="#4f10a1" layoutX="21.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj leveranstillfälle">
+                  <Text fill="#4f10a1" layoutX="46.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj leveranstillfälle">
                      <font>
                         <Font size="48.0" />
                      </font>
                   </Text>
-                  <Text fill="#317252" layoutX="515.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 2 av 3">
+                  <Text fill="#317252" layoutX="543.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg 2 av 3">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Text>
-                  <Pane layoutX="20.0" layoutY="120.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+                  <Pane layoutX="46.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                        <Text layoutX="54.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag" y="5.0">
+                        <Text layoutX="69.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag" y="5.0">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </Text>
-                        <RadioButton fx:id="monTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="10:00-12:00">
+                        <RadioButton fx:id="monTenRBtn" layoutX="52.0" layoutY="90.0" mnemonicParsing="false" selected="true" text="10:00-12:00">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="monTwelveRBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" text="12:00-14:00">
+                        <RadioButton fx:id="monTwelveRBtn" layoutX="52.0" layoutY="158.0" mnemonicParsing="false" text="12:00-14:00">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="monFourteenRBtn" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="14:00-16:00">
+                        <RadioButton fx:id="monFourteenRBtn" layoutX="52.0" layoutY="225.0" mnemonicParsing="false" text="14:00-16:00">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="monSixteenRBtn" layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="16:00-18:00">
+                        <RadioButton fx:id="monSixteenRBtn" layoutX="52.0" layoutY="292.0" mnemonicParsing="false" text="16:00-18:00">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="monEighteenRBtn" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" text="18:00-20:00">
+                        <RadioButton fx:id="monEighteenRBtn" layoutX="52.0" layoutY="360.0" mnemonicParsing="false" text="18:00-20:00">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="256.0" layoutY="119.0" prefHeight="425.0" prefWidth="240.0">
+                  <Pane layoutX="314.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
                      <children>
-                         <Text layoutX="68.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag" y="5.0">
+                         <Text layoutX="83.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
                          </Text>
-                         <RadioButton fx:id="tueTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" text="10:00-12:00">
+                         <RadioButton fx:id="tueTenRBtn" layoutX="52.0" layoutY="94.0" mnemonicParsing="false" text="10:00-12:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="tueTwelveRBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" text="12:00-14:00">
+                         <RadioButton fx:id="tueTwelveRBtn" layoutX="52.0" layoutY="162.0" mnemonicParsing="false" text="12:00-14:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="tueFourteenRBtn" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="14:00-16:00">
+                         <RadioButton fx:id="tueFourteenRBtn" layoutX="52.0" layoutY="229.0" mnemonicParsing="false" text="14:00-16:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="tueSixteenRBtn" layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="16:00-18:00">
+                         <RadioButton fx:id="tueSixteenRBtn" layoutX="52.0" layoutY="296.0" mnemonicParsing="false" text="16:00-18:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="tueEighteenRBtn" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" text="18:00-20:00">
+                         <RadioButton fx:id="tueEighteenRBtn" layoutX="52.0" layoutY="364.0" mnemonicParsing="false" text="18:00-20:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="488.0" layoutY="120.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+                  <Pane layoutX="584.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                         <Text layoutX="58.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag" y="5.0">
+                         <Text layoutX="73.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
                          </Text>
-                         <RadioButton fx:id="wedTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" text="10:00-12:00">
+                         <RadioButton fx:id="wedTenRBtn" layoutX="52.0" layoutY="90.0" mnemonicParsing="false" text="10:00-12:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="wedTwelveRBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" text="12:00-14:00">
+                         <RadioButton fx:id="wedTwelveRBtn" layoutX="52.0" layoutY="158.0" mnemonicParsing="false" text="12:00-14:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="wedFourteenRBtn" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="14:00-16:00">
+                         <RadioButton fx:id="wedFourteenRBtn" layoutX="52.0" layoutY="225.0" mnemonicParsing="false" text="14:00-16:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="wedSixteenRBtn" layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="16:00-18:00">
+                         <RadioButton fx:id="wedSixteenRBtn" layoutX="52.0" layoutY="292.0" mnemonicParsing="false" text="16:00-18:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="wedEighteenRBtn" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" text="18:00-20:00">
+                         <RadioButton fx:id="wedEighteenRBtn" layoutX="52.0" layoutY="360.0" mnemonicParsing="false" text="18:00-20:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="730.0" layoutY="119.0" prefHeight="425.0" prefWidth="240.0">
+                  <Pane layoutX="854.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0">
                      <children>
-                         <Text layoutX="56.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag" y="5.0">
+                         <Text layoutX="71.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
                          </Text>
-                         <RadioButton fx:id="thuTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" text="10:00-12:00">
+                         <RadioButton fx:id="thuTenRBtn" layoutX="52.0" layoutY="94.0" mnemonicParsing="false" text="10:00-12:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="thuTwelveRBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" text="12:00-14:00">
+                         <RadioButton fx:id="thuTwelveRBtn" layoutX="52.0" layoutY="162.0" mnemonicParsing="false" text="12:00-14:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="thuFourteenRBtn" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="14:00-16:00">
+                         <RadioButton fx:id="thuFourteenRBtn" layoutX="52.0" layoutY="229.0" mnemonicParsing="false" text="14:00-16:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="thuSixteenRBtn" layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="16:00-18:00">
+                         <RadioButton fx:id="thuSixteenRBtn" layoutX="52.0" layoutY="296.0" mnemonicParsing="false" text="16:00-18:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="thuEighteenRBtn" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" text="18:00-20:00">
+                         <RadioButton fx:id="thuEighteenRBtn" layoutX="52.0" layoutY="364.0" mnemonicParsing="false" text="18:00-20:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Pane layoutX="974.0" layoutY="116.0" prefHeight="425.0" prefWidth="240.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
+                  <Pane layoutX="1124.0" layoutY="121.0" prefHeight="425.0" prefWidth="270.0" styleClass="deliveryTimePaneFill" stylesheets="@../Stylesheets/formsFonts.css">
                      <children>
-                         <Text layoutX="65.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag" y="5.0">
+                         <Text layoutX="80.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag" y="5.0">
                              <font>
                                  <Font size="36.0" />
                              </font>
                          </Text>
-                         <RadioButton fx:id="friTenRBtn" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" text="10:00-12:00">
+                         <RadioButton fx:id="friTenRBtn" layoutX="52.0" layoutY="94.0" mnemonicParsing="false" text="10:00-12:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="friTwelveRBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" text="12:00-14:00">
+                         <RadioButton fx:id="friTwelveRBtn" layoutX="52.0" layoutY="162.0" mnemonicParsing="false" text="12:00-14:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="friFourteenRBtn" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="14:00-16:00">
+                         <RadioButton fx:id="friFourteenRBtn" layoutX="52.0" layoutY="229.0" mnemonicParsing="false" text="14:00-16:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="friSixteenRBtn" layoutX="20.0" layoutY="282.0" mnemonicParsing="false" text="16:00-18:00">
+                         <RadioButton fx:id="friSixteenRBtn" layoutX="52.0" layoutY="296.0" mnemonicParsing="false" text="16:00-18:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
-                         <RadioButton fx:id="friEighteenRBtn" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" text="18:00-20:00">
+                         <RadioButton fx:id="friEighteenRBtn" layoutX="52.0" layoutY="364.0" mnemonicParsing="false" text="18:00-20:00">
                              <font>
                                  <Font size="24.0" />
                              </font>
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Button layoutX="361.0" layoutY="575.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="63.0" prefWidth="300.0" styleClass="exitColor" text="Tillbaka till Varukorgen">
+                  <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="82.0" prefWidth="343.0" styleClass="exitColor" text="        Tillbaka till Varukorgen" textAlignment="RIGHT">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <Button layoutX="755.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoForwardToPaymentClicked" prefHeight="63.0" prefWidth="300.0" styleClass="buyColor" text="Gå vidare till betalning">
+                  <Button layoutX="1051.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoForwardToPaymentClicked" prefHeight="82.0" prefWidth="343.0" styleClass="buyColor" text="Gå vidare till betalning     ">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="68.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow_left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="1339.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow_right.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </items>
