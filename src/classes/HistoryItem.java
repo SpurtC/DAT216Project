@@ -10,7 +10,6 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
-import java.lang.management.MonitorInfo;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -24,12 +23,10 @@ public class HistoryItem extends AnchorPane{
     Button moreDetailsButton;
 
     private IMatDataHandler iMatDataHandler =  IMatDataHandler.getInstance();
-    private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-    private Order order;
-    private MinHistorikController minHistorikController;
+    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
 
-    HistoryItem(Order order, MinHistorikController minHistorikController){
+    HistoryItem(Order order){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/tidigareKopLista.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -41,29 +38,24 @@ public class HistoryItem extends AnchorPane{
         }
 
         this.dateLbl.textProperty().set(dateFormat.format(order.getDate()));
-        this.order = order;
-        this.minHistorikController = minHistorikController;
-        //whatthafuck(order);
     }
 
-    public void showItems(){
-        minHistorikController.updateItemFlowPane(order);
-    }
-
-    public void whatthafuck(Order order) {
-        double pris = 0;
-        System.out.println(order.getItems().size());
-        System.out.println("\n");
-        List<ShoppingItem> shoppingItemList = order.getItems();
-        for(ShoppingItem shoppingItem: shoppingItemList){
-            System.out.println(shoppingItem.getProduct().getName());
-            pris += shoppingItem.getAmount() * shoppingItem.getProduct().getPrice();
+    private String getTotalPrice (Order order){
+        List<ShoppingItem> list = order.getItems();
+        double total = 0;
+        for(ShoppingItem aShoppingItem : list){
+            total += aShoppingItem.getAmount() * aShoppingItem.getProduct().getPrice();
         }
-        System.out.println(pris);
-
-
+        return total + "";
     }
 
+    private String getAmountOfItems (Order order){
+        List<ShoppingItem> list = order.getItems();
+        int antal = 0;
+        for(ShoppingItem s: list){
+            antal += s.getAmount();
+        }
 
-
+        return antal + "";
+    }
 }
