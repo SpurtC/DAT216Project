@@ -35,7 +35,7 @@
                      </children>
                   </AnchorPane>
                   <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="50.0" prefWidth="144.0" text="Fortsätt handla" />
-                  <Label layoutX="148.0" layoutY="62.0" text="Datum">
+                  <Label layoutX="183.0" layoutY="62.0" text="Datum">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
@@ -50,6 +50,11 @@
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </Label>
+                  <ScrollPane layoutX="431.0" layoutY="112.0" prefHeight="394.0" prefWidth="902.0">
+                     <content>
+                        <FlowPane fx:id="itemFlowPane" prefHeight="390.0" prefWidth="900.0" />
+                     </content>
+                  </ScrollPane>
                   <ScrollPane layoutX="76.0" layoutY="112.0" prefHeight="394.0" prefWidth="306.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="1056.0">
                      <content>
                         <FlowPane fx:id="historyFlowPane" prefHeight="390.0" prefWidth="300.0" />

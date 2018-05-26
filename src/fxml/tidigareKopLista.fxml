@@ -15,7 +15,7 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button fx:id="moreDetailsButton" layoutX="176.0" layoutY="25.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer...." />
+            <Button layoutX="176.0" layoutY="25.0" mnemonicParsing="false" onAction="#showItems" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer...." />
          </children>
       </Pane>
    </children>

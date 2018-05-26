@@ -31,10 +31,11 @@ public class LastConfirmationController extends Controller {
     }
 
     private void addShoppingCartToListOfOrders() {
-
+        System.out.println(ProductController.productToAmountMap.size());
         for (Product aProduct : ProductController.productToAmountMap.keySet()) {
             iMatDataHandler.getShoppingCart().addProduct(aProduct, ProductController.productToAmountMap.get(aProduct));
             System.out.println(aProduct);
+            System.out.println("hej");
         }
         iMatDataHandler.placeOrder();
     }
