@@ -30,7 +30,6 @@ public class VarukorgController extends Controller{
     public void updateShoppingCartFlowPane() {
         shoppingCartFlowPane.getChildren().clear();
         for (Product aProduct : ProductController.productToAmountMap.keySet()){
-            System.out.println(ProductController.productToAmountMap.get(aProduct));
             if(ProductController.productToAmountMap.get(aProduct) > 0){
                 shoppingCartFlowPane.getChildren().add(new VarukorgItem(aProduct, this));
             }

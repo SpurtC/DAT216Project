@@ -67,6 +67,13 @@ public class ProductItem extends AnchorPane {
                     newValue = "0";
                 }
 
+                if(!newValue.matches("[0-9]+")){
+                    antalTxtF.textProperty().set(newValue.replaceAll("[^0-9]", ""));
+                    return;
+                }
+
+
+
                 double antal = Double.parseDouble(newValue);
 
                 if(!product.getUnitSuffix().equals("kg")){
@@ -104,7 +111,7 @@ public class ProductItem extends AnchorPane {
     public void clickedPlsBtn() {
         String stringValue = antalTxtF.textProperty().get();
         int intValue = Integer.valueOf(stringValue);
-        if (intValue < 99) {
+        if (intValue < 999) {
             intValue++;
             antalTxtF.textProperty().set(intValue + "");
         }

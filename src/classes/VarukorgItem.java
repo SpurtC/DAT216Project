@@ -1,5 +1,7 @@
 package classes;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -60,6 +62,42 @@ public class VarukorgItem extends AnchorPane {
         updateItemTotalPrice();
         antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)).intValue());
 
+        antalTxtF.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                charLimiter(antalTxtF, 3);
+                if(newValue.equals("")){
+                    newValue = "0";
+                }
+
+                if(!newValue.matches("[0-9]+")){
+                    antalTxtF.textProperty().set(newValue.replaceAll("[^0-9]", ""));
+                    return;
+                }
+
+
+
+                double antal = Double.parseDouble(newValue);
+
+                if(!product.getUnitSuffix().equals("kg")){
+                    int round = (int) antal;
+                    antalTxtF.textProperty().set(round + "");
+                }
+
+                if (antal <= 0){
+                    ProductController.productToAmountMap.put(product, antal);
+                    antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
+                }
+
+                else {
+                    antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    ProductController.productToAmountMap.put(product, antal);
+                }
+
+            }
+        });
+
+
         antalTxtF.textProperty().addListener((observable, oldValue, newValue) -> {
             updateItemTotalPrice();
         });
@@ -112,6 +150,18 @@ public class VarukorgItem extends AnchorPane {
 
     private String roundInString(double d){
         return String.format("%.2f", d);
+    }
+
+    private void charLimiter(TextField textField, int maxLength){
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (newValue != null && newValue.length() > maxLength ) {
+                    String s = newValue.substring(0, maxLength);
+                    textField.textProperty().set(s);
+                }
+            }
+        });
     }
 
 }

@@ -12,6 +12,16 @@
     -fx-border-color: black;
 }
 
+.fillHistoryItembackground{
+    -fx-background-color: gray;
+    -fx-border-color: black;
+}
+
+.fillHistoryItem{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
 .ctgPaneFill {
     -fx-background-color: linear-gradient(white, lightgray);
 }

@@ -30,9 +30,6 @@ public class ProductController extends Controller implements Initializable{
 
     private static Map<String, Pane> stringPaneMapProduct = new HashMap<>();
 
-    public static List<Map<Product, Double>> purchaseHistory = new ArrayList<>();
-
-
 
 
     /**
