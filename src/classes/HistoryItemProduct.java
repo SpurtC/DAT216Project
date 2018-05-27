@@ -64,10 +64,16 @@ public class HistoryItemProduct extends AnchorPane{
                 }
 
                 char [] charArray = newValue.toCharArray();
+                StringBuilder stringBuilder = new StringBuilder();
                 for(Character character: charArray){
-                    if (!character.equals('.') && !Character.isDigit(character)){
-                        return;
+                    if (character.equals('.') || Character.isDigit(character)){
+                        stringBuilder.append(character);
                     }
+                }
+
+                if(stringBuilder.length() != antalTxtF.textProperty().get().length()){
+                    antalTxtF.textProperty().set("0");
+                    return;
                 }
 
                 double antal = Double.parseDouble(newValue);
@@ -77,13 +83,12 @@ public class HistoryItemProduct extends AnchorPane{
                     antalTxtF.textProperty().set(round + "");
                 }
 
+                antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
                 if (antal <= 0){
-                    antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
                     addBtn.setDisable(true);
                 }
 
                 else {
-                    antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
                     addBtn.setDisable(false);
                 }
 

@@ -74,8 +74,8 @@ public class ProductItem extends AnchorPane {
                     }
                 }
 
-                if(stringBuilder.length() == 0){
-                    antalTxtF.textProperty().set("");
+                if(stringBuilder.length() != antalTxtF.textProperty().get().length()){
+                    antalTxtF.textProperty().set("0");
                     return;
                 }
 
@@ -87,18 +87,18 @@ public class ProductItem extends AnchorPane {
                     antalTxtF.textProperty().set(round + "");
                 }
 
+
+
                 if (antal <= 0){
                     ProductController.productToAmountMap.put(product, antal);
                     antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
 
                 }
-
                 else {
                     antalTxtF.setStyle("-fx-control-inner-background: rgba(111,13,174,0.75); -fx-font-size: 20 px; -fx-font-weight: bold");
                     ProductController.productToAmountMap.put(product, antal);
                     antalTxtF.setStyle("-fx-control-inner-background: #b9aeff; -fx-font-size: 20 px; -fx-font-weight: bold; -fx-text-inner-color: black;");
                 }
-
             }
         });
 
