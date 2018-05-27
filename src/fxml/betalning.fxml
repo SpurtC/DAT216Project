@@ -71,7 +71,6 @@
                         <TextField fx:id="mobileNumberTxtF" layoutX="999.0" layoutY="212.0" prefHeight="41.0" prefWidth="381.0" />
                         <TextField fx:id="emailTxtF" layoutX="999.0" layoutY="263.0" prefHeight="41.0" prefWidth="381.0" />
                         <TextField fx:id="cardHolderTxtF" layoutX="256.0" layoutY="461.0" prefHeight="41.0" prefWidth="383.0" />
-                        <TextField fx:id="cardNumberTxtF" layoutX="256.0" layoutY="512.0" prefHeight="41.0" prefWidth="383.0" />
                         <TextField fx:id="validMonthTxtF" layoutX="975.0" layoutY="461.0" prefHeight="41.0" prefWidth="61.0" />
                         <TextField fx:id="validYearTxtF" layoutX="1068.0" layoutY="461.0" prefHeight="41.0" prefWidth="61.0" />
                         <TextField fx:id="cvcTxtF" layoutX="976.0" layoutY="512.0" prefHeight="41.0" prefWidth="127.0" />
@@ -205,6 +204,10 @@
                               <Image url="@../images/processbarStep3.png" />
                            </image>
                         </ImageView>
+                        <TextField fx:id="cardNumber" layoutX="256.0" layoutY="513.0" prefHeight="42.0" prefWidth="95.8" />
+                        <TextField fx:id="cardNumber1" layoutX="352.0" layoutY="513.0" prefHeight="42.0" prefWidth="95.8" />
+                        <TextField fx:id="cardNumber2" layoutX="448.0" layoutY="513.0" prefHeight="42.0" prefWidth="95.8" />
+                        <TextField fx:id="cardNumber3" layoutX="544.0" layoutY="513.0" prefHeight="42.0" prefWidth="95.8" />
                      </children>
                   </AnchorPane>
                </items>

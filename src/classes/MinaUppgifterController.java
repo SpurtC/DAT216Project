@@ -101,10 +101,18 @@ public class MinaUppgifterController extends Controller{
             }
         }
 
-        if (checkUsage(cardHolder)){
-            System.out.println(cardHolder.textProperty().get());
-            System.out.println(checkIfFineForLetters(cardHolder));
+        if (checkUsage(address)){
+            if(checkIfFineAddress(address)){
+                iMatDataHandler.getCustomer().setAddress(address.getText());
+            }
+            else{
+                addressArrow.setVisible(true);
+            }
+        }
 
+
+
+        if (checkUsage(cardHolder)){
             if(checkIfFineForLetters(cardHolder)){
                 iMatDataHandler.getCreditCard().setHoldersName(cardHolder.getText());
             }
@@ -242,6 +250,20 @@ public class MinaUppgifterController extends Controller{
             if(!Character.isAlphabetic(character)) {
                 if(!Character.isSpaceChar(character)){
                     return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean checkIfFineAddress(TextField textField){
+        char [] charArray = textField.textProperty().get().toCharArray();
+        for (Character character: charArray){
+            if(!Character.isSpaceChar(character)){
+                if(!Character.isAlphabetic(character)){
+                    if(!Character.isDigit(character)){
+                        return false;
+                    }
                 }
             }
         }
