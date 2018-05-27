@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaUppgifterController">
+<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaUppgifterController">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -104,7 +104,7 @@
                         <Font name="Arial" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="confirmation" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="312.0" layoutY="32.0" prefHeight="38.0" prefWidth="1028.0" text="Bekräftelse" textAlignment="RIGHT" textFill="RED">
+                  <Label fx:id="confirmation" alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="410.0" layoutY="32.0" prefHeight="38.0" prefWidth="930.0" text="Bekräftelse" textFill="RED">
                      <font>
                         <Font name="Arial Bold" size="33.0" />
                      </font>
