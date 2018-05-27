@@ -43,7 +43,7 @@
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text fill="#684990" layoutX="74.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortuppgifter">
+                        <Text fill="#684990" layoutX="21.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortuppgifter">
                            <font>
                               <Font size="36.0" />
                            </font>
@@ -195,7 +195,7 @@
                               <Image url="@../images/arrow_right.png" />
                            </image>
                         </ImageView>
-                        <Text fill="#684990" layoutX="73.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personuppgifter">
+                        <Text fill="#684990" layoutX="21.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personuppgifter">
                            <font>
                               <Font size="36.0" />
                            </font>

@@ -20,77 +20,77 @@
                      <font>
                         <Font size="24.0" />
                      </font></Button>
-                  <Label layoutX="24.0" layoutY="111.0" text="Förnamn:">
+                  <Label layoutX="82.0" layoutY="111.0" text="Förnamn:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font></Label>
-                  <TextField fx:id="firstName" layoutX="292.0" layoutY="104.0" onKeyTyped="#setFirstName" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="24.0" layoutY="161.0" text="Efternamn:">
+                  <TextField fx:id="firstName" layoutX="292.0" layoutY="104.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="82.0" layoutY="161.0" text="Efternamn:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="lastName" layoutX="292.0" layoutY="154.0" onKeyTyped="#setLastName" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="24.0" layoutY="211.0" text="Telefonnummer:">
+                  <TextField fx:id="lastName" layoutX="292.0" layoutY="154.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="79.0" layoutY="211.0" text="Telefonnummer:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="phoneNumber" layoutX="292.0" layoutY="204.0" onKeyTyped="#setPhoneNumber" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="24.0" layoutY="262.0" text="Mobilnummer:">
+                  <TextField fx:id="phoneNumber" layoutX="292.0" layoutY="204.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="82.0" layoutY="262.0" text="Mobilnummer:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="mobileNumber" layoutX="292.0" layoutY="255.0" onKeyTyped="#setMobileNumber" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="789.0" layoutY="111.0" text="E-postadress:">
+                  <TextField fx:id="mobileNumber" layoutX="292.0" layoutY="255.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="795.0" layoutY="111.0" text="E-postadress:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email" layoutX="995.0" layoutY="104.0" onKeyTyped="#setEmail" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="787.0" layoutY="161.0" text="Gatuadress:">
+                  <TextField fx:id="email" layoutX="995.0" layoutY="104.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="795.0" layoutY="161.0" text="Gatuadress:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="address" layoutX="995.0" layoutY="154.0" onKeyTyped="#setAddress" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="792.0" layoutY="211.0" text="Postnummer:">
+                  <TextField fx:id="address" layoutX="995.0" layoutY="154.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="795.0" layoutY="211.0" text="Postnummer:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="zipCode" layoutX="995.0" layoutY="204.0" onKeyTyped="#setZipCode" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="22.0" layoutY="426.0" text="Kortinnehavare:">
+                  <TextField fx:id="zipCode" layoutX="995.0" layoutY="204.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="82.0" layoutY="426.0" text="Kortinnehavare:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardHolder" layoutX="292.0" layoutY="419.0" onKeyTyped="#setCardHolder" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="22.0" layoutY="476.0" text="Kortnummer:">
+                  <TextField fx:id="cardHolder" layoutX="292.0" layoutY="419.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="82.0" layoutY="476.0" text="Kortnummer:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNumber" layoutX="292.0" layoutY="469.0" onKeyTyped="#setCardNumber" prefHeight="41.0" prefWidth="383.0" />
-                  <Label layoutX="777.0" layoutY="426.0" text="Giltigt till:">
+                  <TextField fx:id="cardNumber" layoutX="292.0" layoutY="469.0" prefHeight="41.0" prefWidth="383.0" />
+                  <Label layoutX="795.0" layoutY="426.0" text="Giltigt till:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="validMonth" layoutX="995.0" layoutY="419.0" onKeyTyped="#setValidMonth" prefHeight="41.0" prefWidth="88.0" />
-                  <TextField fx:id="validYear" layoutX="1134.0" layoutY="419.0" onKeyTyped="#setValidYear" prefHeight="41.0" prefWidth="88.0" />
+                  <TextField fx:id="validMonth" layoutX="995.0" layoutY="419.0" prefHeight="41.0" prefWidth="88.0" />
+                  <TextField fx:id="validYear" layoutX="1134.0" layoutY="419.0" prefHeight="41.0" prefWidth="88.0" />
                   <Label layoutX="1104.0" layoutY="426.0" text="/">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="777.0" layoutY="476.0" text="CVC:">
+                  <Label layoutX="795.0" layoutY="476.0" text="CVC:">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cvc" layoutX="995.0" layoutY="469.0" onKeyTyped="#setCvc" prefHeight="41.0" prefWidth="118.0" />
+                  <TextField fx:id="cvc" layoutX="995.0" layoutY="469.0" prefHeight="41.0" prefWidth="118.0" />
                   <Label layoutX="1013.0" layoutY="392.0" text="Månad">
                      <font>
                         <Font name="Arial" size="17.0" />
@@ -101,7 +101,7 @@
                         <Font name="Arial" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="confirmation" layoutX="312.0" layoutY="32.0" prefHeight="38.0" prefWidth="1028.0" text="Bekräftelse" textAlignment="CENTER" textFill="RED">
+                  <Label fx:id="confirmation" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="312.0" layoutY="32.0" prefHeight="38.0" prefWidth="1028.0" text="Bekräftelse" textAlignment="RIGHT" textFill="RED">
                      <font>
                         <Font name="Arial Bold" size="33.0" />
                      </font>
@@ -126,6 +126,61 @@
                         <Font size="36.0" />
                      </font>
                   </Text>
+                  <ImageView fx:id="firstNameArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emailArrow" fitHeight="35.0" fitWidth="50.0" layoutX="736.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="addressArrow" fitHeight="35.0" fitWidth="50.0" layoutX="736.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="zipCodeArrow" fitHeight="35.0" fitWidth="50.0" layoutX="735.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cardNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cardHolderArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mobileNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="phoneNumberArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="validArrow" fitHeight="35.0" fitWidth="50.0" layoutX="736.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cvcArrow" fitHeight="35.0" fitWidth="50.0" layoutX="736.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="lastNameArrow" fitHeight="35.0" fitWidth="50.0" layoutX="21.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/RedArrow.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             </items>
         </SplitPane>
