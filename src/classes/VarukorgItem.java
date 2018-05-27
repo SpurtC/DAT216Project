@@ -85,8 +85,8 @@ public class VarukorgItem extends AnchorPane {
                     }
                 }
 
-                if(stringBuilder.length() == 0){
-                    antalTxtF.textProperty().set("");
+                if(stringBuilder.length() != antalTxtF.textProperty().get().length()){
+                    antalTxtF.textProperty().set("0");
                     return;
                 }
 
