@@ -70,12 +70,12 @@ public class VarukorgItem extends AnchorPane {
                     newValue = "0";
                 }
 
-                if(!newValue.matches("[0-9]+")){
-                    antalTxtF.textProperty().set(newValue.replaceAll("[^0-9]", ""));
-                    return;
+                char [] charArray = newValue.toCharArray();
+                for(Character character: charArray){
+                    if (!character.equals('.') && !Character.isDigit(character)){
+                        return;
+                    }
                 }
-
-
 
                 double antal = Double.parseDouble(newValue);
 
