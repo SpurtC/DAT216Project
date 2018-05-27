@@ -100,23 +100,30 @@ public class ProductItem extends AnchorPane {
 
     public void clickedMnsBtn() {
         stringValue = antalTxtF.textProperty().get();
-        int intValue = Integer.valueOf(stringValue);
+        double doubleValue = Double.valueOf(stringValue);
 
-        if (intValue > 0) {
-            intValue--;
-            antalTxtF.textProperty().set(intValue + "");
+        if (doubleValue > 0) {
+            doubleValue--;
+            antalTxtF.textProperty().set(doubleValue + "");
         }
     }
 
     public void clickedPlsBtn() {
+        double doubleValue;
+
         if(antalTxtF.textProperty().get().equals("")){
-            return;
+            doubleValue = 0;
         }
-        String stringValue = antalTxtF.textProperty().get();
-        int intValue = Integer.valueOf(stringValue);
-        if (intValue < 999) {
-            intValue++;
-            antalTxtF.textProperty().set(intValue + "");
+
+        else{
+            String stringValue = antalTxtF.textProperty().get();
+            doubleValue = Double.valueOf(stringValue);
+        }
+
+
+        if (doubleValue < 999) {
+            doubleValue++;
+            antalTxtF.textProperty().set(doubleValue + "");
         }
     }
 
