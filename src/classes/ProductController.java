@@ -48,7 +48,8 @@ public class ProductController extends Controller implements Initializable{
     private AnchorPane leftAnchorPane;
 
     @FXML
-    private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane, sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane, allProductsCtgPane;
+    private Pane minaFavoriterCtgPane, breadCtgPane, drinksCtgPane, fruitCtgPane, meatCtgPane, dairyCtgPane,
+            sweetsCtgPane, dryCtgPane, nutCtgPane, ekoCtgPane, allProductsCtgPane, podCtgPane;
 
     @FXML
     FlowPane resultFlowPane;
@@ -248,6 +249,7 @@ public class ProductController extends Controller implements Initializable{
     public void makeAMapProduct () {
         stringPaneMapProduct.put("minaFavoriterCtgPane", minaFavoriterCtgPane );
         stringPaneMapProduct.put("allProductsCtgPane", allProductsCtgPane);
+        stringPaneMapProduct.put("podCtgPane", podCtgPane);
         stringPaneMapProduct.put("breadCtgPane", breadCtgPane );
         stringPaneMapProduct.put("drinksCtgPane", drinksCtgPane );
         stringPaneMapProduct.put("fruitCtgPane", fruitCtgPane );
