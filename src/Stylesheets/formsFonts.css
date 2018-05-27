@@ -39,10 +39,6 @@
     -fx-border-color: black;
 }
 
-.clickOnMe:hover {
-    -fx-border-color: blue;
-}
-
 .myAccountPane {
     -fx-background-color: linear-gradient(white, lightgray);
     -fx-border-color: black;
@@ -62,10 +58,6 @@
     -fx-border-color: black;
 }
 
-.favoriteHeart:hover {
-    -fx-border-color: red;
-}
-
 .productsFill {
     -fx-background-color: #ffbf91;
     -fx-border-color: black;
@@ -77,16 +69,33 @@
 }
 
 .exitColor {
-    -fx-background-color: #e0a8a8;
-    -fx-border-color: black;
+    -fx-background-color: #ffe2e2;
+
 }
 
-.buyColor {
-    -fx-background-color: #99e482;
-    -fx-border-color: black;
+.clickOnMePlus {
+    -fx-background-color: #c2f0b0;
 }
+
+
+.clickOnMePlus:hover {
+    -fx-border-color: #e1ffcd;
+    -fx-background-color: #e1ffcd;
+    -fx-font-size: 21px;
+}
+
+.clickOnMeMinus {
+    -fx-background-color: #ffd7d7;
+}
+
+.clickOnMeMinus:hover {
+    -fx-background-color: #ffedf0;
+    -fx-border-color: #ffe2e2;
+    -fx-font-size: 21px;
+}
+
 
 .plusButton{
-    -fx-background-color: #efffe2
+    -fx-background-color: #efffe2;
 }
 

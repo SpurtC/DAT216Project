@@ -34,13 +34,13 @@
                   <Image url="@../images/hjartaVit.png" />
                </image>
             </ImageView>
-            <Button fx:id="plusBtn" layoutX="157.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #efffe2;" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="+">
+            <Button fx:id="plusBtn" layoutX="157.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" styleClass="clickOnMePlus" stylesheets="@../Stylesheets/formsFonts.css" text="+">
                <font>
-                  <Font name="System Bold" size="21.0" />
+                  <Font name="System Bold" size="19.0" />
                </font></Button>
-            <Button fx:id="minusBtn" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #ffe2e2;" styleClass="clickOnMe" stylesheets="@../Stylesheets/formsFonts.css" text="–">
+            <Button fx:id="minusBtn" layoutX="25.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" styleClass="clickOnMeMinus" stylesheets="@../Stylesheets/formsFonts.css" text="–">
                <font>
-                  <Font name="System Bold" size="21.0" />
+                  <Font name="System Bold" size="19.0" />
                </font></Button>
          </children></Pane>
    </children>
