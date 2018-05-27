@@ -23,7 +23,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="shoppingCartProductPriceLbl" layoutX="435.0" layoutY="11.0" text="5 kr / st">
+            <Label fx:id="shoppingCartProductPriceLbl" layoutX="416.0" layoutY="11.0" text="5 kr / st">
                <font>
                   <Font size="27.0" />
                </font>

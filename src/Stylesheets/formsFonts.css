@@ -4,7 +4,7 @@
 }
 
 .upperPaneFill:hover {
-    -fx-background-color: #897ec3;
+    -fx-background-color: #dbd5ff;
 }
 
 .upperPaneFillPressed {
@@ -31,7 +31,7 @@
 }
 
 .ctgPaneFill:hover {
-    -fx-background-color: #897ec3;
+    -fx-background-color: #dbd5ff;
 }
 
 .ctgPaneFillClicked {
@@ -72,7 +72,7 @@
 }
 
 .productsFill2 {
-    -fx-background-color: #eaeaea;
+    -fx-background-color: #ebf2ff;
     -fx-border-color: black;
 }
 
