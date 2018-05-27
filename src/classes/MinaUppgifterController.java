@@ -31,43 +31,38 @@ public class MinaUppgifterController extends Controller{
     }
 
     public void setLastName() {
+        if (iMatDataHandler.getCustomer().getFirstName().equals("")){
+            iMatDataHandler.getCustomer().setFirstName(" ");
+        }
         iMatDataHandler.getCustomer().setLastName(lastName.getText());
-        System.out.println(lastName.getText());
     }
 
     public void setPhoneNumber() {
         iMatDataHandler.getCustomer().setPhoneNumber(phoneNumber.getText());
-        System.out.println(phoneNumber.getText());
     }
 
     public void setMobileNumber() {
         iMatDataHandler.getCustomer().setMobilePhoneNumber(mobileNumber.getText());
-        System.out.println(mobileNumber.getText());
     }
 
     public void setEmail() {
         iMatDataHandler.getCustomer().setEmail(email.getText());
-        System.out.println(email.getText());
     }
 
     public void setAddress() {
         iMatDataHandler.getCustomer().setAddress(address.getText());
-        System.out.println(address.getText());
     }
 
     public void setZipCode() {
         iMatDataHandler.getCustomer().setPostCode(zipCode.getText());
-        System.out.println(zipCode.getText());
     }
 
     public void setCardHolder() {
         iMatDataHandler.getCreditCard().setHoldersName(cardHolder.getText());
-        System.out.println(cardHolder.getText());
     }
 
     public void setCardNumber() {
         iMatDataHandler.getCreditCard().setCardNumber(cardNumber.getText());
-        System.out.println(cardNumber.getText());
     }
 
     public void setValidMonth() {
