@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.LeveranstidController">
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.LeveranstidController">
    <children>
       <SplitPane>
          <items>
@@ -191,7 +191,7 @@
                          </RadioButton>
                      </children>
                   </Pane>
-                  <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="82.0" prefWidth="343.0" styleClass="exitColor" text="        Tillbaka till Varukorgen" textAlignment="RIGHT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                  <Button layoutX="46.0" layoutY="577.0" mnemonicParsing="false" onAction="#onGoBackToShoppingCartClicked" prefHeight="82.0" prefWidth="343.0" styleClass="exitColor" text="        Tillbaka till varukorgen" textAlignment="RIGHT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -211,7 +211,7 @@
                         <Image url="@../images/arrow_right.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="80.0" fitWidth="515.0" layoutX="610.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="80.0" fitWidth="515.0" layoutX="609.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/processbarStep2.png" />
                      </image>
