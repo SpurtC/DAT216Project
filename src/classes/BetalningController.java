@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class BetalningController extends Controller {
@@ -245,6 +246,7 @@ public class BetalningController extends Controller {
                 zipCodeArrow.isVisible() || cardHolderArrow.isVisible() || cardNumberArrow.isVisible() || validArrow.isVisible() ||
                 cvcArrow.isVisible()){
             messageLbl.textProperty().set("Vänligen kontrollera att fälten är korrekt ifyllda");
+            messageLbl.setTextFill(Color.RED);
             messageLbl.setVisible(true);
         }
 
@@ -252,6 +254,7 @@ public class BetalningController extends Controller {
                 checkUsage(emailTxtF) && checkUsage(addressTxtF) && checkUsage(zipCodeTxtF) && checkUsage(cardHolderTxtF) &&
                 checkUsage(cardHolderTxtF) && checkUsage(cvcTxtF)){
             messageLbl.setText("Dina uppgifter har sparats!");
+            messageLbl.setTextFill(Color.GREEN);
             messageLbl.setVisible(true);
         }
     }
@@ -497,5 +500,6 @@ public class BetalningController extends Controller {
         cardNumberArrow.setVisible(false);
         validArrow.setVisible(false);
         cvcArrow.setVisible(false);
+        messageLbl.setVisible(false);
     }
 }

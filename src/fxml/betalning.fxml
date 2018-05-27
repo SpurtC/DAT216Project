@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.BetalningController">
    <children>
       <AnchorPane layoutY="1.0" prefHeight="700.0" prefWidth="1440.0">
          <children>
@@ -179,7 +179,7 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="messageLbl" layoutX="763.0" layoutY="368.0" textFill="RED">
+                        <Label fx:id="messageLbl" layoutX="616.0" layoutY="102.0" text="Dina uppgifter har sparats!" textFill="#008000">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
