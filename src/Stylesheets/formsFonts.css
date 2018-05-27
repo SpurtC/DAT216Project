@@ -68,33 +68,24 @@
 }
 
 .productsFill {
-    -fx-background-color: #ffbf91;
+    -fx-background-color: #e7e1ee;
     -fx-border-color: black;
-}
-
-.productsFill2 {
-    -fx-background-color: #ebf2ff;
-    -fx-border-color: black;
-}
-
-.exitColor {
-    -fx-background-color: #ffe2e2;
-
 }
 
 .clickOnMePlus {
     -fx-background-color: #c2f0b0;
+    -fx-border-color: #7ac556;
 }
 
-
 .clickOnMePlus:hover {
-    -fx-border-color: #e1ffcd;
     -fx-background-color: #e1ffcd;
+    -fx-border-color: #c7ffad;
     -fx-font-size: 21px;
 }
 
 .clickOnMeMinus {
     -fx-background-color: #ffd7d7;
+    -fx-border-color: #ffb5b5;
 }
 
 .clickOnMeMinus:hover {
