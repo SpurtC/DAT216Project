@@ -22,7 +22,16 @@
 }
 
 .fillHistoryItem{
-    -fx-background-color: white;
+    -fx-background-color: lavender ;
+    -fx-border-color: black;
+}
+
+.fillHistoryItem:hover {
+    -fx-background-color: #dbd5ff;
+}
+
+.fillHistoryItemClicked {
+    -fx-background-color: #b9aeff;
     -fx-border-color: black;
 }
 
@@ -93,9 +102,3 @@
     -fx-border-color: #ffe2e2;
     -fx-font-size: 21px;
 }
-
-
-.plusButton{
-    -fx-background-color: #efffe2;
-}
-
