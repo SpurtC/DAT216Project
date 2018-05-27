@@ -74,6 +74,16 @@
                         <Image url="@../images/arrow_left.png" />
                      </image>
                   </ImageView>
+                  <Button layoutX="1077.0" layoutY="552.0" mnemonicParsing="false" onAction="#addOrderToShoppingCart" prefHeight="82.0" prefWidth="343.0" text="Lägg till hela köpet i varukorgen">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="messageLbl" layoutX="691.0" layoutY="570.0" text="Label">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
             </items>
         </SplitPane>

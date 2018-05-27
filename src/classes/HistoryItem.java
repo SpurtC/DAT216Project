@@ -25,7 +25,7 @@ public class HistoryItem extends AnchorPane{
 
     private IMatDataHandler iMatDataHandler =  IMatDataHandler.getInstance();
     private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:dd:ss");
-    private Order order;
+    Order order;
     private MinHistorikController minHistorikController;
 
 
@@ -46,6 +46,8 @@ public class HistoryItem extends AnchorPane{
     }
 
     public void showItems(){
+        MinHistorikController.getDate = order.getDate();
         minHistorikController.updateItemFlowPane(order);
+        minHistorikController.messageLbl.setVisible(false);
     }
 }

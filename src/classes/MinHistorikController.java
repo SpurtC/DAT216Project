@@ -1,15 +1,12 @@
 package classes;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -21,10 +18,14 @@ public class MinHistorikController extends Controller {
     @FXML
     private FlowPane historyFlowPane, itemFlowPane;
 
-    private HashMap<Date, HistoryItem> stringHistoryItemHashMap = new HashMap<>();
+    @FXML
+    Label messageLbl;
+
+    private HashMap<Date, HistoryItem> dateHistoryItemHashMap = new HashMap<>();
     private HashMap<String, HistoryItemProduct> stringHistoryItemProductHashMap = new HashMap<>();
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    static Date getDate = null;
 
     @FXML
     public void onContinueShopPreviewPaymentClicked () {
@@ -36,8 +37,8 @@ public class MinHistorikController extends Controller {
         historyFlowPane.getChildren().clear();
         for(Order aOrder: orderList){
             HistoryItem historyItem = new HistoryItem(aOrder, this);
-            stringHistoryItemHashMap.put(aOrder.getDate(), historyItem);
-            historyFlowPane.getChildren().add(stringHistoryItemHashMap.get(aOrder.getDate()));
+            dateHistoryItemHashMap.put(aOrder.getDate(), historyItem);
+            historyFlowPane.getChildren().add(dateHistoryItemHashMap.get(aOrder.getDate()));
         }
     }
 
@@ -53,6 +54,24 @@ public class MinHistorikController extends Controller {
         }
     }
 
+    public void addOrderToShoppingCart() {
+        if(getDate == null){
+            messageLbl.textProperty().set("Vänligen välj köp");
+            messageLbl.setVisible(true);
+            return;
+        }
+        else {
+            HistoryItem historyItem = dateHistoryItemHashMap.get(getDate);
+            List<ShoppingItem> shoppingItemList = historyItem.order.getItems();
+            for(ShoppingItem shoppingItem: shoppingItemList){
+                if(shoppingItem.getAmount() != 0){
+                    ProductController.productToAmountMap.put(shoppingItem.getProduct(), shoppingItem.getAmount());
+                }
+            }
+            messageLbl.setVisible(false);
+        }
+    }
+
 
     @Override
     public void init() {
@@ -61,5 +80,8 @@ public class MinHistorikController extends Controller {
 
     public void opened() {
         updateFlowPane(iMatDataHandler.getOrders());
+        itemFlowPane.getChildren().clear();
+        getDate = null;
+        messageLbl.setVisible(false);
     }
 }
