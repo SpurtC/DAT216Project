@@ -112,17 +112,17 @@ public class VarukorgItem extends AnchorPane {
 
     public void clickedMnsBtn() {
         stringValue = antalTxtF.textProperty().get();
-        int intValue = Integer.valueOf(stringValue);
+        double doubleValue = Double.valueOf(stringValue);
 
-        if (intValue > 0) {
-            intValue--;
-            antalTxtF.textProperty().set(intValue + "");
-            ProductController.productToAmountMap.put(product, (double) intValue);
+        if (doubleValue > 0) {
+            doubleValue--;
+            antalTxtF.textProperty().set(doubleValue + "");
+            ProductController.productToAmountMap.put(product, (double) doubleValue);
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
 
         }
 
-        if (intValue == 0){
+        if (doubleValue == 0){
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
         }
 
@@ -133,15 +133,15 @@ public class VarukorgItem extends AnchorPane {
 
     public void clickedPlsBtn() {
         String stringValue = antalTxtF.textProperty().get();
-        int intValue = Integer.valueOf(stringValue);
-        if (intValue < 99) {
-            intValue++;
-            antalTxtF.textProperty().set(intValue + "");
-            ProductController.productToAmountMap.put(product, (double) intValue);
+        double doubleValue = Double.valueOf(stringValue);
+        if (doubleValue < 99) {
+            doubleValue++;
+            antalTxtF.textProperty().set(doubleValue + "");
+            ProductController.productToAmountMap.put(product, (double) doubleValue);
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
         }
 
-        if (intValue == 0)
+        if (doubleValue == 0)
             antalTxtF.setStyle("-fx-font-size: 20 px; -fx-font-weight: bold");
 
         this.updateItemTotalPrice();
