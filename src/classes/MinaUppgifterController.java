@@ -31,8 +31,8 @@ public class MinaUppgifterController extends Controller{
     }
 
     public void setLastName() {
-        if (iMatDataHandler.getCustomer().getFirstName().equals("")){
-            iMatDataHandler.getCustomer().setFirstName(" ");
+        if (iMatDataHandler.getCustomer().getFirstName() == null){
+            iMatDataHandler.getCustomer().setFirstName("");
         }
         iMatDataHandler.getCustomer().setLastName(lastName.getText());
     }
