@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane layoutX="170.0" layoutY="203.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
@@ -29,7 +29,7 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="253.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att betala trycker du på &quot;Se Hela Varukorgen&quot;-knappen därefter &quot;Till Betala&quot;. Där väljer du ett leveransdatum och trycker &quot;vidare&quot;." wrappingWidth="873.021484375">
+                                    <Text layoutX="12.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att betala trycker du på &quot;Se Hela Varukorgen&quot;-knappen därefter &quot;Till Betala&quot;. Där väljer du ett leveransdatum och trycker &quot;vidare&quot;." wrappingWidth="873.021484375">
                                        <font>
                                           <Font size="27.0" />
                                        </font></Text>
@@ -44,7 +44,7 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Text layoutX="11.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på den stora &quot;Handla&quot;-knappen högst upp till vänster, där väljer du sedan vilka varor du vill köpa och trycker på pluset för att lägga till rätt antal. När du är klar trycker du på &quot;Se Hela Varukorgen&quot;" wrappingWidth="857.955810546875">
+                                    <Text layoutX="11.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på den stora &quot;Handla&quot;-knappen högst upp till vänster, där väljer du sedan vilka varor du vill köpa och trycker på pluset för att lägga till rätt antal. När du är klar trycker du på &quot;Se Hela Varukorgen&quot;" wrappingWidth="857.955810546875">
                                        <font>
                                           <Font size="27.0" />
                                        </font></Text>
@@ -59,7 +59,7 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="492.0">
                                  <children>
-                                    <Text layoutX="7.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Börja med att trycka på &quot;Mitt konto&quot;, där kan du välja mina uppgifter. Väl på den sidan skiver du in dina uppgifter och trycker på spara." wrappingWidth="874.240234375">
+                                    <Text layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Börja med att trycka på &quot;Mitt konto&quot;, där kan du välja mina uppgifter. Väl på den sidan skiver du in dina uppgifter och trycker på spara." wrappingWidth="874.240234375">
                                        <font>
                                           <Font size="27.0" />
                                        </font>
@@ -75,7 +75,7 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Text layoutX="12.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att göra en vara till din favorit trycker du på hjärtat i högra hörnet på varan, hjärtat kommer då bli rött och visas bland mina favoritvaror" wrappingWidth="872.9830722808838">
+                                    <Text layoutX="12.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att göra en vara till din favorit trycker du på hjärtat i högra hörnet på varan, hjärtat kommer då bli rött och visas bland mina favoritvaror" wrappingWidth="872.9830722808838">
                                        <font>
                                           <Font size="27.0" />
                                        </font></Text>
@@ -90,7 +90,7 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Text layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om hjärtat högst upp i hörnet är rött är det din nuvarande favorit. För att ta bort den från listan trycker du på hjärtat, som blir vitt och det är inte längre din favorit." wrappingWidth="881.546875">
+                                    <Text layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om hjärtat högst upp i hörnet är rött är det din nuvarande favorit. För att ta bort den från listan trycker du på hjärtat, som blir vitt och det är inte längre din favorit." wrappingWidth="881.546875">
                                        <font>
                                           <Font size="27.0" />
                                        </font></Text>
