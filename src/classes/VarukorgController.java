@@ -101,11 +101,9 @@ public class VarukorgController extends Controller{
         }
         if(antal == 0){
             shoppingCartForwardButton.setDisable(true);
-            emptyBasketButton.setDisable(true);
             forwardImage.setVisible(false);
         }else{
             shoppingCartForwardButton.setDisable(false);
-            emptyBasketButton.setDisable(false);
             forwardImage.setVisible(true);
         }
     }
