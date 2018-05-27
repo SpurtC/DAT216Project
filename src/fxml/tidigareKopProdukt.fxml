@@ -34,11 +34,11 @@
                </font>
             </Label>
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="767.0" layoutY="52.0" prefHeight="50.0" prefWidth="50.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-            <Button layoutX="828.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedPlsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="buyColor" stylesheets="@../Stylesheets/formsFonts.css" text="+">
+            <Button layoutX="828.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedPlsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMePlus" stylesheets="@../Stylesheets/formsFonts.css" text="+">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font></Button>
-            <Button layoutX="707.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedMnsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="exitColor" stylesheets="@../Stylesheets/formsFonts.css" text="–">
+            <Button layoutX="707.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedMnsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMeMinus" stylesheets="@../Stylesheets/formsFonts.css" text="–">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font></Button>
