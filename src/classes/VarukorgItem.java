@@ -128,6 +128,7 @@ public class VarukorgItem extends AnchorPane {
 
         this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
+        varukorgController.checkIfEmpty2();
     }
 
     public void clickedPlsBtn() {
@@ -145,6 +146,7 @@ public class VarukorgItem extends AnchorPane {
 
         this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
+        varukorgController.checkIfEmpty2();
     }
 
     public void clickedTrashCan(){
@@ -185,7 +187,7 @@ public class VarukorgItem extends AnchorPane {
 
 
     public void trashCanMouseExited(){
-            trashCanImg.setImage(new Image("images/trash_can_icon.png"));
+            trashCanImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream("images/trash_can_icon.png")));
     }
 
 }

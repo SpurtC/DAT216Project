@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1366.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1366.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="203.0" layoutY="-27.0" prefHeight="64.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,7 +23,7 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="shoppingCartProductPriceLbl" layoutX="435.0" layoutY="11.0" text="5 kr / st">
+            <Label fx:id="shoppingCartProductPriceLbl" layoutX="416.0" layoutY="11.0" text="5 kr / st">
                <font>
                   <Font size="27.0" />
                </font>
@@ -34,11 +34,17 @@
                </font>
             </Label>
             <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="786.0" layoutY="8.0" prefHeight="45.0" prefWidth="65.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-            <Button fx:id="plusBtn" layoutX="871.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+" />
-            <Button fx:id="minusBtn" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–" />
+            <Button fx:id="plusBtn" layoutX="871.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedPlsBtn" prefHeight="45.0" prefWidth="45.0" text="+">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Button>
+            <Button fx:id="minusBtn" layoutX="720.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#clickedMnsBtn" prefHeight="45.0" prefWidth="45.0" text="–">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Button>
             <ImageView fx:id="trashCanImg" fitHeight="54.0" fitWidth="45.0" layoutX="1307.0" layoutY="8.0" onMouseClicked="#clickedTrashCan" onMouseEntered="#trashCanMouseEntered" onMouseExited="#trashCanMouseExited" pickOnBounds="true" preserveRatio="true" styleClass="deleteProduct">
                <image>
-                  <Image url="@../images/trash%20can%20icon.png" />
+                  <Image url="@../images/trash_can_icon.png" />
                </image>
             </ImageView>
          </children>

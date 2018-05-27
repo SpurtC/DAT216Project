@@ -17,7 +17,6 @@ public class RootController extends Controller{
 
     private void makeRootList () {
         rootFxmlfileList.add("/fxml/mainWindow.fxml");
-        rootFxmlfileList.add("/fxml/certainConfirm.fxml");
     }
 
     @Override

@@ -93,6 +93,21 @@ public class VarukorgController extends Controller{
         }
     }
 
+    public void checkIfEmpty2(){
+        int antal = 0;
+
+        for(Product entry : ProductController.productToAmountMap.keySet()){
+            antal += ProductController.productToAmountMap.get(entry);
+        }
+        if(antal == 0){
+            shoppingCartForwardButton.setDisable(true);
+            forwardImage.setVisible(false);
+        }else{
+            shoppingCartForwardButton.setDisable(false);
+            forwardImage.setVisible(true);
+        }
+    }
+
     @Override
     public void init() {
 
