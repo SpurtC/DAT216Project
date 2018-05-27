@@ -90,11 +90,13 @@ public class ProductItem extends AnchorPane {
                 if (antal <= 0){
                     ProductController.productToAmountMap.put(product, antal);
                     antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
+
                 }
 
                 else {
-                    antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    antalTxtF.setStyle("-fx-control-inner-background: rgba(111,13,174,0.75); -fx-font-size: 20 px; -fx-font-weight: bold");
                     ProductController.productToAmountMap.put(product, antal);
+                    antalTxtF.setStyle("-fx-control-inner-background: #b9aeff; -fx-font-size: 20 px; -fx-font-weight: bold; -fx-text-inner-color: black;");
                 }
 
             }
