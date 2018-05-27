@@ -152,6 +152,18 @@ public class ProductItem extends AnchorPane {
         }
     }
 
+    public void favoriteHeartMouseEntered(){
+        favoriteHeartImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "images/hjartaPink.png")));
+    }
 
 
+    public void favoriteHeartMouseExited(){
+        if(IMatDataHandler.getInstance().isFavorite(product)) {
+            favoriteHeartImg.setImage(new Image("images/hjartaRod.png"));
+        }
+        else {
+            favoriteHeartImg.setImage(new Image("images/hjartaVit.png"));
+        }
+    }
 }
