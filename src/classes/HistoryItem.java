@@ -46,7 +46,7 @@ public class HistoryItem extends AnchorPane{
     }
 
     public void showItems(){
-        MinHistorikController.getDate = order.getDate();
+        minHistorikController.getDate = order.getDate();
         minHistorikController.updateItemFlowPane(order);
         minHistorikController.messageLbl.setVisible(false);
     }

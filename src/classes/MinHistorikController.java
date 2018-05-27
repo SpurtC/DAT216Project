@@ -25,7 +25,7 @@ public class MinHistorikController extends Controller {
     private HashMap<String, HistoryItemProduct> stringHistoryItemProductHashMap = new HashMap<>();
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-    static Date getDate = null;
+    Date getDate = null;
 
     @FXML
     public void onContinueShopPreviewPaymentClicked () {
