@@ -140,6 +140,13 @@ public class VarukorgItem extends AnchorPane {
         varukorgController.updateTotalPriceLabel();
     }
 
+    public void clickedTrashCan(){
+        ProductController.productToAmountMap.remove(product);
+        this.updateItemTotalPrice();
+        varukorgController.updateTotalPriceLabel();
+        varukorgController.updateShoppingCartFlowPane();
+    }
+
     private double totalAmount (Product product){
         return ProductController.productToAmountMap.get(product) == null ? 0 : ProductController.productToAmountMap.get(product);
     }
