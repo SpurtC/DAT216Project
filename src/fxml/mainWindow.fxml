@@ -22,7 +22,7 @@
                <font>
                   <Font name="System Bold" size="23.0" />
                </font></Label>
-            <Button fx:id="VarukorgBtn" layoutX="328.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#onVarukorgClicked" prefHeight="74.0" prefWidth="106.0" text="Se hela varukorgen" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="VarukorgBtn" layoutX="335.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#onVarukorgClicked" prefHeight="74.0" prefWidth="106.0" text="Se hela varukorgen" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
@@ -31,12 +31,12 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="numberOfItemsLbl" layoutX="225.0" layoutY="15.0" text="0 st">
+            <Label fx:id="numberOfItemsLbl" layoutX="224.0" layoutY="15.0" text="0 st">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="totalPriceLbl" layoutX="213.0" layoutY="53.0" prefHeight="35.0" prefWidth="115.0" text="0,00 kr">
+            <Label fx:id="totalPriceLbl" layoutX="212.0" layoutY="53.0" prefHeight="35.0" prefWidth="115.0" text="0,00 kr">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
