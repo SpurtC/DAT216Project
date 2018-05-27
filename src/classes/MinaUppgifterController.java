@@ -6,11 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class MinaUppgifterController extends Controller{
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+
+
 
     @FXML
     TextField firstName, lastName, phoneNumber, mobileNumber, email, address, zipCode,
@@ -210,6 +214,7 @@ public class MinaUppgifterController extends Controller{
                 zipCodeArrow.isVisible() || cardHolderArrow.isVisible() || cardNumberArrow.isVisible() || validArrow.isVisible() ||
                 cvcArrow.isVisible()){
             confirmation.textProperty().set("Vänligen kontrollera att de markerade uppgifterna stämmer");
+            confirmation.setTextFill(Color.RED);
             confirmation.setVisible(true);
         }
 
@@ -217,6 +222,7 @@ public class MinaUppgifterController extends Controller{
                 checkUsage(email) || checkUsage(address) || checkUsage(zipCode) || checkUsage(cardHolder) ||
                 checkUsage(cardHolder) || checkUsage(cvc)){
             confirmation.setText("Dina uppgifter har sparats!");
+            confirmation.setTextFill(Color.GREEN);
             confirmation.setVisible(true);
         }
     }
