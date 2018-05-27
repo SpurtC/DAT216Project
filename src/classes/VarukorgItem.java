@@ -128,6 +128,7 @@ public class VarukorgItem extends AnchorPane {
 
         this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
+        varukorgController.checkIfEmpty2();
     }
 
     public void clickedPlsBtn() {
@@ -145,6 +146,7 @@ public class VarukorgItem extends AnchorPane {
 
         this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
+        varukorgController.checkIfEmpty2();
     }
 
     public void clickedTrashCan(){
