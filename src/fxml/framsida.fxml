@@ -31,7 +31,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane fx:id="minaFavoriterCtgPane" layoutY="55.0" onMouseClicked="#clickedMinaFavoriter" prefHeight="63.6" prefWidth="380.0" styleClass="ctgPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Pane fx:id="minaFavoriterCtgPane" layoutY="55.0" onMouseClicked="#clickedMinaFavoriter" prefHeight="55.0" prefWidth="380.0" styleClass="ctgPaneFill" stylesheets="@../Stylesheets/formsFonts.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Label layoutX="14.0" layoutY="11.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Mina favoriter">
                            <font>

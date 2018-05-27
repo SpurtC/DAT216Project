@@ -29,6 +29,7 @@ public class MainWindowController extends Controller{
     public List<String> getFxmlFilesList() {
         return fxmlFileList;
     }
+    CSSManager cssManagerCategory = new CSSManager(ProductController.stringPaneMapProduct);
 
     @Override
     public void init() {
@@ -41,6 +42,8 @@ public class MainWindowController extends Controller{
             updateNumberOfItems();
             updateTotalPrice();
         });
+
+        cssManagerCategory.changeCSS("allProductsCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
     }
 
     @Override

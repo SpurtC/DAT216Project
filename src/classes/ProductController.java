@@ -30,7 +30,7 @@ public class ProductController extends Controller implements Initializable{
 
     private CSSManager cssManager = new CSSManager(stringPaneMapProduct);
 
-    private static Map<String, Pane> stringPaneMapProduct = new HashMap<>();
+    static Map<String, Pane> stringPaneMapProduct = new HashMap<>();
 
 
 
