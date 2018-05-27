@@ -58,9 +58,15 @@ public class VarukorgItem extends AnchorPane {
 
         this.shoppingCartProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.shoppingCartProductNameLbl.textProperty().set(product.getName() + "");
-        this.shoppingCartProductPriceLbl.textProperty().set(product.getPrice() + " kr");
+        this.shoppingCartProductPriceLbl.textProperty().set(product.getPrice() + " kr/ " + product.getUnitSuffix());
         updateItemTotalPrice();
-        antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)).intValue());
+
+        if(!product.getUnitSuffix().equals("kg")){
+            antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product).intValue()));
+        }
+        else{
+            antalTxtF.textProperty().set("" + (ProductController.productToAmountMap.get(product)));
+        }
 
         antalTxtF.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -141,7 +147,7 @@ public class VarukorgItem extends AnchorPane {
     }
 
     public void clickedTrashCan(){
-        ProductController.productToAmountMap.remove(product);
+        ProductController.productToAmountMap.put(product, 0.0);
         this.updateItemTotalPrice();
         varukorgController.updateTotalPriceLabel();
         varukorgController.updateShoppingCartFlowPane();

@@ -118,7 +118,8 @@ public class HistoryItemProduct extends AnchorPane{
     }
 
     public void addButton() {
-        ProductController.productToAmountMap.put(shoppingItem.getProduct(), Double.parseDouble(antalTxtF.textProperty().get()));
+        ProductController.productToAmountMap.put(shoppingItem.getProduct(),
+                ProductController.productToAmountMap.get(shoppingItem.getProduct()) + Double.parseDouble(antalTxtF.textProperty().get()));
         System.out.println(antalTxtF.textProperty().get());
     }
 
