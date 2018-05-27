@@ -183,9 +183,9 @@
                               <Image url="@../images/RedArrow.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="messageLbl" layoutX="616.0" layoutY="102.0" text="Dina uppgifter har sparats!" textFill="#008000">
+                        <Label fx:id="messageLbl" layoutX="535.0" layoutY="98.0" text="Dina uppgifter har sparats!" textFill="#008000">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="System Bold" size="29.0" />
                            </font>
                         </Label>
                         <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="47.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">

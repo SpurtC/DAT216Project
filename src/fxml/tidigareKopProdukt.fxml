@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="997.0" styleClass="border" stylesheets="@../Stylesheets/formsFonts.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="981.0" styleClass="border" stylesheets="@../Stylesheets/formsFonts.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="191.0" layoutY="-40.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="picture" fitHeight="105.0" fitWidth="127.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="picture" fitHeight="105.0" fitWidth="127.0" layoutX="10.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../imat/images/product_36.jpg" />
                </image>
@@ -33,16 +33,16 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="767.0" layoutY="52.0" prefHeight="50.0" prefWidth="50.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
-            <Button layoutX="828.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedPlsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMePlus" stylesheets="@../Stylesheets/formsFonts.css" text="+">
+            <TextField fx:id="antalTxtF" alignment="CENTER" layoutX="756.0" layoutY="52.0" prefHeight="52.0" prefWidth="50.0" promptText="0" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+            <Button layoutX="817.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedPlsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMePlus" stylesheets="@../Stylesheets/formsFonts.css" text="+">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font></Button>
-            <Button layoutX="707.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedMnsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMeMinus" stylesheets="@../Stylesheets/formsFonts.css" text="–">
+            <Button layoutX="696.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedMnsBtn" prefHeight="50.0" prefWidth="50.0" styleClass="clickOnMeMinus" stylesheets="@../Stylesheets/formsFonts.css" text="–">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font></Button>
-            <Button fx:id="addBtn" disable="true" layoutX="898.0" layoutY="52.0" mnemonicParsing="false" onAction="#addButton" prefHeight="50.0" prefWidth="81.0" text="Lägg i varukorgen" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="addBtn" disable="true" layoutX="884.0" layoutY="52.0" mnemonicParsing="false" onAction="#addButton" prefHeight="52.0" prefWidth="81.0" text="Lägg i varukorgen" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>

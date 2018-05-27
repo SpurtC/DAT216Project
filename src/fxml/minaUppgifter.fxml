@@ -104,7 +104,7 @@
                         <Font name="Arial" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="confirmation" alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="410.0" layoutY="32.0" prefHeight="38.0" prefWidth="930.0" text="Bekräftelse" textFill="RED">
+                  <Label fx:id="confirmation" alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="521.0" layoutY="32.0" prefHeight="38.0" prefWidth="834.0" text="Bekräftelse" textAlignment="CENTER" textFill="RED">
                      <font>
                         <Font name="Arial Bold" size="33.0" />
                      </font>
