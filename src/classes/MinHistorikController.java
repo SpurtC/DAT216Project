@@ -1,6 +1,7 @@
 package classes;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -20,6 +21,9 @@ public class MinHistorikController extends Controller {
 
     @FXML
     Label messageLbl;
+
+    @FXML
+    public Button addOrderButton;
 
     private HashMap<Date, HistoryItem> dateHistoryItemHashMap = new HashMap<>();
     private HashMap<String, HistoryItemProduct> stringHistoryItemProductHashMap = new HashMap<>();
@@ -55,21 +59,15 @@ public class MinHistorikController extends Controller {
     }
 
     public void addOrderToShoppingCart() {
-        if(getDate == null){
-            messageLbl.textProperty().set("Vänligen välj köp");
-            messageLbl.setVisible(true);
-            return;
-        }
-        else {
-            HistoryItem historyItem = dateHistoryItemHashMap.get(getDate);
-            List<ShoppingItem> shoppingItemList = historyItem.order.getItems();
-            for(ShoppingItem shoppingItem: shoppingItemList){
-                if(shoppingItem.getAmount() != 0){
-                    ProductController.productToAmountMap.put(shoppingItem.getProduct(), shoppingItem.getAmount());
-                }
+        HistoryItem historyItem = dateHistoryItemHashMap.get(getDate);
+        List<ShoppingItem> shoppingItemList = historyItem.order.getItems();
+        for(ShoppingItem shoppingItem: shoppingItemList){
+            if(shoppingItem.getAmount() != 0){
+                ProductController.productToAmountMap.put(shoppingItem.getProduct(), shoppingItem.getAmount());
             }
-            messageLbl.setVisible(false);
         }
+        messageLbl.textProperty().set("Produkterna har lagts till i din varukorg");
+        messageLbl.setVisible(true);
     }
 
 
@@ -82,6 +80,7 @@ public class MinHistorikController extends Controller {
         updateFlowPane(iMatDataHandler.getOrders());
         itemFlowPane.getChildren().clear();
         getDate = null;
+        addOrderButton.setDisable(true);
         messageLbl.setVisible(false);
     }
 }

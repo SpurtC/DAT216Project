@@ -10,12 +10,15 @@
    <children>
       <Pane layoutX="4.0" layoutY="5.0" prefHeight="100.0" prefWidth="325.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="3.0">
          <children>
-            <Label fx:id="dateLbl" layoutX="14.0" layoutY="33.0" prefHeight="38.0" prefWidth="194.0" text="14/6">
+            <Label fx:id="dateLbl" layoutX="6.0" layoutY="30.0" prefHeight="40.0" prefWidth="226.0" text="14/6">
                <font>
-                  <Font size="20.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
-            <Button layoutX="259.0" layoutY="29.0" mnemonicParsing="false" onAction="#showItems" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer" />
+            <Button layoutX="261.0" layoutY="21.0" mnemonicParsing="false" onAction="#showItems" prefHeight="58.0" prefWidth="108.0" text="Fler detaljer">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
          </children>
       </Pane>
    </children>

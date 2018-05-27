@@ -74,14 +74,14 @@
                         <Image url="@../images/arrow_left.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="1077.0" layoutY="552.0" mnemonicParsing="false" onAction="#addOrderToShoppingCart" prefHeight="82.0" prefWidth="343.0" text="Lägg till hela köpet i varukorgen">
+                  <Button fx:id="addOrderButton" layoutX="1077.0" layoutY="552.0" mnemonicParsing="false" onAction="#addOrderToShoppingCart" prefHeight="82.0" prefWidth="343.0" text="Lägg till hela köpet i varukorgen" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Label fx:id="messageLbl" layoutX="691.0" layoutY="570.0" text="Label">
+                  <Label fx:id="messageLbl" layoutX="419.0" layoutY="564.0" prefHeight="47.0" prefWidth="601.0" text="Produkterna har lagts till i din varukorg" textAlignment="CENTER" textFill="#684990">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="System Bold" size="32.0" />
                      </font>
                   </Label>
                </children></AnchorPane>
