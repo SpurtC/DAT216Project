@@ -31,6 +31,8 @@ public class MinHistorikController extends Controller {
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     Date getDate = null;
 
+    CSSManager cssManager = new CSSManager(dateHistoryItemHashMap, "Katt");
+
     @FXML
     public void onContinueShopPreviewPaymentClicked () {
         MainWindowController.spManager.showPane("../fxml/framsida.fxml");
@@ -39,11 +41,12 @@ public class MinHistorikController extends Controller {
 
     private void updateFlowPane(List<Order> orderList){
         historyFlowPane.getChildren().clear();
-        for(Order aOrder: orderList){
+        for(Order aOrder: orderList) {
             HistoryItem historyItem = new HistoryItem(aOrder, this);
             dateHistoryItemHashMap.put(aOrder.getDate(), historyItem);
             historyFlowPane.getChildren().add(dateHistoryItemHashMap.get(aOrder.getDate()));
         }
+
     }
 
     public void updateItemFlowPane (Order order){
@@ -56,6 +59,8 @@ public class MinHistorikController extends Controller {
                 itemFlowPane.getChildren().add(stringHistoryItemProductHashMap.get(shoppingItem.getProduct().getName()));
             }
         }
+        cssManager.changeCSSHistory(order.getDate(), "fillHistoryItem", "fillHistoryItemClicked");
+
     }
 
     public void addOrderToShoppingCart() {
