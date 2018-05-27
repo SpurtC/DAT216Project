@@ -23,7 +23,7 @@ public class ProductController extends Controller implements Initializable{
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-
+    static List<ProductItem> productItemList = new ArrayList<>();
     private List<Product> allProducts = iMatDataHandler.getProducts();
     private List<Product> currentList = new ArrayList<>();
     private Map<String, ProductItem> productsListItemMap = new HashMap<>();
@@ -226,6 +226,14 @@ public class ProductController extends Controller implements Initializable{
         updateFlowPane(currentList);
     }
 
+    public void populateAllProducts() {
+        for(ProductItem productItem: productItemList){
+            productItem.antalTxtF.textProperty().set(productToAmountMap.get(productItem.product) + "");
+        }
+    }
+
+
+
     public void makeAMapProduct () {
         stringPaneMapProduct.put("minaFavoriterCtgPane", minaFavoriterCtgPane );
         stringPaneMapProduct.put("allProductsCtgPane", allProductsCtgPane);
@@ -239,6 +247,11 @@ public class ProductController extends Controller implements Initializable{
         stringPaneMapProduct.put("dryCtgPane", dryCtgPane );
         stringPaneMapProduct.put("nutCtgPane", nutCtgPane );
         stringPaneMapProduct.put("ekoCtgPane", ekoCtgPane );
+    }
+
+    @Override
+    public void opened(){
+        populateAllProducts();
     }
 
     @Override

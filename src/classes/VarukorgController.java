@@ -43,7 +43,9 @@ public class VarukorgController extends Controller{
     }
 
     public void clearBasket(){
-        ProductController.productToAmountMap.clear();
+        for(Product product: ProductController.productToAmountMap.keySet()){
+            ProductController.productToAmountMap.put(product, 0.0);
+        }
         shoppingCartFlowPane.getChildren().clear();
         shoppingCartTotalPriceLbl.textProperty().set("0 kr");
         checkIfEmpty();
