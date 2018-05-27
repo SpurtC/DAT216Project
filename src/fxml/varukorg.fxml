@@ -21,7 +21,7 @@
                      <font>
                         <Font size="24.0" />
                      </font></Button>
-                  <Button layoutX="710.0" layoutY="606.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="82.0" prefWidth="343.0" text="Gå vidare" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                  <Button fx:id="shoppingCartForwardButton" layoutX="710.0" layoutY="606.0" mnemonicParsing="false" onAction="#onGoForwardClicked" prefHeight="82.0" prefWidth="343.0" text="Gå vidare" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font size="24.0" />
                      </font></Button>
@@ -55,7 +55,7 @@
                      </font></Label>
                   <ScrollPane layoutX="24.0" layoutY="135.0" prefHeight="381.0" prefWidth="1392.0">
                      <content>
-                        <FlowPane fx:id="shoppingCartFlowPane" prefHeight="402.0" prefWidth="1376.0" />
+                        <FlowPane fx:id="shoppingCartFlowPane" prefHeight="381.0" prefWidth="1376.0" />
                      </content>
                   </ScrollPane>
                   <Label layoutX="450.0" layoutY="96.0" text="Styckpris:">
@@ -78,6 +78,16 @@
                         <Font size="48.0" />
                      </font>
                   </Text>
+                  <ImageView fitHeight="80.0" fitWidth="515.0" layoutX="609.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/processbarStep1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="noProductsInBasketLabel" layoutX="340.0" layoutY="225.0" prefHeight="154.0" prefWidth="760.0" text="Du har för tillfället inga produkter tillagda i din varukorg. För att göra detta, tryck på &quot;Fortsätt handla&quot; och välj de produkter du önskar köpa." wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
             </items>
         </SplitPane>
