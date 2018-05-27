@@ -185,7 +185,7 @@ public class VarukorgItem extends AnchorPane {
 
 
     public void trashCanMouseExited(){
-            trashCanImg.setImage(new Image("images/trash_can_icon.png"));
+            trashCanImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream("images/trash_can_icon.png")));
     }
 
 }
