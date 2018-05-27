@@ -68,7 +68,7 @@
                         <Image url="@../images/arrow_left.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="1362.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="forwardImage" fitHeight="40.0" fitWidth="35.0" layoutX="1362.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/arrow_right.png" />
                      </image>

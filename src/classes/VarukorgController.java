@@ -3,6 +3,8 @@ package classes;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -27,7 +29,10 @@ public class VarukorgController extends Controller{
     private FlowPane shoppingCartFlowPane;
 
     @FXML
-    private Button shoppingCartForwardButton;
+    private ImageView forwardImage;
+
+    @FXML
+    private Button shoppingCartForwardButton, emptyBasketButton;
 
     @FXML
     private Label shoppingCartTotalPriceLbl, noProductsInBasketLabel;
@@ -78,9 +83,13 @@ public class VarukorgController extends Controller{
         if(antal == 0){
             noProductsInBasketLabel.setVisible(true);
             shoppingCartForwardButton.setDisable(true);
+            emptyBasketButton.setDisable(true);
+            forwardImage.setVisible(false);
         }else{
             noProductsInBasketLabel.setVisible(false);
             shoppingCartForwardButton.setDisable(false);
+            emptyBasketButton.setDisable(false);
+            forwardImage.setVisible(true);
         }
     }
 

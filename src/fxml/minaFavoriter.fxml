@@ -26,12 +26,12 @@
                      <font>
                         <Font size="24.0" />
                      </font></Button>
-                  <Label fx:id="noFavoritessLbl" layoutX="43.0" layoutY="67.0" prefHeight="49.0" prefWidth="1265.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Du har tyvärr inga favoritvaror. Om du vill göra en vara till din favorit, tryck på hjärtat i högra hörnet på varan." wrapText="true" />
                   <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="45.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/arrow_left.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="noFavoritessLbl" layoutX="379.0" layoutY="199.0" prefHeight="122.0" prefWidth="681.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Du har tyvärr inga favoritvaror. Om du vill göra en vara till din favorit, tryck på hjärtat i högra hörnet på varan." wrapText="true" />
                </children>
             </AnchorPane>
          </items>
