@@ -91,16 +91,8 @@ public class VarukorgItem extends AnchorPane {
                     antalTxtF.textProperty().set(round + "");
                 }
 
-                if (antal <= 0){
-                    ProductController.productToAmountMap.put(product, antal);
-                    antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
-                }
-
-                else {
-                    antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
-                    ProductController.productToAmountMap.put(product, antal);
-                }
-
+                ProductController.productToAmountMap.put(product, antal);
+                antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
             }
         });
 
