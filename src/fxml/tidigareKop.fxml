@@ -36,7 +36,7 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="82.0" prefWidth="343.0" text="    Fortsätt handla" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="82.0" prefWidth="343.0" text="Fortsätt handla" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
                      <font>
                         <Font size="24.0" />
                      </font></Button>

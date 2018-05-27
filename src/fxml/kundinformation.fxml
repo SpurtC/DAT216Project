@@ -19,7 +19,7 @@
                      <font>
                         <Font size="36.0" />
                      </font></Label>
-                  <Label layoutX="949.0" layoutY="75.0" styleClass="tjockText" stylesheets="@/Stylesheets/textFont.css" text="Kontakta oss">
+                  <Label layoutX="949.0" layoutY="75.0" text="Kontakta oss">
                      <font>
                         <Font name="System Bold" size="38.0" />
                      </font></Label>
