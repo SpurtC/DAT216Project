@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -24,7 +25,7 @@ public class VarukorgItem extends AnchorPane {
     private VarukorgController varukorgController;
 
     @FXML
-    private ImageView shoppingCartProductImage;
+    private ImageView shoppingCartProductImage, trashCanImg;
 
     @FXML
     private Label shoppingCartProductNameLbl, shoppingCartProductPriceLbl, shoppingCartProductTotalPriceLbl, shoppingCartTotalPriceLbl;
@@ -175,6 +176,16 @@ public class VarukorgItem extends AnchorPane {
                 }
             }
         });
+    }
+
+    public void trashCanMouseEntered(){
+        trashCanImg.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "images/trash_can_icon_hover.png")));
+    }
+
+
+    public void trashCanMouseExited(){
+            trashCanImg.setImage(new Image("images/trash_can_icon.png"));
     }
 
 }
