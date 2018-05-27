@@ -14,7 +14,7 @@ public class MinaUppgifterController extends Controller{
 
     @FXML
     TextField firstName, lastName, phoneNumber, mobileNumber, email, address, zipCode,
-            cardHolder, cardNumber, validMonth, validYear, cvc;
+            cardHolder, cardNumber,cardNumber1,cardNumber2,cardNumber3, validMonth, validYear, cvc;
     @FXML
     Label confirmation;
 
@@ -50,107 +50,166 @@ public class MinaUppgifterController extends Controller{
         emailArrow.setVisible(false);
         addressArrow.setVisible(false);
         zipCodeArrow.setVisible(false);
+        cardHolderArrow.setVisible(false);
+        cardNumberArrow.setVisible(false);
+        validArrow.setVisible(false);
+        cvcArrow.setVisible(false);
 
 
         if (checkUsage(firstName)){
-            if(checkIfNumbers(firstName)){
-                firstNameArrow.setVisible(true);
+            if(checkIfFineForLetters(firstName)){
+                iMatDataHandler.getCustomer().setFirstName(firstName.getText());
             }
             else{
-                iMatDataHandler.getCustomer().setFirstName(firstName.getText());
+                firstNameArrow.setVisible(true);
             }
         }
 
         if (checkUsage(lastName)){
-            if(checkIfNumbers(lastName)){
-                lastNameArrow.setVisible(true);
+            if(checkIfFineForLetters(lastName)){
+                iMatDataHandler.getCustomer().setLastName(lastName.getText());
             }
             else{
-                iMatDataHandler.getCustomer().setLastName(lastName.getText());
+                lastNameArrow.setVisible(true);
             }
         }
 
         if (checkUsage(phoneNumber)){
-            if(checkIfLetters(phoneNumber)){
-                phoneNumberArrow.setVisible(true);
+            if(checkIfFineForNumbers(phoneNumber)){
+                iMatDataHandler.getCustomer().setPhoneNumber(phoneNumber.getText());
             }
             else{
-                iMatDataHandler.getCustomer().setPhoneNumber(phoneNumber.getText());
+                phoneNumberArrow.setVisible(true);
             }
         }
 
         if (checkUsage(mobileNumber)){
-            if(checkIfLetters(mobileNumber)){
-                mobileNumberArrow.setVisible(true);
-            }else{
+            if(checkIfFineForNumbers(mobileNumber)){
                 iMatDataHandler.getCustomer().setMobilePhoneNumber(mobileNumber.getText());
+            }
+            else{
+                mobileNumberArrow.setVisible(true);
             }
         }
 
         if (checkUsage(zipCode)){
-            if(checkIfLetters(zipCode)){
-                zipCodeArrow.setVisible(true);
+            if(checkIfFineForNumbers(zipCode)){
+                iMatDataHandler.getCustomer().setPostCode(zipCode.getText());
             }
             else{
-                iMatDataHandler.getCustomer().setPostCode(zipCode.getText());
+                zipCodeArrow.setVisible(true);
             }
         }
 
         if (checkUsage(cardHolder)){
-            if(checkIfNumbers(cardHolder)){
-                cardHolderArrow.setVisible(true);
+            System.out.println(cardHolder.textProperty().get());
+            System.out.println(checkIfFineForLetters(cardHolder));
+
+            if(checkIfFineForLetters(cardHolder)){
+                iMatDataHandler.getCreditCard().setHoldersName(cardHolder.getText());
             }
             else{
-                iMatDataHandler.getCreditCard().setHoldersName(cardHolder.getText());
+                cardHolderArrow.setVisible(true);
             }
         }
 
         if (checkUsage(cardNumber)){
-            if(checkIfLetters(cardNumber)){
-                cardNumberArrow.setVisible(true);
+            if(checkLengthCardNumber(cardNumber)){
+                if(!checkIfFineForNumbers(cardNumber)){
+                    cardNumberArrow.setVisible(true);
+                }
             }
             else{
-                iMatDataHandler.getCreditCard().setCardNumber(cardNumber.getText());
+                cardNumberArrow.setVisible(true);
             }
+        }
+
+        if (checkUsage(cardNumber1)){
+            if(checkLengthCardNumber(cardNumber1)){
+                if(!checkIfFineForNumbers(cardNumber1)){
+                    cardNumberArrow.setVisible(true);
+                }
+            }
+            else{
+                cardNumberArrow.setVisible(true);
+            }
+        }
+
+        if (checkUsage(cardNumber2)){
+            if(checkLengthCardNumber(cardNumber2)){
+                if(!checkIfFineForNumbers(cardNumber2)){
+                    cardNumberArrow.setVisible(true);
+                }
+            }
+            else{
+                cardNumberArrow.setVisible(true);
+            }
+        }
+
+        if (checkUsage(cardNumber3)){
+            if(checkLengthCardNumber(cardNumber3)){
+                if(!checkIfFineForNumbers(cardNumber3)){
+                    cardNumberArrow.setVisible(true);
+                }
+            }
+            else{
+                cardNumberArrow.setVisible(true);
+            }
+        }
+
+        if(!cardNumberArrow.isVisible()){
+            String stringBuilder = (cardNumber.textProperty().get() + cardNumber1.textProperty().get() +
+                    cardNumber2.textProperty().get() + cardNumber3.textProperty().get());
+            iMatDataHandler.getCreditCard().setCardNumber(stringBuilder);
         }
 
         if (checkUsage(validMonth)){
-            if (validMonth.textProperty().get().equals("0")){
-
-            }
-            else if (Integer.parseInt(validMonth.getText()) > 12 || Integer.parseInt(validMonth.getText()) < 1) {
-                validArrow.setVisible(true);
-            }
-            else{
-                iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonth.getText()));
-            }
+           if(checkIfFineForNumbers(validMonth)){
+               if (Integer.parseInt(validMonth.getText()) > 12 || Integer.parseInt(validMonth.getText()) < 1) {
+                   validArrow.setVisible(true);
+               }
+               else{
+                   iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(validMonth.getText()));
+               }
+           }
+           else {
+               validArrow.setVisible(true);
+           }
         }
 
         if (checkUsage(validYear)){
-            if(validYear.textProperty().get().equals("0")){
-
-            }
-            if(Integer.parseInt(validYear.getText()) < 18){
-                validArrow.setVisible(true);
+            if(checkIfFineForNumbers(validYear)){
+                if(Integer.parseInt(validYear.getText()) < 18){
+                    validArrow.setVisible(true);
+                }
+                else{
+                    iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYear.getText()));
+                }
             }
             else{
-                iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(validYear.getText()));
+                validArrow.setVisible(true);
             }
         }
 
         if (checkUsage(cvc)){
-            if(checkIfLetters(cvc)){
+            if(checkLengthCVC(cvc)){
+                if(checkIfFineForNumbers(cvc)){
+                    iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvc.getText()));
+                }
+                else{
+                    cvcArrow.setVisible(true);
+                }
+            }
+            else {
                 cvcArrow.setVisible(true);
             }
-            else{
-                iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(cvc.getText()));
-            }
+
         }
 
         if (firstNameArrow.isVisible() || lastNameArrow.isVisible() || phoneNumberArrow.isVisible() || mobileNumberArrow.isVisible() ||
                 zipCodeArrow.isVisible() || cardHolderArrow.isVisible() || cardNumberArrow.isVisible() || validArrow.isVisible() ||
                 cvcArrow.isVisible()){
-            confirmation.textProperty().set("Kontrollera att de markerade uppgifterna stämmer");
+            confirmation.textProperty().set("Vänligen kontrollera att de markerade uppgifterna stämmer");
             confirmation.setVisible(true);
         }
 
@@ -166,32 +225,73 @@ public class MinaUppgifterController extends Controller{
         return textField.getText() != null;
     }
 
-    private boolean checkIfNumbers(TextField textField){
-        if(textField.getText() == null){
-            return false;
-        }
-        char [] charArray = textField.getText().toCharArray();
-        for (int i = 0; i < charArray.length; i++){
-            if (Character.isDigit(charArray[i])){
-                return true;
+
+    private boolean checkIfFineForNumbers(TextField textField){
+        char [] charArray = textField.textProperty().get().toCharArray();
+        for(Character character: charArray){
+            if(!Character.isDigit(character)){
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
-    private boolean checkIfLetters(TextField textField) {
-        if(textField.getText() == null){
-            return false;
-        }
-        char[] charArray = textField.getText().toCharArray();
-        for (int i = 0; i < charArray.length; i++){
-            if (Character.isAlphabetic(charArray[i])){
-                return true;
+    private boolean checkIfFineForLetters(TextField textField){
+        char [] charArray = textField.textProperty().get().toCharArray();
+        for(Character character: charArray){
+            if(!Character.isAlphabetic(character)) {
+                if(!Character.isSpaceChar(character)){
+                    return false;
+                }
             }
         }
-        return false;
+        return true;
     }
 
+    private boolean checkLengthCardNumber(TextField textField){
+        char [] charArray = textField.textProperty().get().toCharArray();
+        return charArray.length == 4;
+    }
+
+    private boolean checkLengthCVC (TextField textField){
+        char [] charArray = textField.textProperty().get().toCharArray();
+        return charArray.length == 3;
+    }
+
+    private void populateCardNumber(){
+        if(iMatDataHandler.getCreditCard().getCardNumber() == null){
+            return;
+        }
+        if(iMatDataHandler.getCreditCard().getCardNumber().length() < 16){
+            return;
+        }
+
+        char [] charArray = iMatDataHandler.getCreditCard().getCardNumber().toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for(int i = 0; i < 4; i++){
+            stringBuilder.append(charArray[i]);
+        }
+        cardNumber.textProperty().set(stringBuilder.toString());
+        stringBuilder.setLength(0);
+
+        for(int i = 4; i < 8; i++){
+            stringBuilder.append(charArray[i]);
+        }
+        cardNumber1.textProperty().set(stringBuilder.toString());
+        stringBuilder.setLength(0);
+
+        for(int i = 8; i < 12; i++){
+            stringBuilder.append(charArray[i]);
+        }
+        cardNumber2.textProperty().set(stringBuilder.toString());
+        stringBuilder.setLength(0);
+
+        for(int i = 12; i < 16; i++){
+            stringBuilder.append(charArray[i]);
+        }
+        cardNumber3.textProperty().set(stringBuilder.toString());
+    }
 
     private void checkPreviousInfo(){
 
@@ -204,10 +304,11 @@ public class MinaUppgifterController extends Controller{
         phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
 
         cardHolder.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
-        cardNumber.textProperty().set(iMatDataHandler.getCreditCard().getCardNumber());
+
         validMonth.textProperty().set(iMatDataHandler.getCreditCard().getValidMonth() + "");
         validYear.textProperty().set(iMatDataHandler.getCreditCard().getValidYear() + "");
         cvc.textProperty().set(iMatDataHandler.getCreditCard().getVerificationCode() + "");
+        populateCardNumber();
     }
 
     @Override
@@ -216,7 +317,10 @@ public class MinaUppgifterController extends Controller{
         charLimiter(phoneNumber,11);
         charLimiter(mobileNumber, 10);
         charLimiter(zipCode,5);
-        charLimiter(cardNumber,16);
+        charLimiter(cardNumber,4);
+        charLimiter(cardNumber1,4);
+        charLimiter(cardNumber2,4);
+        charLimiter(cardNumber3,4);
         charLimiter(validMonth, 2);
         charLimiter(validYear, 2);
         charLimiter(cvc,3);

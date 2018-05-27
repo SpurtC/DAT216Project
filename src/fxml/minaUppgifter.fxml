@@ -72,7 +72,10 @@
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cardNumber" layoutX="292.0" layoutY="469.0" prefHeight="41.0" prefWidth="383.0" />
+                  <TextField fx:id="cardNumber" layoutX="292.0" layoutY="469.0" prefHeight="42.0" prefWidth="95.8" />
+                  <TextField fx:id="cardNumber1" layoutX="388.0" layoutY="469.0" prefHeight="42.0" prefWidth="95.8" />
+                  <TextField fx:id="cardNumber2" layoutX="484.0" layoutY="469.0" prefHeight="42.0" prefWidth="95.8" />
+                  <TextField fx:id="cardNumber3" layoutX="580.0" layoutY="469.0" prefHeight="42.0" prefWidth="95.8" />
                   <Label layoutX="795.0" layoutY="426.0" text="Giltigt till:">
                      <font>
                         <Font name="Arial" size="24.0" />
