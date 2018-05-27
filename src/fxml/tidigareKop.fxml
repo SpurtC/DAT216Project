@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
@@ -34,13 +36,16 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="50.0" prefWidth="144.0" text="Fortsätt handla" />
-                  <Label layoutX="183.0" layoutY="62.0" text="Datum">
+                  <Button layoutX="76.0" layoutY="526.0" mnemonicParsing="false" onAction="#onContinueShopPreviewPaymentClicked" prefHeight="82.0" prefWidth="343.0" text="    Fortsätt handla" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Label layoutX="155.0" layoutY="62.0" text="Datum">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </Label>
-                  <Label layoutX="588.0" layoutY="62.0" text="Produkt">
+                  <Label layoutX="555.0" layoutY="62.0" text="Produkt">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
@@ -50,20 +55,25 @@
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </Label>
-                  <ScrollPane layoutX="431.0" layoutY="112.0" prefHeight="394.0" prefWidth="950.0">
+                  <ScrollPane layoutX="421.0" layoutY="112.0" prefHeight="394.0" prefWidth="1000.0">
                      <content>
                         <FlowPane fx:id="itemFlowPane" prefHeight="390.0" prefWidth="941.0" />
                      </content>
                   </ScrollPane>
-                  <ScrollPane layoutX="76.0" layoutY="112.0" prefHeight="394.0" prefWidth="341.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="1021.0">
+                  <ScrollPane layoutX="20.0" layoutY="112.0" prefHeight="394.0" prefWidth="387.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="1031.0">
                      <content>
-                        <FlowPane fx:id="historyFlowPane" prefHeight="390.0" prefWidth="338.0" />
+                        <FlowPane fx:id="historyFlowPane" prefHeight="390.0" prefWidth="385.0" />
                      </content></ScrollPane>
                   <Label layoutX="983.0" layoutY="62.0" text="Antal">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="45.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow_left.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             </items>
         </SplitPane>

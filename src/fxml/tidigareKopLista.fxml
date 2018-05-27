@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="331.0" styleClass="border" stylesheets="@../Stylesheets/formsFonts.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="385.0" styleClass="border" stylesheets="@../Stylesheets/formsFonts.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="4.0" layoutY="5.0" prefHeight="100.0" prefWidth="325.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="3.0">
          <children>
@@ -15,7 +15,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button layoutX="221.0" layoutY="29.0" mnemonicParsing="false" onAction="#showItems" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer" />
+            <Button layoutX="259.0" layoutY="29.0" mnemonicParsing="false" onAction="#showItems" prefHeight="46.0" prefWidth="95.0" text="Fler detaljer" />
          </children>
       </Pane>
    </children>

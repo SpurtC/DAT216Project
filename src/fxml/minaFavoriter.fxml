@@ -4,23 +4,35 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaFavoriterController">
+<AnchorPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MinaFavoriterController">
    <children>
       <SplitPane prefHeight="650.0" prefWidth="1440.0">
          <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ScrollPane layoutX="21.0" layoutY="29.0" prefHeight="520.0" prefWidth="1396.0">
+                  <ScrollPane layoutX="21.0" layoutY="14.0" prefHeight="503.0" prefWidth="1396.0">
                      <content>
                         <FlowPane fx:id="favoriteFlowPane" prefHeight="504.0" prefWidth="1380.0" />
                      </content>
                   </ScrollPane>
                   <AnchorPane layoutX="268.0" layoutY="-39.0" prefHeight="50.0" prefWidth="861.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutX="638.0" layoutY="572.0" mnemonicParsing="false" onAction="#onContinueShopMyFavoritesClicked" text="Fortsätt handla" />
                   <Label fx:id="noFavoritessLbl" layoutX="43.0" layoutY="67.0" prefHeight="49.0" prefWidth="1265.0" styleClass="categoriesText" stylesheets="@../Stylesheets/textFont.css" text="Du har tyvärr inga favoritvaror. Om du vill göra en vara till din favorit, tryck på hjärtat i högra hörnet på varan." wrapText="true" />
+                  <Button layoutX="8.0" layoutY="538.0" mnemonicParsing="false" onAction="#onContinueShopMyAccountClicked" prefHeight="82.0" prefWidth="343.0" styleClass="categoriesText" text="    Fortsätt handla" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="45.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow_left.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </items>
