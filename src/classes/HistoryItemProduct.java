@@ -4,6 +4,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -26,6 +27,9 @@ public class HistoryItemProduct extends AnchorPane{
 
     @FXML
     ImageView picture;
+
+    @FXML
+    Button addBtn;
 
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private ShoppingItem shoppingItem;
@@ -75,10 +79,12 @@ public class HistoryItemProduct extends AnchorPane{
 
                 if (antal <= 0){
                     antalTxtF.setStyle("-fx-control-inner-background: white; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    addBtn.setDisable(true);
                 }
 
                 else {
                     antalTxtF.setStyle("-fx-control-inner-background: #ebd8ff; -fx-font-size: 20 px; -fx-font-weight: bold");
+                    addBtn.setDisable(false);
                 }
 
             }
