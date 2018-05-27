@@ -17,8 +17,6 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ProductItem extends AnchorPane {
     @FXML
@@ -28,14 +26,14 @@ public class ProductItem extends AnchorPane {
     @FXML
     private Button minusBtn, plusBtn;
     @FXML
-    public TextField antalTxtF;
+    TextField antalTxtF;
     @FXML
     private ImageView favoriteHeartImg;
 
     private int numberOfItems;
     private ShoppingCart shoppingCart;
     private ShoppingItem shoppingItem;
-    private Product product;
+    Product product;
     private String stringValue;
 
     ProductItem(Product product) {
@@ -54,6 +52,7 @@ public class ProductItem extends AnchorPane {
         this.prisTxt.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
         this.varaImg.setImage(IMatDataHandler.getInstance().getFXImage(product));
         this.product = product;
+        this.antalTxtF.textProperty().set("");
 
         if(IMatDataHandler.getInstance().isFavorite(product)) {
             favoriteHeartImg.setImage(new Image("images/hjartaRod.png"));
@@ -96,6 +95,7 @@ public class ProductItem extends AnchorPane {
 
         this.antalTxtF.textProperty().set(ProductController.productToAmountMap.containsKey(product) ? String.valueOf(ProductController.productToAmountMap.get(product).intValue()) : "0");
 
+        ProductController.productItemList.add(this);
     }
 
     public void clickedMnsBtn() {
@@ -109,6 +109,9 @@ public class ProductItem extends AnchorPane {
     }
 
     public void clickedPlsBtn() {
+        if(antalTxtF.textProperty().get().equals("")){
+            return;
+        }
         String stringValue = antalTxtF.textProperty().get();
         int intValue = Integer.valueOf(stringValue);
         if (intValue < 999) {
