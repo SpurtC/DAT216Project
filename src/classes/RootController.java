@@ -23,10 +23,7 @@ public class RootController extends Controller{
     public void init() {
         makeRootList();
 
-        System.out.println("Root");
-
         spManager = new SPManager(stackPane, rootFxmlfileList);
-        System.out.println("SPManager created");
         spManager.showPane("/fxml/mainWindow.fxml");
     }
 }

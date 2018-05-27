@@ -29,10 +29,7 @@ public class SPManager {
         }
     }
 
-    private Page loadFXML (String fxml) {                           //Load the right stackpane
-
-        System.out.println("Loading" + fxml);
-
+    private Page loadFXML (String fxml) {                           
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
 
         FXMLLoader loader = new FXMLLoader(SPManager.class.getResource(fxml));
@@ -43,7 +40,6 @@ public class SPManager {
             e.printStackTrace();
         }
 
-        System.out.println(fxml + "; Controller is null: " + (loader.getController() == null) + "; Root is null: " + (root == null));
 
         return new Page((Pane) root, loader.getController());
     }
@@ -60,8 +56,6 @@ public class SPManager {
         }
         if(map.get(fxml).CONTROLLER != null){
             map.get(fxml).CONTROLLER.opened();
-        }else{
-            System.out.println("WARN: " + fxml + " har ingen controller som extendar Controller. Plz fix ");
         }
 
     }
