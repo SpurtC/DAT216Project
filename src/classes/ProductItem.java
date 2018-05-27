@@ -67,13 +67,20 @@ public class ProductItem extends AnchorPane {
                 }
 
                 char [] charArray = newValue.toCharArray();
+                StringBuilder stringBuilder = new StringBuilder();
                 for(Character character: charArray){
-                    if (!character.equals('.') && !Character.isDigit(character)){
-                        return;
+                    if (character.equals('.') || Character.isDigit(character)){
+                        stringBuilder.append(character);
                     }
                 }
 
-                double antal = Double.parseDouble(newValue);
+                if(stringBuilder.length() == 0){
+                    antalTxtF.textProperty().set("");
+                    return;
+                }
+
+
+                double antal = Double.parseDouble(stringBuilder.toString());
 
                 if(!product.getUnitSuffix().equals("kg")){
                     int round = (int) antal;

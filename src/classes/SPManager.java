@@ -29,7 +29,7 @@ public class SPManager {
         }
     }
 
-    private Page loadFXML (String fxml) {                           
+    private Page loadFXML (String fxml) {
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
 
         FXMLLoader loader = new FXMLLoader(SPManager.class.getResource(fxml));
