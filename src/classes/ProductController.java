@@ -145,6 +145,7 @@ public class ProductController extends Controller implements Initializable{
                     allProducts.get(i).getCategory() == ProductCategory.EXOTIC_FRUIT ||
                     allProducts.get(i).getCategory() == ProductCategory.MELONS ||
                     allProducts.get(i).getCategory() == ProductCategory.FRUIT ||
+                    allProducts.get(i).getCategory() == ProductCategory.HERB ||
                     allProducts.get(i).getCategory() == ProductCategory.ROOT_VEGETABLE ||
                     allProducts.get(i).getCategory() == ProductCategory.VEGETABLE_FRUIT){
                 currentList.add(allProducts.get(i));
@@ -154,11 +155,21 @@ public class ProductController extends Controller implements Initializable{
         updateFlowPane(currentList);
     }
 
+    public void clickedPodCtg(){
+        currentList.clear();
+        for(int i = 0; i < allProducts.size(); i++){
+            if (allProducts.get(i).getCategory() == ProductCategory.POD){
+                currentList.add(allProducts.get(i));
+            }
+        }
+        cssManager.changeCSS("podCtgPane", "ctgPaneFill", "ctgPaneFillClicked");
+        updateFlowPane(currentList);
+    }
+
     public void clickedNutCtg() {
         currentList.clear();
         for (int i = 0; i < allProducts.size(); i++) {
             if (allProducts.get(i).getCategory() == ProductCategory.NUTS_AND_SEEDS ||
-                    allProducts.get(i).getCategory() == ProductCategory.HERB ||
                     allProducts.get(i).getCategory() == ProductCategory.BERRY ||
                     allProducts.get(i).getCategory() == ProductCategory.POD){
                 currentList.add(allProducts.get(i));

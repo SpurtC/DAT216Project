@@ -374,7 +374,7 @@ public class BetalningController extends Controller {
         }
 
         if(phoneNumberTxtF.getText() != null ){
-            phoneNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+            phoneNumberTxtF.textProperty().set(iMatDataHandler.getCustomer().getPhoneNumber());
         }
 
         if(cardHolderTxtF.getText() != null){

@@ -84,7 +84,14 @@ public class MainWindowController extends Controller{
         }*/
 
         for(Map.Entry<Product, Double> entry: ProductController.productToAmountMap.entrySet()){
-            amount += entry.getValue();
+            double prelAmount;
+            if(entry.getKey().getUnitSuffix().equals("kg") && entry.getValue() > 0){
+                prelAmount = 1;
+            }
+            else {
+                prelAmount = entry.getValue();
+            }
+            amount += prelAmount;
         }
 
         numberOfItemsLbl.textProperty().set(amount + " st");

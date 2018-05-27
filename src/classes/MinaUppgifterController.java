@@ -114,6 +114,10 @@ public class MinaUppgifterController extends Controller{
             }
         }
 
+        if (checkUsage(email)){
+            iMatDataHandler.getCustomer().setEmail(email.getText());
+        }
+
 
 
         if (checkUsage(cardHolder)){
@@ -329,7 +333,7 @@ public class MinaUppgifterController extends Controller{
         email.textProperty().set(iMatDataHandler.getCustomer().getEmail());
         zipCode.textProperty().set(iMatDataHandler.getCustomer().getPostCode());
         mobileNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
-        phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getMobilePhoneNumber());
+        phoneNumber.textProperty().set(iMatDataHandler.getCustomer().getPhoneNumber());
 
         cardHolder.textProperty().set(iMatDataHandler.getCreditCard().getHoldersName());
 
